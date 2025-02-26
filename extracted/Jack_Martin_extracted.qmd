@@ -7,7 +7,7 @@ subtitle: Jack Martin
 ![](../documents/Jack_Martin.pdf){width=100% height=1200}
 :::
 
-![pdf](../documents/Jack_Martin.pdf)
+![pdf](https://github.com/skcho13/docs/blob/49aee751009b02d16495500da244f79d1d7f2583/documents/Jack_Martin.pdf)
 
 ## Reinterpreting Internalization and Agency through G.H. Mead’s Perspectival Realism
 
