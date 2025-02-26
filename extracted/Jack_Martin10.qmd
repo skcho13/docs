@@ -3,28 +3,23 @@ title: Reinterpreting Internalization and Agency through G.H. Mead’s Perspecti
 subtitle: Jack Martin
 ---
 
-:::{.column-screen-inset-right}
+<!-- :::{.column-screen-inset-right}
 ![](../documents/Jack_Martin.pdf){width=100% height=1200}
-:::
+::: -->
 
-![pdf](https://github.com/skcho13/docs/blob/49aee751009b02d16495500da244f79d1d7f2583/documents/Jack_Martin.pdf)
+
+Human Development 2006;49:65–86
+DOI: 10.1159/000091333
 
 ## Reinterpreting Internalization and Agency through G.H. Mead’s Perspectival Realism
 
 Jack Martin
 
-Human Development 
-DOI: 10.1159/000091333
-Reinterpreting Internalization and Agency
-through G.H. Mead’s Perspectival Realism
-Jack Martin
 Simon Fraser University, Burnaby , Canada
-
-### Key Words
+Key Words
 Agency (cid:1) G.H. Mead (cid:1) Internalization (cid:1) Perspective taking (cid:1) Social ontology
 
-### Abstract
-
+## Abstract
 Toward the end of his life, George Herbert Mead developed a theory of perspec-
 tives that may be used to reinterpret his social, developmental psychology. This paper
 attempts such a reinterpretation, leading to the emergence of a theory of perspective
@@ -33,7 +28,9 @@ extant work in developmental psychology. Theoretical and empirical implications 
 Mead’s perspectivism and perspective taking are also explored, with particular focus on
 questions of internalization and agency. In addition, important distinctions are drawn
 between Mead’s view of human development and most contemporary theories.
+
 Copyright © 2006 S. Karger AG, Basel
+
 Various conceptions of internalization and agency can be found in the contem-
 porary literature of developmental psychology, but relatively little consensus has
 been achieved concerning their specifi c nature and role in the development of the
@@ -46,7 +43,8 @@ into private cognitive and other psychological phenomena [e.g., Vygotsky, 1934/
 termination that is itself determined by sociocultural and biophysical structures and
 processes, yet is not entirely reducible to such non-psychological systems [e.g.,
 Bruner, 1990]. In recent years, a number of developmentalists have proposed theo-
-ries of self-development that assume conceptions of internalization and agency that attempt to avoid overly strong forms of psychological constructivism on the one
+ries of self-development that assume conceptions of internalization and agency that
+attempt to avoid overly strong forms of psychological constructivism on the one
 hand, and overly strong forms of social constructionism on the other [e.g., Bickhard,
 2004; Harré, 1998, 2004; Tomasello, 1999]. These theoretical positions understand
 social interactivity and communication as developmentally indispensable to, and in
@@ -57,6 +55,7 @@ associated with the theorizing of Vygotsky [1934/1986, 1978], sometimes with the
 work of Piaget [e.g., Carpendale & Lewis, 2004; Chapman, 1991, 1999], and occa-
 sionally with the body of ideas articulated by George Herbert Mead [1932/2002,
 1934, 1938].
+
 In developmental psychology, especially in more recent years, Mead’s interac-
 tionist view of the self-societal dialectic has been both endorsed as an early relation-
 al theory of the development of mind and consciousness through participation with
@@ -72,15 +71,18 @@ ers. Mead also seems to have championed somewhat different views in different
 writings. It is thus not surprising that Mead scholars have offered several interpreta-
 tions of his work [e.g., Blumer, 1980; Cook, 1993; Gillespie, 2005; Joas, 1997; Wiley,
 1995].
+
 Herein, Mead is interpreted as a perspectival realist who had a great deal to say
 that is highly relevant to contemporary debates and questions within developmental
 psychology concerning internalization and agency. In what follows, it will be main-
 tained that Mead’s theory of perspective taking offers a viable, alternative account
 of internalization that is both theoretically progressive and empirically suggestive.
+
 Moreover, this is an account that provides a plausible compatibilist interpretation
 of agency as both determined and determining, in the societal-personal, co-constitu-
 tive manner seemingly desired by many developmentalists [e.g., Bruner, 1990; Ro-
 goff, 1992; Valsiner, 1991].
+
 Consequently, what follows, while centrally concerned with perspective taking,
 is not in any way intended as a review of, or detailed commentary on, the vast lit-
 erature in developmental psychology that is concerned with perspective taking [for
@@ -95,10 +97,6 @@ progress as epistemic agents. Instead, he considers perspective taking as a basi
 dition of our sociality and ontological constitution as agentive selves in interaction
 with others.
 
-
-
-### Mead’s Perspective Realism and Theory of Perspectives
-
 Mead’s Perspective Realism and Theory of Perspectives
 The term ‘perspective’ was not used by Mead until about 1920, when he began
 to articulate his mature philosophical position in opposition to traditional meta-
@@ -111,6 +109,7 @@ ism and solipsism. In developing his theory of the objective reality of perspect
 [Mead, 1932/2002, pp. 153–170], Mead was at pains to put our sociocultural and
 psychological functioning back into the world in such a way that it might be the ob-
 ject of rigorous scientifi c study and consideration.
+
 ‘In his later years, Mead often used “being in the perspective of the other” in-
 stead of “taking the role of the other”’ [Miller, 1982, p. 17]. Cook [1993] has noted
 that Mead came to use the phrases, ‘take the attitude of the other … taking the role
@@ -125,12 +124,14 @@ p. 215]. When entered into, perspectives are both perceptual and conceptual. Al-
 though they arise within particular sequences of social interactivity, they are not
 fi xed to a particular present. As a consequence, once they are experienced, they can
 be used imaginatively.
+
 Thus, a perspective is an orientation to an environment that is associated with
 acting within that environment. Perspectives emerge out of activity and enable in-
 creasingly complex, differentiated, and abstracted forms of activity. Because the hu-
 man world is a social world, all perspectives arise and are employed within interper-
 sonal interactivity. Even though perspectives may be elaborated imaginatively and
 honed refl ectively, they are seeded and maintained through interactions with others.
+
 This is not to say that there is no biophysical world that constrains and also enables
 human interactivity. It is simply to recognize that biophysical conditions, although
 necessary, are in no way suffi cient for perspectivity of the kind that enables the de-
@@ -140,17 +141,13 @@ an epistemological matter through which we come to understand our world and our
 selves. Rather, it is an ontological matter. It is by taking perspectives that exist in
 the sociocultural world in which we are embedded from birth that we come to exist
 as self-interpreting beings at all.
+
 Social acts are collective acts that involve two or more participating individuals,
 and social objects are collective objects with meanings that can be shared by par-
 ticipating individuals. Social objects are what they are by virtue of their embedded-
 ness within the matrix of social acts that makes up the life of a society. Bones of
 animals become weapons in the experience of early human individuals engaged in
 social acts of confl ict, and balloons become toys when bounced back and forth be-
-
-
-
-### ‘Internalization’ and Agency within Sociality
-
 tween a mother and her child. At a more abstract level, minds and selves also arise
 out of human interactive activity, especially communicative activity supported by
 the signifi cant symbols of language. Mead [in Reck, 1964, pp. 134–141] maintains
@@ -159,6 +156,7 @@ as a conversation of gestures that gradually becomes transformed into a conversa
 of signifi cant symbols (i.e., language). Signifi cant symbols ‘call out’ in the individual
 using them functionally similar responses to what they call out in others to whom
 they are directed.
+
 Taking the perspective of the other is essential to Mead’s conception of the sig-
 nifi cant symbol [Gillespie, 2005]. Most importantly for current purposes, signifi cant
 symbols are not to be understood only as shared, singular perspectives (i.e., as the
@@ -169,8 +167,10 @@ self that the symbol becomes signifi cant’ [Mead, in Reck, 1964, p. 244]. For 
 as I tell what I regard as an amusing anecdote to a friend, I watch his reactions for
 signs of enjoyment, simultaneously adjusting and embellishing my story, at least in
 part, on the basis of what I fi nd there.
+
 With this in mind, consider Miller’s [1982] statement about the centrality of the
 signifi cant symbol to Mead’s thought.
+
 Mead’s most profound insight consists in understanding that the signifi cant symbol, the
 language symbol, consists of a gesture whose meaning is had by both the one who makes the
 gesture and the other to whom it is addressed. He spent most of his intellectual life unravel-
@@ -182,30 +182,34 @@ individual within two or more perspectives. It is being in two perspectives at t
 same time, simultaneously taking multiple positions within meaningful sequences
 of conduct, that defi nes sociality for Mead. It is within this sociality that mind and
 self emerge.
+
 For Mead, human conduct must be understood as an emergent unfolding of se-
 quences of social acts within which individuals react to both others and themselves.
+
 Such a conception of social conduct makes it possible to understand Mead’s theory
 of how consciousness and selfhood arise through a graduated, social developmental
 process of intersubjectivity. It is within interactions with others that infants become
 other to themselves. They do this by taking the perspectives of others, and then by
 reacting to the self and other perspectives that emerge within their ongoing interac-
 tivity.
+
 ‘Internalization’ and Agency within Sociality
 The self is something which has a development; it is not there, at birth, but arises in the
 process of social experience and activity, that is, develops in the given individual as a result
 of his relations to that process as a whole and to other individuals within that process.
+
 [Mead, 1934, p. 135]
-
-
 What distinguishes the forms of consciousness that can be experienced by the
 normal, adult human being from the more basic forms of sensitivity to the environ-
 ment likely experienced by other animals and infants is the refl exivity of the self.
+
 This is a refl exivity that only can arise through interactions with others within an
 ongoing social process. Pre-refl ective consciousness refers to a world that is there,
 but refl ective consciousness or refl exivity refers to a world as experienced by a self
 that is capable of being both a subject and an object to itself. The individual becomes
 ‘an object to himself by taking the attitudes of other individuals toward himself
 within an organized setting of social relationships’ [Mead, 1934, p. 255].
+
 By reinterpreting Mead’s social developmental psychology, as set forth in Mind,
 Self, and Society and several of his earlier essays, through his theory of perspectives
 within social conduct, it is possible to arrive at a detailed understanding of what is
@@ -213,6 +217,7 @@ involved in achieving selfhood, self-understanding, and agency. Such an understa
 ing highlights two features of Mead’s theory of perspective taking: (1) the importance
 of simultaneously being in one’s own and another’s perspective, and (2) the impor-
 tance of reacting to the multiple perspectives that one is in.
+
 Being in Different Perspectives Simultaneously
 In Vygotsky’s [1978, p. 56] famous analysis of the child’s internalization of the
 meaning of pointing, he provides a feedback theory in which the mother responds
@@ -224,6 +229,7 @@ lespie, 2005]. In this example, the feedback theory does not endow the mother wi
 a perspective that can be taken by the child, and occupied together with the child’s
 own initial perspective. Consequently, the feedback theory cannot explain adequate-
 ly how the child becomes other to himself.
+
 For Mead, the child displays the meaning of pointing when she is able to re-
 spond appropriately to the situational pointing of her mother as well as to stimulate
 herself to act as her mother would act in response to her (the child’s) own pointing
@@ -239,11 +245,10 @@ quences of interaction with others in which she has exchanged roles and position
 (e.g., sometimes passing a ball and sometimes receiving it; sometimes crying and
 sometimes comforting; sometimes asking and sometimes receiving; sometimes dis-
 puting and sometimes placating).
+
 Very early in development, such perspective taking is exceedingly rudimentary,
 amounting to little more than a pre-refl ective recollection and anticipation of p hases
 and positions within very simple gestural sequences (e.g., pushing a ball back and
-
-
 forth, with some assistance from a caregiver). However, through repeated social ex-
 perience of sequences of gestures, responses, and consequences, in interaction with
 their caretakers, infants gradually comprehend and anticipate the meanings of rou-
@@ -255,6 +260,7 @@ mother and father. They then can begin to develop awareness of their own actions
 and selves through interactions that use signifi cant symbols, and eventually through
 more refl ective forms of interpersonal and societal perspective taking [Baldwin,
 1986].
+
 As Gillespie [2005] makes clear, for Mead the way to understand perspective
 taking was to stay focused on the social act:
 A social act refers to a social interaction that has become an institution, with established
@@ -274,11 +280,13 @@ Mead calls the generalized other or generalized others [Cronk, 1973]. This more 
 stracted process of perspective taking eventually can be continued vicariously and
 imaginatively through engagements with orientations and views available in diverse
 media including literature and fi lm.
+
 Once the child has taken the perspectives of others in the way Gillespie [2005]
 has described, she only has to react to herself through these perspectives that she
 previously has engaged in interactions with others. As already hinted, the key here
 lies in exchanging and reversing roles within sequences of social interactivity, espe-
 cially in coming to occupy two or more positions or perspectives simultaneously.
+
 One major way in which such multiple occupation of perspectives is developed is
 through play and games, which are characterized by positional exchange, both ac-
 tual and imaginary. Gillespie [2005] points out that games encourage the simultane-
@@ -291,12 +299,11 @@ between players can serve to integrate perspectives in an immediately concrete m
 ner (e.g., calling for a ‘pass’ and responding to that call). The important point is that
 it is through repeated and graduated participation in different positions within rou-
 tine, everyday social interactions (including play and games) that the child is able to
-
-
 take different perspectives, and eventually to occupy different perspectives simulta-
 neously. Such multiple perspectivity allows the child to be other to herself, so that
 she is able to react to those very perspectives that now constitute her as a social be-
 ing (i.e., as a ‘Me’).
+
 Reacting to Perspectives
 The importance of reacting to the perspectives of others that one has previous-
 ly experienced in social interactions that have involved reversals of roles and posi-
@@ -327,6 +334,7 @@ Mead, unlike many theorists of emergence in contemporary science and social sci-
 ence, insisted on a social level of reality with unique constitutive powers that was
 not reducible to biophysical levels of the world [also see Archer, 1995; Bhaskar,
 1979; Martin, 2003].
+
 For Mead, the immediate moment of action brings together a concern of the
 present with both recollections of relevant past activity and anticipations of a future
 in which the concern or problem to which the action of the present is directed is
@@ -334,14 +342,14 @@ resolved or somehow made manageable. Such concerns typically are emergent in
 the fi eld of activity, within the ongoing dynamic interplay of social, interpersonal,
 and personal perspectives. They arise in the immediate context of novel, unpredict-
 able occurrences that constitute a change in past action sequences and perspectives.
+
 If such emergent change were not common, our minds and selves would be deter-
 mined entirely by our past interactions in our biophysical and sociocultural world,
 and our worldly conduct would not be punctuated and experienced in temporal
 terms. It is precisely because of the emergence of change that our temporal experi-
-
-
 ence and agency also arise. Psychological time requires markers, and change sup-
 plies them.
+
 To summarize, Mead’s theory of perspectives treats the taking of perspectives
 as embedded in, and emergent from, positional exchange and simultaneity within
 interpersonal interactivity. Mead’s perspective taking arises from participation
@@ -361,6 +369,7 @@ acts. In short, agency is a reaction to the situation in which one fi nds one’
 that situation always is a social situation. For Mead, both selfhood and agency arise
 developmentally through perspective taking (positional exchange, simultaneity, and
 coordination) within social acts.
+
 Perspectival Selfhood in Context
 Recall that a major rationale for Mead’s perspectival realism was to restore so-
 cial and psychological phenomena to the world, and to forestall a rush to subjectiv-
@@ -369,9 +378,11 @@ real and emergent, he also hoped to resist reductive forms of social and psychol
 cal theorizing that he viewed as pseudo-scientifi c, in that they inappropriately re-
 duce, and thereby distort, exactly those entities (like mind, self, and consciousness)
 that need to be explained. Perspectives, in Mead’s sense, are always in the world.
+
 Indeed, they make up our social and cultural world. They have an objectivity that
 derives from the extent to which they are shared and function within our individual
 and collective experience [Mead, 1938].
+
 For Mead, the reality and organization of perspectives is apparent in social con-
 duct within which the individual and others are immersed in a cooperative process
 of perspective taking. If a number of others are involved, the individual is able to
@@ -385,11 +396,10 @@ the removal of the diffi culty that confronts them all. However, over time, and 
 accumulated interactions in the problem context through which different actions
 with respect to the problem are discussed and attempted, the individual is able to
 enter into the perspectives of others. At the same time, she enters into an emerging,
-
-
 more detailed common perspective as a consequence of her participation in this
 overall process of problem solving, a process which in turn is nested in the overall
 social process.
+
 What ultimately organizes these various perspectives is the extent to which they
 achieve collective support within the problem context and the social process in gen-
 eral. Since all perspectives are initially, at least to some extent, hypothetical, it is the
@@ -406,12 +416,14 @@ tives are social and objectively real in that they both constrain (acting consis
 with generalized others in conventional situations) and enable (acting contrary to,
 or extending generalized others, especially in problem situations where convention-
 al perspectives fail).
+
 To the extent that all emergent, hypothetical perspectives have the potential to
 become realized in social conduct, especially in problem situations, they are objec-
 tively in the real world that is the sum total of all perspectives. In Mead’s words,
 the emergent value which the individual organism confers upon the common world belongs
 to that world in so far as it leads to its creative reconstruction. In so far as the world is pass-
 ing into a future, there is an opportunity for that which is not objective to become objective.
+
 [Mead, 1938, p. 613]
 For Mead, the relation of an organism and an environment is continuously dy-
 namic. The natural and social world consists of a multiplicity of perspectives, any
@@ -421,6 +433,7 @@ within) two or more different perspectives, that the organism is able to deal wi
 emergent events or novel, unexpected occurrences. Because human persons are
 themselves social, their perspective taking may be enhanced greatly by communica-
 tion with others through signifi cant symbols.
+
 It is precisely because human individuals are able to take the perspectives of
 others within the social process that they may acquire selves that are constituted by
 the perspectives available in their ongoing social encounters. Because social life is
@@ -433,11 +446,6 @@ an ‘I,’ the self is an active agent simultaneously occupying situations that
 in one sense determined by the past, but which (because of the ever-present emer-
 gence of novel circumstances) in another sense are open to determination by the
 momentary activity of the ‘I’ in the fl eeting present. By being simultaneously present
-
-
-
-### Implications for Contemporary Theory and Research
-
 in both of these temporal perspectives, the self is a source of both the achieved wis-
 dom of the past and the agentive cultivation of the future. Perspectives constitutive
 of selfhood must be coordinated suffi ciently with other social and interpersonal per-
@@ -445,6 +453,7 @@ spectives to ensure functional levels of intelligibility and interactivity. Howe
 such required coordination still leaves room for considerable creativity in achieving
 perspectival coordinations that might prove more functional and inclusive than con-
 ventionally extant organizations of perspectives [Martin, 2005].
+
 Implications for Contemporary Theory and Research
 Perspective Taking as ‘Internalization’
 Mead’s theory of perspectives and perspective taking is a participation theory in
@@ -462,10 +471,12 @@ is to assume exactly what needs to be explained. Thus, unlike contemporary versi
 of theory of mind in developmental psychology [see Carpendale & Lewis, 2004 for a
 recent critical review], Mead understood interpreting the actions of others as an in-
 tersubjective process that privileges action with others over introspective thought.
+
 Moreover, processes like imitation and identifi cation, which many contemporary de-
 velopmental theorists [e.g., Hobson, 2002; Tomasello, 1999] understand as basic
 mechanisms of internalization, are treated by Mead as developmental consequences
 of the kind of participatory positioning and perspective taking he endorsed.
+
 Possible Theoretical Progress. M ead’s developmental account, as interpreted
 through his theory of perspectives, runs counter to much contemporary developmental
 psychology. In particular, it does not talk about the development of general or specifi c
@@ -475,14 +486,14 @@ inner functioning [e.g., Harris, 1992], or arrays of innate capabilities that ma
 ‘mindfulness’ possible [e.g., Baron-Cohen, 1995]. In Mead’s approach, the mind and
 self are in the world as much as they are in individuals. It simply is a matter of
 perspective, and the taking of perspectives is fi rst and foremost a social activity.
+
 However, Mead’s account also departs in signifi cant ways from neo-Vygotskian
 accounts of internalization and from what may reasonably be regarded as neo-
 Meadian accounts by developmentalists like Marková [1987] and Hobson [2002].
+
 In many ways, Mead’s perspectival theorizing, when applied to his social, develop-
 mental account, yields a participation alternative to internalization that demon-
 strates many of the theoretical advantages that Matusov [1998] previously has pre-
-
-
 sented in arguing for the participation theories of Lave and Wegner [1991] and Ro-
 goff [1990, 2003]. Not only does Mead’s theorizing seem helpful in overcoming
 dualisms inherent in internalization accounts, such as individual-social, inner-outer,
@@ -495,6 +506,7 @@ transformation such as ‘legitimacy of participation’ and ‘communities of p
 to the important sociocultural practices to which they refer. Finally, Mead’s strong
 emphases on position exchange and simultaneity are not found in most neo-Vy-
 gotskian, participation theories.
+
 It is perhaps easiest to evaluate critically Mead’s perspectival realism as a po-
 tential contribution to contemporary developmental theory by considering it in rela-
 tion to what may be the most thoroughly Meadian of all contemporary works, Hob-
@@ -513,10 +525,12 @@ by doing this, by taking a view on her own ways of construing the world, that sh
 begin to think in terms of her own and others’ perspectives. This happens through a
 particular species of identifi cation: the child identifi es with others’ attitudes towards
 the child’s own attitudes and actions (p. 106).
+
 In many ways, Hobson’s account is amazingly similar to the perspectival ren-
 dering of Mead’s developmental thought offered herein. Nonetheless, there are im-
 portant theoretical disjunctions that may be explored both theoretically and empir-
 ically in ways that might prove fruitful for contemporary developmental theorizing.
+
 To make his thought more concretely accessible, Hobson [2002] employs a model
 consisting of a triangle of relations in which an infant relates to objects, persons, or
 events in the world; to herself as the other relates to her; and to the other’s relation
@@ -532,7 +546,6 @@ object is experienced as in receipt of two different attitudes and meanings, and
 ‘it is this that prompts the infant to separate out her own attitude from that of the
 other’ (p. 109).
 
-
 Like Mead, Hobson [2002] emphasizes the importance of simultaneously being
 in one’s own and another’s perspective in achieving an understanding of mind and
 self. Hobson also emphasizes the likely importance of taking cooperative, comple-
@@ -545,6 +558,7 @@ triangulation experiences he describes to be a kind of imitation made possible b
 process of identifi cation. ‘There is something about our propensity to imitate others
 that is as basic as our intellectual prowess … It is the capacity to identify with oth-
 ers’ [Hobson, 2002, p. 215].
+
 Just as one person’s expressions of feeling can move someone else to feel things in sympathy,
 so a person may identify with someone else in the act of imitation. This, too, involves a kind
 of movement into the other person’s position. The person who imitates assumes something
@@ -552,6 +566,7 @@ of the mental orientation of the other person. (pp. 221–222)
 And, just in case there is any doubt about Hobson’s intentions concerning the
 primacy of processes of imitation and identifi cation with respect to perspective tak-
 ing, ‘Identifying with people is what leads to perspective taking’ (p. 271).
+
 On a Meadian account, Hobson’s [2002] invoking of imitation and identifi ca-
 tion is both unnecessary and ill-advised. One problem is that neither imitation nor
 identifi cation, in Hobson’s theorizing and research, are given referential grounds or
@@ -565,6 +580,7 @@ theory that he seems otherwise at pains to dispel with his Wittgensteinian-inspi
 participation theorizing – ‘in relating to people we get access to minds directly, not
 via a convoluted route of inferences, deductions and analogies. Minds are neither so
 hidden nor so abstract as they seem’ [Hobson, 2002, p. 251].
+
 In fact, though, it is not a mentalistic theory of mind with which Hobson wish-
 es to align himself, but Vygotskian internalization, exactly what the presentation of
 Meadian perspective taking herein is intended to replace (because of its dualism and
@@ -575,12 +591,11 @@ self-awareness. This is the process of interiorization described by Lev Vygotsky
 central to psychoanalytic accounts of development. It is the process by which things
 that happen between people become things that happen within the individual’s own
 mind’ [Hobson, 2002, p. 257].
+
 For Mead, mind is not an individual property. As stated earlier it is a relation-
 al entity distributed across and within those coordinated, intersubjective patterns of
 interaction with others that imbue our worldly actions with meaning. Moreover,
 there is no need to get behind perspectives. What are most basic are perspectives
-
-
 through which we engage and share in the social process in general, as well as in its
 particular manifestations in our life histories of interpersonal exchanges within
 which we emerge as self-conscious, self-interpreting beings. This is not to deny that
@@ -593,7 +608,9 @@ representations which afford us a detached view of the world. Although Hobson
 potentially useful extension to Mead’s account by emphasizing the centrality of a
 social- emotional orientation to the development of mind, he seems at times to want
 to go beneath Mead’s developmental bedrock of social interactivity with others.
+
 There can be little doubt that Mead would resist any such excavation.
+
 Suggested Empirical Research. If Mead’s perspectival social psychology is really
 to constitute a viable alternative to theories of internalization in contemporary
 developmental psychology, it should be possible to point to empirical implications
@@ -618,6 +635,7 @@ refl ective and conceptual abilities that are highly arguable [cf. Carpendale & 
 2004]. Even more socially sensitive theories [e.g., Hobson, 2002; Moore & Corkum,
 1994] seem to posit meta-representational capacities [Penner, 1991] and/or very
 early forms of identifi cation and imitation that are contestable.
+
 By comparison, Mead’s perspectival realism gives us a rather straightforward
 account of the psychological consequences of participation with others in routine
 gestural and communicative interactions sanctioned within particular sociocultural
@@ -628,11 +646,10 @@ may be that Mead’s approach is insuffi ciently replete with distinctions and m
 nisms required to provide a fully satisfying theory of the development of mind and
 selfhood. But Mead’s approach offers a comparatively lean account that contains
 relatively little in the way of contestable assumptions and logical diffi culties. It also
-
-
 fi ts the existing empirical record as well as its competitors. The Meadian approach
 suggests at least two kinds of research that have not, to date, been popular in the
 empirical arm of developmental psychology.
+
 Because little is assumed in Mead’s theory that is entirely hidden (i.e., all of the
 developmental mechanisms and events he describes may be quite readily located in
 sequences of social interaction), intensive longitudinal videotaping of interactions
@@ -645,6 +662,7 @@ tional pointers to key processes such as identifi cation, imitation, intersubjec
 and perspective taking (especially multiple perspective taking, in terms of role rever-
 sals, combinations, and coordinations) that might be used to adjudicate amongst
 competing accounts of key developmental accomplishments and processes.
+
 For example, indications of perspective taking in intersubjective interactional
 sequences could be indicated by role reversals in which a caregiver and year-old child
 occupy different perspectives in simple, repeated actions – a child holds out a piece
@@ -656,6 +674,7 @@ and then offering it once again to the mother. Children’s play with dolls and 
 toys also may be observed for instances of positional exchange and simultaneity. If
 such instances could be interpreted reasonably as re-enactments of previously expe-
 rienced exchanges with caregivers, they would support Mead’s theoretical position.
+
 In general, if perspective taking is developmentally foundational in the manner pro-
 posed by Mead, the child’s occupation and simultaneous coordination of roles and
 phases in diverse social interactions ought to be affected by the ways in which care-
@@ -663,6 +682,7 @@ givers coordinate the child’s perspective with their own. This being so, it wo
 especially interesting to note possible differences in the quantity and quality of chil-
 dren’s perspective taking that might be related to their interactions with those pri-
 mary caregivers with whom they are most active socially.
+
 Of course, to some extent, it remains a matter of interpretation as to whether to
 treat particular aspects of events like food sharing or doll play as instances of par-
 ticipatory role and perspective taking or identifi cation and imitation. However, it
@@ -678,10 +698,9 @@ thesis concerning the necessity of relational interactivity for perspective taki
 would be unsupported empirically. Obviously, a great deal remains to be worked out
 in any such potential program of research. However, it is clear that such work would
 need to be conceived in considerable theoretical detail, would be methodologically
-
-
 very challenging, and would demand a great commitment of time and energy from
 both participating families and researchers.
+
 A second kind of research that might be especially instructive with respect to
 examining empirically some of Mead’s central theoretical propositions could in-
 volve experimental or quasi-experimental interventions with young children in day-
@@ -698,6 +717,7 @@ demonstrate their perspective taking capability and self-understanding. By compa
 ing such demonstrations to those of similar children who have not participated in
 the ‘complementary perspective’ interventions, it might be possible to gauge some-
 thing of the likely effects of such experiences.
+
 Of course, any such interventions would need to be of a reasonably lengthy du-
 ration, and the studies themselves would benefi t greatly from intensive, longitudinal
 recording and analysis of a carefully planned set of gradually more demanding and
@@ -710,6 +730,7 @@ children might be encouraged to expand and increase their perspective taking cap
 bilities by building on the instructional scaffolding provided by more developmen-
 tally advanced others (perhaps including modeling that emphasizes identifi cation
 with, and imitation of, researcher-teachers and/or older children).
+
 The simultaneous occupation and reactive consideration of non-complemen-
 tary, even antagonistic, perspectives may be viewed as demanding greater accumu-
 lated experience of perspective taking and multiple perspectival involvement. It is
@@ -718,6 +739,7 @@ taking really can develop out of initially complementary perspective taking as M
 suggests. Certainly there are several extant theoretical perspectives [e.g., Bakhtin,
 1986; Billig, 1987; Hermans, 2002; Wertsch, 1991] that might contest such a devel-
 opmental sequence as too facile.
+
 Perspective Taking and Agency
 It is by means of perspectives, which are experientially occupied and available
 actually and imaginatively as situated resources for action, that individuals become
@@ -725,8 +747,6 @@ Meadian ‘Mes.’ However, agency goes beyond the ‘Me’ in that it manifests
 tion to the ‘Me,’ one which may become increasingly self-interpretive with repeated
 and differentiated experiences, especially in problem-solving situations. Of course,
 this Meadian ‘I’ need not be self-consciously or even consciously engaged. In many
-
-
 ways, Mead seems to suggest that a basic pre-refl ective, reactive agency is part of
 what it is to be a human being participating in social processes with other human
 beings. In this sense, one is an agent by acting and reacting to extant perspectives
@@ -742,6 +762,7 @@ emergent within those concerns and problems that we encounter in our sociocul-
 tural and biophysical world. Mead understood agency as a situated reaction to extant
 perspectives that goes beyond them in the act of reacting to them. His account of
 agency thus resists the classic dualism of free will versus determinism.
+
 Possible Theoretical Progress
 At least a few contemporary developmental theorists have formulated theories
 of emergent agency that may be related to aspects of Mead’s thought. For example,
@@ -758,6 +779,7 @@ al framework that locks the developing agent inside her own cerebral mechanisms
 in interaction with her environment and genetic make-up, rather than viewing her
 as creatively participating in social processes and interpersonal interactions in ways
 that transform both her society and her self.
+
 A more Meadian outlook may be found in the work of Mark Bickhard [1999,
 2004]. To Bickhard [2004], ‘An infant is a socially tuned biological creature with
 marvelous capacity for development into a participant in, and co-creator of, social
@@ -767,12 +789,11 @@ people. Some must constantly be worked out in an ongoing process of interpersona
 interactivity. Conventionalization consists in large part of common understandings
 and practices that contain distinctive roles and functions. Participation in social
 conventions constitutes the world of the individual in a deeply normative sense.
+
 Normativities themselves ‘are emergent from, ontologically involved in, and func-
 tion as constraints – and enabling constraints – upon individual level values and
 actions’ (p. 119). For Bickhard [2004], ontogenetic development is the story of the
 emergence of
-
-
 an entirely new kind of being, one who participates in society and culture and history. And
 the person, in so participating, participates in the emergent creation of society in turn …
 The person is constituted in the multiple ways of being social that that individual has de-
@@ -800,6 +821,7 @@ previous social experiences have provided her with a set of functions she can us
 think and act in relation to current and future contexts. This is a very Meadian un-
 derstanding of agency, yet one which still does not make full use of the theoretical
 resources that Mead’s perspectivism has to offer.
+
 To date, no contemporary developmental psychologist, or any other contempo-
 rary psychologist for that matter, has theorized agency in a manner specifi cally con-
 sistent with Mead’s perspectivism – as a constantly emergent reactivity to those
@@ -811,14 +833,13 @@ increasingly able to take and work within a multiplicity of perspectives. Such m
 perspectival experience enables a much more refl ective, deliberative agency that
 may be targeted at specifi c problems and concerns [Martin, Sugarman, & Thompson,
 2003].
+
 Suggested Empirical Research
 To indicate ways in which a more truly Meadian conception of agency might be
 infused into research in developmental psychology, it is possible to extend the two
 lines of research suggested and developed earlier when considering research on ‘in-
 ternalization.’ For example, the kind of naturalistic, longitudinal study outlined
 above might explore opportunities for children to apply their nascent ability to oc-
-
-
 cupy two complimentary perspectives to novel situations. For instance, a third indi-
 vidual (another research assistant) might enter the room and point at what remains
 of the food that had been offered and received by mother and child in the earlier
@@ -840,6 +861,7 @@ rizing with or without such planned, quasi-scripted extensions to ongoing, natur
 occurring interactions between adults and children. Nonetheless, the deployment of
 such extensions would certainly increase the amount and variety of interaction di-
 rectly relevant to perspective taking in Mead’s terms.
+
 The second kind of research suggested earlier consisted of experimental or
 quasi-experimental interventions in which cooperative interactions that encour-
 aged the simultaneous occupation of complementary perspectives were facilitated
@@ -864,10 +886,6 @@ there is no reason to suspect that these would, at least in principle, prove any
 diffi cult than the host of conceptual, defi nitional, and theoretical matters that at-
 tend extant research on perspective taking [see Chandler, 2001; Menna & Cohen,
 1997; Schober, 1998].
-
-
-
-### Conclusion
 
 Conclusion
 In an autobiographical refl ection on his then 35 years as a developmental psy-
@@ -898,12 +916,14 @@ derstanding that are more clearly representational. For Mead, theories of develo
 ment that assume that infants and very young children identify with, and imitate,
 others as consciously self-refl ective agents with unique mental perspectives and rep-
 resentations assume exactly what developmental theories should set out to explain.
+
 Our obviously important abilities to act refl ectively, intentionally, and self-con-
 sciously grow out of our activity with others and the early forms of perspective taking
 that such interactivity enables. They should not be invoked to make sense of the
 early intersubjectivity on which they depend. Mead consistently gave developmental
 primacy to social interactivity as a basis for higher forms of consciousness and cog-
 nition.
+
 It is, of course, true that Mead’s defi nitions and conceptions of early perspective
 taking do not distinguish between perceptual and conceptual perspective taking
 [Chandler, 2001] or among a speaker’s situation and identity, conceptualizations,
@@ -914,8 +934,6 @@ make plausible sense of perspective taking in early childhood. For Mead, perspec
 taking is a basic fact of sociality, which he understands as being in two or more per-
 spectives simultaneously. This form of perspective taking is not predominately men-
 talistic. It is relational and positional. It constitutes the very social reality in which
-
-
 we are embedded from birth, and through our ontogenetic experience it comes to
 constitute us as socially formed agents whose multiperspectival reactivity is a defi n-
 ing feature of the human condition and the ongoing self-societal dialectic. In many
@@ -926,6 +944,7 @@ spect to social, interpersonal processes related to ‘internalization’ and ag
 ever, even here, the constitutive processes most central to Mead’s theorizing, multi-
 perspectival occupation and reactivity, have not to date received the attention they
 deserve.
+
 Perhaps, contemporary developmentalists have been overly infl uenced by the
 somewhat dismissive reception that Mead has been accorded by leading scholars like
 John Flavell. Flavell praises Mead for making ‘it diffi cult for all subsequent theorists,
@@ -950,6 +969,7 @@ matically oppositional than those available in the vast majority of his discussi
 and examples. However, it quite obviously is a more developed, specifi c, and de-
 tailed account than that assumed in much of the developmental literature that has
 referred to Mead’s ideas [e.g. Davidson & Youniss, 1995; Flavell et al., 1968].
+
 To date, only a very few studies exist that have investigated Mead’s views em-
 pirically and theoretically in comparison with those of infl uential developmental
 theorists like Piaget and Vygotsky. One of these was concerned with the relationship
@@ -963,7 +983,6 @@ Mead’s emphasis on perspective taking in a highly complementary manner. Light
 Piaget equated the problem of centering on a particular social perspective with that of cen-
 tering on a particular aspect of a situation … Mead [makes] the same equation, and [argues]
 that social decentration is a necessary condition for intellectual decentration. (p. 12)
-
 However, for Mead, perspective taking serves both epistemological and onto-
 logical functions during ontogenesis. It is not only our knowing, but more fundamen-
 tally our being or existence as psychological selves and agents that is at stake. It is
@@ -971,4 +990,185 @@ only by occupying and reacting to perspectives available in the social reality i
 we are active that we become psychological beings for whom understanding is a con-
 cern.
 
+## References
+Archer, M.S. (1995). Realist social theory: The morphogenetic approach. New York, NY: Cambridge Univer-
+sity Press.
+
+Bakhtin, M.M. (1986). Speech genres and other late essays (V.W. McGee, Trans.). Austin, TX: University of
+Texas Press.
+
+Baldwin, J.D. (1986). George Herbert Mead: A unifying theory for sociology. Newbury Park, CA: Sage.
+
+Baron-Cohen, S. (1995). Mindblindness: An essay on autism and theory of mind . Cambridge, MA: MIT
+Press.
+
+Baron-Cohen, S. (1999). The evolution of a theory of mind. In M.C. Corballis & S.E.G. Lea (Eds.), The de-
+scent of mind: Psychological perspectives on hominid evolution (pp. 261–277). Oxford, UK: Oxford
+University Press.
+
+Bhaskar, R. (1979). The possibility of naturalism. Brighton, UK: Harvester Press.
+
+Bickhard, M. H. (1992). How does the environment affect the person? In L.T. Winegar & J. Valsiner (Eds.),
+Children’s development within social contexts: Vol. 1. Metatheory and theory (pp. 63–92). Hillsdale, NJ:
+Erlbaum.
+
+Bickhard, M.H. (1999). Interaction and representation. Theory & Psychology, 9, 435–458.
+
+Bickhard, M.H. (2004). The social ontology of persons. In J.I.M. Carpendale & U. Müller (Eds.), Social in-
+teraction and the development of knowledge (pp. 111–132). Mahwah, NJ: Lawrence Erlbaum.
+
+Bidell, T.R., & Fischer, K.W. (1997). Between nature and nurture: The role of human agency in the epigen-
+esis of intelligence. In R.J. Sternberg & E.L. Grigorenko (Eds.), Intelligence, heredity, and environment
+(pp. 193–242). New York, NY: Cambridge University Press.
+
+Billig, M. (1987). Arguing and thinking: A rhetorical approach to social psychology . Cambridge, UK: Cam-
+bridge University Press.
+
+Blumer, H. (1980). Mead and Blumer: The convergent methodological perspectives of social behaviorism and
+symbolic interactionism. American Sociological Review, 45, 409–419.
+
+Bruner, J.S. (1990). Acts of meaning. Cambridge, MA: Harvard University Press.
+
+Butterworth, G. (2003). Pointing is the royal road to language for babies. In S. Kita (Ed.), Pointing: Where
+language, culture, and cognition meet (pp. 9–33). Mahwah, NJ: Lawrence Erlbaum.
+
+Carpendale, J.I.M., & Lewis, C. (2004). Constructing an understanding of mind: The development of chil-
+dren’s social understanding within social interaction. Behavioral and Brain Sciences, 27, 79–96.
+
+Chandler, M. (2001). Perspective taking in the aftermath of theory-theory and the collapse of the social role-
+taking literature. In A. Tryphon & J. Vonèche, J. (Eds.), Working with Piaget: Essays in honour of Bär-
+bel Inhelder (pp. 39–63). East Sussex, UK: Psychology Press.
+
+Chapman, M. (1991). The epistemic triangle: Operative and communicative components of cognitive devel-
+opment. In M. Chandler & M. Chapman (Eds.), Criteria for competence: Controversies in the conceptu-
+alization and assessment of children’s abilities (pp. 209–228). Mahwah, NJ: Lawrence Erlbaum.
+
+Chapman, M. (1999). Constructivism and the problem of reality. Journal of Applied Developmental Psychol-
+ogy, 20, 31–43.
+
+Cook, G.A. (1993). George Herbert Mead: The making of a social pragmatist . Urbana, IL: University of Illi-
+nois Press.
+
+Cronk, G. (1973). Symbolic interactionism: A ‘left-Meadian’ interpretation. Social Theory and Practice, 2,
+313–333.
+
+Davidson, P., & Youniss, J. (1995). Moral development and social construction. In W.M. Kurtines & J.L.
+
+Gewirtz (Eds.), Moral development: An introduction (pp. 289–310). Boston, MA: Allyn and Bacon.
+
+Flavell, J.H. (1992). Piaget’s theory: Perspectives on perspective taking. In H. Beilin & P. Pufall (Eds.), Pia-
+get’s theory: Prospects and possibilities (pp. 107–139). Mahwah, NJ: Lawrence Erlbaum.
+
+Flavell, J.H., Botkin, P.T., Fry, C.L., Wright, J.W., & Jarvis, P.E. (1968). The development of role-taking and
+communication skills in children. New York, NY: Wiley.
+
+Gillespie, A. (2005). G.H. Mead: Theorist of the social act. Journal for the Theory of Social Behaviour, 35,
+19–39.
+
+Gopnick, A., & Wellman, H.M. (1992). Why the child’s theory of mind really is a theory. Mind and Language,
+7, 145–171.
+
+Harré, R. (1998). The singular self: An introduction to the psychology of personhood. London, UK: Sage.
+
+Harré, R. (2004). The social construction of persons. In C. Lightfoot, C. LaLonde, & M. Chandler (Eds.),
+Changing Conceptions of psychological life (pp. 241–250). Mahwah, NJ: Lawrence Erlbaum.
+
+Harris, P.L. (1992). From simulation to folk psychology. Mind and Language, 7, 120–144.
+
+Hermans, H.J.M. (2002). The dialogical self as a society of mind: Introduction. Theory & Psychology, 12,
+147–160.
+
+Hobson, P. (2002). The cradle of thought: Exploring the origins of thinking. London, UK: Macmillan.
+
+Lave, J., & Wenger, E. (1991). Situated learning: Legitimate peripheral participation . New York, NY: Cam-
+bridge University Press.
+
+Light, P. (1979). The development of social sensitivity: A study of social aspects of role-taking in young children.
+
+Cambridge, UK: Cambridge University Press.
+
+Joas, H. (1997). G.H. Mead: A contemporary re-examination of his thought (R. Meyer, Trans.). Cambridge,
+MA: MIT Press.
+
+Kohlberg, L., Yaeger, J., & Hjertholm, E. (1968). Private speech: Four studies and a review of theories. Child
+Development, 39, 691–733.
+
+Marková, I. (1987). Human awareness: Its social development. London, UK: Hutchinson.
+
+Martin, J. (2003). Emergent persons. New Ideas in Psychology, 21, 85–99.
+
+Martin, J. (2005). Perspectival selves in interaction with others: Re-reading G.H. Mead’s social psychology.
+
+Journal for the Theory of Social Behavior, 35, 2 31–254.
+
+Martin, J., Sugarman, J., & Thompson, J. (2003). Psychology and the question of agency. Albany, NY: State
+University of New York Press.
+
+Matusov, E. (1998). When solo activity is not privileged: Participation and internalization models of devel-
+opment. Human Development, 41, 326–349.
+
+Mead, G. H. (1934). Mind, self, & society from the standpoint of a social behaviorist (C.W. Morris, Ed.). Chi-
+cago, IL: University of Chicago Press.
+
+Mead, G.H. (1938). The philosophy of the act (C.W. Morris, Ed.). Chicago, IL: University of Chicago Press.
+
+Mead, G.H. (1932/2002). The philosophy of the present. Amherst, NY: Prometheus.
+
+Meltzoff, A.N., & Brooks, R. (2001). ‘Like me’ as a building block for understanding other minds: Bodily acts,
+attention, and intention. In B.F. Malle, L.J. Moses, & D.A. Baldwin (Eds.), Intentions and intentional-
+ity (pp. 171–191). Cambridge, MA: MIT Press.
+
+Menna, R., & Cohen, N.J. (1997). Social perspective taking. In M. McCallum & W.E. Piper (Eds.), Psycho-
+logical mindedness: A contemporary understanding (pp. 189–210), Mahwah, NJ: Lawrence Erlbaum.
+
+Miller, D.L. (Ed.). (1982). The individual and the social self. Chicago, MA: University of Chicago Press. (A
+compendium of papers and unpublished lectures/notes by George Herbert Mead).
+
+Moore, C., & Corkum, V. (1994). Social understanding at the end of the fi rst year of life. Developmental Re-
+view, 14, 349–372.
+
+Nicolopoulou, A., & Weintraub, J. (1998). Individual and collective representations in social context: A mod-
+est contribution to resuming the interrupted project of a sociocultural developmental psychology. Hu-
+man Development, 41, 215–235.
+
+Penner, J. (1991). Understanding the representational mind . Cambridge, MA: MIT Press.
+
+Reck, A.J. (Ed.). (1964). Selected writings: George Herbert Mead. Chicago, IL: University of Chicago Press.
+
+Rogoff, B. (1990). Apprenticeship in thinking: Cognitive development in social context. New York, NY: Oxford
+University Press.
+
+Rogoff, B. (1992). Three ways to relate person and culture: Thoughts sparked by Valsiner’s review of Appren-
+ticeship in Thinking. Human Development, 35, 316–320.
+
+Rogoff, B. (2003). The cultural nature of human development. Oxford, UK: Oxford University Press.
+
+Sawyer, R.K. (2002). Emergence in psychology: Lessons from the history of non-reductionist science. Human
+Development, 45, 2–28.
+
+Schober, M.F. (1998). Different kinds of conversational perspective taking. In S.R. Fussell & R. J. Kreuz
+(Eds.), Social and cognitive approaches to interpersonal communication (pp. 145–174). Mahwah, NJ:
+Lawrence Erlbaum.
+
+Tomasello, M. (1999). The cultural origins of cognition. Cambridge, MA: Harvard University Press.
+
+Tomasello, M., Carpenter, M., Call, J., Behne, T., & Moll, H. (in press). Understanding and sharing inten-
+tions: The origins of cultural cognition. Behavioral and Brain Sciences.
+
+Trevarthan, C. (1993). The self born in intersubjectivity: The psychology of an infant communicating. In U.
+
+Neisser (Ed.), The perceived self: Ecological and interpersonal sources of self-knowledge (pp. 121–173).
+
+New York, NY: Cambridge University Press.
+
+Valsiner, J. (1991). Building theoretical bridges over a lagoon of everyday events. A review of Apprenticeship
+in Thinking: Cognitive Development in Social Context. Human Development, 34, 307–315.
+
+Vygotsky, L.S. (1934/1986). Thought and language (A. Kozulin, Trans.). Cambridge, MA: MIT Press.
+
+Vygotsky, L.S. (1978). Mind in society: The development of higher psychological processes (M. Cole, V. John-
+Steiner, S. Scribner, & E. Souberman, Eds.). Cambridge, MA: Harvard University Press.
+
+Wertsch, J.V. (1991). Voices of the mind: A sociocultural approach to mediated action. Cambridge, MA: Har-
+vard University Press.
 
