@@ -1,0 +1,78 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+    - "*.qmd"
+    - "*.ipynb"
+    - "!contents/ignore/"
+    - "!contents/*.py"
+    - "!*-temp.ipynb"
+    - "!*-temp.qmd"
+  resources: CNAME
+  # preview:
+  #   port: 5452
+
+website:
+  page-navigation: true
+  bread-crumbs: false
+  # navbar: true
+  title: "Translate Docs"
+  description: "Translate Documents"
+  site-url: "https://transdocs.modellings.art"
+  site-path: "/"
+  open-graph: 
+    site-name: Translate Docs
+  # repo-url:
+  # repo-actions: [edit, issue]
+
+  page-footer:
+    # right: "This page is built with [Quarto](https://quarto.org/)."
+    left: This work © 2024 by Sungkyun Cho is licensed under CC BY-NC-SA 4.0 
+    # background: 
+
+  sidebar:
+    # background: "#F6F6FF"
+    # logo: 
+    # pinned: true
+    alignment: left
+    # tools:
+    #   - icon: github
+    #     href: 
+    #     text: "GitHub organization"
+    style: "floating"
+    search: true
+    collapse-level: 2
+    
+    contents:
+      - href: index.qmd
+        text: "Welcome"
+      - text: ---
+      - section: Documents
+        contents:
+          - href: extracted/Jack_Martin_extracted.qmd
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-location: right
+    code-fold: false
+    code-overflow: wrap
+    code-summary: "Show the code"
+    theme: 
+      light: [sandstone, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
+    fontsize: 1.1em
+    linestretch: 1.8
+    code-copy: true
+    highlight-style: gruvbox
+    link-external-newwindow: true
+    # link-external-icon: true
+    grid:
+      body-width: 900px
+      margin-width: 200px
+        
+        # css: styles.css
+
+
+
