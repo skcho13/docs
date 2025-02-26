@@ -50,6 +50,7 @@ website:
       - section: Documents
         contents:
           - href: extracted/Jack_Martin10.qmd
+          - href: extracted/On_the_material_supports_of_subjectivity.qmd
 
 format:
   html:
