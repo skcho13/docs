@@ -51,6 +51,8 @@ website:
         contents:
           - href: extracted/Jack_Martin10.qmd
           - href: extracted/On_the_material_supports_of_subjectivity.qmd
+          - href: documents/Program.qmd
+          - href: documents/Program_KR.qmd
 
 format:
   html:
