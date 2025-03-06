@@ -53,7 +53,8 @@ website:
           - href: extracted/On_the_material_supports_of_subjectivity.qmd
           - href: documents/Program.qmd
           - href: documents/Program_KR.qmd
-
+          - href: extracted/Probably Overthinking It.qmd
+          - href: extracted/The Book of Why - Judea Pearl.qmd
 format:
   html:
     toc: true
