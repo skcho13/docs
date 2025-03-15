@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Causal inference in statistics – Translate Docs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../extracted/Causal Inference in the Social and Behavioral Sciences2.html" rel="next">
+<link href="../extracted/Sobel.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e062e8fe420344c07f1e837915f9541.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-55b2b16ef464b1d24caa77f57887db60.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-aeea4e2781fea0fa87091c4b8120fd0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9a906db709ed07d4d5e93d578d1cfe1b.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Causal inference in statistics – Translate Docs">
+<meta property="og:description" content="Translate Documents">
+<meta property="og:site_name" content="Translate Docs">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Causal inference in statistics</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Translate Docs</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Documents</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Jack_Martin10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reinterpreting Internalization and Agency through G.H. Mead’s Perspectival Realism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/On_the_material_supports_of_subjectivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On the material supports of subjectivity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documents/Program.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2025 Seoul Workshop on Philosophy of Machine Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documents/Program_KR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2025 서울 기계학습 철학 워크숍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Probably Overthinking It.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PROBABLY OVERTHINKING IT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/The Book of Why - Judea Pearl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The book of why</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/nun_study.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Positive Emotions in Early Life and Longevity - Findings from the Nun Study</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Counterfactuals and Causal Inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COUNTERFACTUALS AND CAUSAL INFERENCE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Sobel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DISCUSSION - ‘THE SCIENTIFIC MODEL OF CAUSALITY’</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Causal inference in statistics An overview2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Causal inference in statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../extracted/Causal Inference in the Social and Behavioral Sciences2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1 Causal Inference in the Social and Behavioral Sciences</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#contents" id="toc-contents" class="nav-link" data-scroll-target="#contents">Contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#from-association-to-causation" id="toc-from-association-to-causation" class="nav-link" data-scroll-target="#from-association-to-causation">2. From association to causation</a>
+  <ul>
+  <li><a href="#the-basic-distinction-coping-with-change" id="toc-the-basic-distinction-coping-with-change" class="nav-link" data-scroll-target="#the-basic-distinction-coping-with-change">2.1. The basic distinction: Coping with change</a></li>
+  <li><a href="#formulating-the-basic-distinction" id="toc-formulating-the-basic-distinction" class="nav-link" data-scroll-target="#formulating-the-basic-distinction">2.2. Formulating the basic distinction</a></li>
+  <li><a href="#ramiﬁcations-of-the-basic-distinction" id="toc-ramiﬁcations-of-the-basic-distinction" class="nav-link" data-scroll-target="#ramiﬁcations-of-the-basic-distinction">2.3. Ramiﬁcations of the basic distinction</a></li>
+  <li><a href="#two-mental-barriers-untested-assumptions-and-new-nota-tion" id="toc-two-mental-barriers-untested-assumptions-and-new-nota-tion" class="nav-link" data-scroll-target="#two-mental-barriers-untested-assumptions-and-new-nota-tion">2.4. Two mental barriers: Untested assumptions and new nota tion</a></li>
+  </ul></li>
+  <li><a href="#structural-models-diagrams-causal-eﬀects-and-counter-factuals" id="toc-structural-models-diagrams-causal-eﬀects-and-counter-factuals" class="nav-link" data-scroll-target="#structural-models-diagrams-causal-eﬀects-and-counter-factuals">3. Structural models, diagrams, causal eﬀects, and counter factuals</a>
+  <ul>
+  <li><a href="#introduction-to-structural-equation-models" id="toc-introduction-to-structural-equation-models" class="nav-link" data-scroll-target="#introduction-to-structural-equation-models">3.1. Introduction to structural equation models</a></li>
+  <li><a href="#from-linear-to-nonparametric-models-and-graphs" id="toc-from-linear-to-nonparametric-models-and-graphs" class="nav-link" data-scroll-target="#from-linear-to-nonparametric-models-and-graphs">3.2. From linear to nonparametric models and graphs</a></li>
+  <li><a href="#coping-with-unmeasured-confounders" id="toc-coping-with-unmeasured-confounders" class="nav-link" data-scroll-target="#coping-with-unmeasured-confounders">3.3. Coping with unmeasured confounders</a></li>
+  <li><a href="#counterfactual-analysis-in-structural-models" id="toc-counterfactual-analysis-in-structural-models" class="nav-link" data-scroll-target="#counterfactual-analysis-in-structural-models">3.4. Counterfactual analysis in structural models</a></li>
+  <li><a href="#an-example-non-compliance-in-clinical-trials" id="toc-an-example-non-compliance-in-clinical-trials" class="nav-link" data-scroll-target="#an-example-non-compliance-in-clinical-trials">3.5. An example: Non-compliance in clinical trials</a></li>
+  </ul></li>
+  <li><a href="#the-potential-outcome-framework" id="toc-the-potential-outcome-framework" class="nav-link" data-scroll-target="#the-potential-outcome-framework">4. The potential outcome framework</a>
+  <ul>
+  <li><a href="#the-black-box-missing-data-paradigm" id="toc-the-black-box-missing-data-paradigm" class="nav-link" data-scroll-target="#the-black-box-missing-data-paradigm">4.1. The “Black-Box” missing-data paradigm</a></li>
+  <li><a href="#problem-formulation-and-the-demystiﬁcation-of-ignora-bility" id="toc-problem-formulation-and-the-demystiﬁcation-of-ignora-bility" class="nav-link" data-scroll-target="#problem-formulation-and-the-demystiﬁcation-of-ignora-bility">4.2. Problem formulation and the demystiﬁcation of “ignora bility”</a></li>
+  <li><a href="#combining-graphs-and-potential-outcomes" id="toc-combining-graphs-and-potential-outcomes" class="nav-link" data-scroll-target="#combining-graphs-and-potential-outcomes">4.3. Combining graphs and potential outcomes</a></li>
+  </ul></li>
+  <li><a href="#counterfactuals-at-work" id="toc-counterfactuals-at-work" class="nav-link" data-scroll-target="#counterfactuals-at-work">5. Counterfactuals at work</a>
+  <ul>
+  <li><a href="#mediation-direct-and-indirect-eﬀects" id="toc-mediation-direct-and-indirect-eﬀects" class="nav-link" data-scroll-target="#mediation-direct-and-indirect-eﬀects">5.1. Mediation: Direct and indirect eﬀects</a></li>
+  <li><a href="#causes-of-eﬀects-and-probabilities-of-causation" id="toc-causes-of-eﬀects-and-probabilities-of-causation" class="nav-link" data-scroll-target="#causes-of-eﬀects-and-probabilities-of-causation">5.2. Causes of eﬀects and probabilities of causation</a></li>
+  </ul></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">6. Conclusions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Causal inference in statistics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Statistics Surveys Vol. 3 (2009) 96–146 ISSN: 1935-7516 DOI:10.1214/09-SS057</p>
+<p>Causal inference in statistics: An overview∗†‡</p>
+<p>Judea Pearl</p>
+<p>Computer Science Department University of California, Los Angeles, CA 90095 USA e-mail:judea@cs.ucla.edu</p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This review presents empirical researcherswith recent adv ances in causal inference, and stresses the paradigmatic shifts t hat must be un- dertaken in moving from traditional statistical analysis t o causal analysis of multivariate data. Special emphasis is placed on the assump tions that un- derly all causal inferences, the languages used in formulat ing those assump- tions, the conditional nature of all causal and counterfact ual claims, and the methods that have been developed for the assessment of su ch claims. These advances are illustrated using a general theory of cau sation based on the Structural Causal Model (SCM) described in Pearl (2000a), which subsumes and uniﬁes other approaches to causation, and prov ides a coher- ent mathematical foundation for the analysis of causes and c ounterfactuals. In particular, the paper surveys the development of mathema tical tools for inferring (from a combination of data and assumptions) answ ers to three types of causal queries: (1) queries about the eﬀects of pote ntial interven- tions, (also called “causal eﬀects” or “policy evaluation” ) (2) queries about probabilities of counterfactuals, (including assessment of “regret,” “attri- bution” or “causes of eﬀects”) and (3) queries about direct a nd indirect eﬀects (also known as “mediation”). Finally, the paper deﬁn es the formal and conceptual relationships between the structural and po tential-outcome frameworks and presents tools for a symbiotic analysis that uses the strong features of both.</p>
+<p>Keywords and phrases: Structuralequation models, confounding,graph- ical methods, counterfactuals, causal eﬀects, potential- outcome, mediation, policy evaluation, causes of eﬀects.</p>
+<p>Received September 2009.</p>
+</section>
+<section id="contents" class="level2">
+<h2 class="anchored" data-anchor-id="contents">Contents</h2>
+<p>1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97 2 From association to causation . . . . . . . . . . . . . . . . . . . . . . 99 2.1 The basic distinction: Coping with change . . . . . . . . . . . . .99 2.2 Formulating the basic distinction . . . . . . . . . . . . . . . . . . 99 2.3 Ramiﬁcations of the basic distinction . . . . . . . . . . . . . . . .100 2.4 Two mental barriers: Untested assumptions and new notat ion . 101 ∗Portions of this paper are based on my book Causality (Pearl, 2000, 2nd edition 2009), and have beneﬁted appreciably from conversations with read ers, students, and colleagues. †This research was supported in parts by an ONR grant #N000-14 -09-1-0665. ‡This paper was accepted by Elja Arjas, Executive Editor for t he Bernoulli.</p>
+<p>3 Structural models, diagrams, causal eﬀects, and counterf actuals . . . . 102 3.1 Introduction to structural equation models . . . . . . . . . . . .103 3.2 From linear to nonparametric models and graphs . . . . . . . . .107 3.2.1 Representing interventions . . . . . . . . . . . . . . . . . . 107 3.2.2 Estimating the eﬀect of interventions . . . . . . . . . . . . 109 3.2.3 Causal eﬀects from data and graphs . . . . . . . . . . . . 110 3.3 Coping with unmeasured confounders . . . . . . . . . . . . . . . 113 3.3.1 Covariate selection – the back-door criterion . . . . . . . .113 3.3.2 General control of confounding . . . . . . . . . . . . . . . 116 3.3.3 From identiﬁcation to estimation . . . . . . . . . . . . . . 117 3.3.4 Bayesianism and causality, or where do the probabilit ies come from? . . . . . . . . . . . . . . . . . . . . . . . . . . 117 3.4 Counterfactual analysis in structural models . . . . . . . . . . . . 119 3.5 An example: Non-compliance in clinical trials . . . . . . . . . . .122 3.5.1 Deﬁning the target quantity . . . . . . . . . . . . . . . . . 122 3.5.2 Formulating the assumptions – Instrumental variable s . . 122 3.5.3 Bounding causal eﬀects . . . . . . . . . . . . . . . . . . . 124 3.5.4 Testable implications of instrumental variables . . . . . .125 4 The potential outcome framework . . . . . . . . . . . . . . . . . . . . 126 4.1 The “Black-Box” missing-data paradigm . . . . . . . . . . . . . . 127 4.2 Problem formulation and the demystiﬁcation of “ignorab ility” . . 128 4.3 Combining graphs and potential outcomes . . . . . . . . . . . . 131 5 Counterfactuals at work . . . . . . . . . . . . . . . . . . . . . . . . . . 132 5.1 Mediation: Direct and indirect eﬀects . . . . . . . . . . . . . . . .132 5.1.1 Direct versus total eﬀects: . . . . . . . . . . . . . . . . . 132 5.1.2 Natural direct eﬀects . . . . . . . . . . . . . . . . . . . . . 134 5.1.3 Indirect eﬀects and the Mediation Formula . . . . . . . . 135 5.2 Causes of eﬀects and probabilities of causation . . . . . . . . . .136 6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139 References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>The questions that motivate most studies in the health, soci al and behavioral sciences are not associational but causal in nature. For exa mple, what is the eﬃcacy of a given drug in a given population? Whether data can prove an employer guilty of hiring discrimination? What fraction of past crimes could have been avoided by a given policy? What was the cause of deat h of a given individual, in a speciﬁc incident? These are causal questions because they require some knowledge of the data-generating process; they cannot be computed from the data alone, nor from the distributions that govern the da ta. Remarkably, although much of the conceptual framework and a lgorithmic tools needed for tackling such problems are now well establi shed, they are hardly known to researchers who could put them into practical use. T he main reason is educational. Solving causal problems systematically requ ires certain extensions in the standard mathematical language of statistics, and th ese extensions are not generally emphasized in the mainstream literature and educ ation. As a result, large segments of the statistical research community ﬁnd it hard to appreciate and beneﬁt from the many results that causal analysis has pro duced in the past two decades. These results rest on contemporary advances in four areas:</p>
+<ol type="1">
+<li>Counterfactual analysis</li>
+<li>Nonparametric structural equations</li>
+<li>Graphical models</li>
+<li>Symbiosis between counterfactual and graphical methods .</li>
+</ol>
+<p>This survey aims at making these advances more accessible to the general re- search community by, ﬁrst, contrasting causal analysis wit h standard statistical analysis, second, presenting a unifying theory, called “st ructural,” within which most (if not all) aspects of causation can be formulated, ana lyzed and compared, thirdly, presenting a set of simple yet eﬀective tools, spaw ned by the structural theory, for solving a wide variety of causal problems and, ﬁn ally, demonstrating how former approaches to causal analysis emerge as special c ases of the general structural theory. To this end, Section 2begins by illuminating two conceptual barriers that im- pede the transition from statistical to causal analysis: (i ) coping with untested assumptions and (ii) acquiring new mathematical notation. Crossing these bar- riers, Section 3.1then introduces the fundamentals of the structural theory of causation, with emphasis on the formal representation of causal assump- tions, and formal deﬁnitions of causal eﬀects, counterfact uals and joint prob- abilities of counterfactuals. Section 3.2uses these modeling fundamentals to represent interventions and develop mathematical tools fo r estimating causal eﬀects (Section 3.3) and counterfactual quantities (Section 3.4). These tools are demonstrated by attending to the analysis of instrumental v ariables and their role in bounding treatment eﬀects in experiments marred by n oncompliance (Section 3.5). The tools described in this section permit investigators to communicate causal assumptions formally using diagrams, then inspect the diag ram and</p>
+<ol type="1">
+<li>Decide whether the assumptions made are suﬃcient for obta ining consis- tent estimates of the target quantity;</li>
+<li>Derive (if the answer to item 1is aﬃrmative) a closed-form expression for the target quantity in terms of distributions of observed qu antities; and</li>
+<li>Suggest (if the answer to item 1 is negative) a set of observ ations and ex- periments that, if performed, would render a consistent est imate feasible.</li>
+</ol>
+<p>Section 4relates these tools to those used in the potential-outcome f rame- work, and oﬀers a formal mapping between the two frameworks a nd a symbiosis (Section 4.3) that exploits the best features of both. Finally, the beneﬁ t of this symbiosis is demonstrated in Section 5, in which the structure-based logic of counterfactuals is harnessed to estimate causal quantitie s that cannot be de- ﬁned within the paradigm of controlled randomized experime nts. These include direct and indirect eﬀects, the eﬀect of treatment on the tre ated, and ques- tions of attribution, i.e., whether one event can be deemed “ responsible” for another.</p>
+</section>
+<section id="from-association-to-causation" class="level2">
+<h2 class="anchored" data-anchor-id="from-association-to-causation">2. From association to causation</h2>
+<section id="the-basic-distinction-coping-with-change" class="level3">
+<h3 class="anchored" data-anchor-id="the-basic-distinction-coping-with-change">2.1. The basic distinction: Coping with change</h3>
+<p>The aim of standard statistical analysis, typiﬁed by regres sion, estimation, and hypothesis testing techniques, is to assess parameters of a distribution from samples drawn of that distribution. With the help of such par ameters, one can infer associations among variables, estimate beliefs or pr obabilities of past and future events, as well as update those probabilities in ligh t of new evidence or new measurements. These tasks are managed well by standar d statistical analysis so long as experimental conditions remain the same . Causal analysis goes one step further; its aim is to infer not only beliefs or p robabilities under static conditions, but also the dynamics of beliefs under changing conditions , for example, changes induced by treatments or external inte rventions. This distinction implies that causal and associational con cepts do not mix. There is nothing in the joint distribution of symptoms and di seases to tell us that curing the former would or would not cure the latter. Mor e generally, there is nothing in a distribution function to tell us how that dist ribution would diﬀer if external conditions were to change—say from observation al to experimental setup—because the laws of probability theory do not dictate how one property of a distribution ought to change when another property is mo diﬁed. This in- formation must be provided by causal assumptions which iden tify relationships that remain invariant when external conditions change. These considerations imply that the slogan “correlation do es not imply cau- sation” can be translated into a useful principle: one canno t substantiate causal claims from associations alone, even at the population leve l—behind every causal conclusion there must lie some causal assumption tha t is not testable in observational studies.1</p>
+</section>
+<section id="formulating-the-basic-distinction" class="level3">
+<h3 class="anchored" data-anchor-id="formulating-the-basic-distinction">2.2. Formulating the basic distinction</h3>
+<p>A useful demarcation line that makes the distinction betwee n associational and causal concepts crisp and easy to apply, can be formulated as follows. An as- sociational concept is any relationship that can be deﬁned i n terms of a joint distribution of observed variables, and a causal concept is any relationship that cannot be deﬁned from the distribution alone. Examples of as sociational con- cepts are: correlation, regression, dependence, conditio nal independence, like- lihood, collapsibility, propensity score, risk ratio, odd s ratio, marginalization, 1The methodology of “causal discovery” ( Spirtes et al.&nbsp;2000 ;Pearl 2000a , Chapter 2) is likewise based on the causal assumption of “faithfulness”o r “stability,”a problem-independent assumption that concerns relationships between the struct ure of a model and the data it generates. conditionalization, “controlling for,” and so on. Example s of causal concepts are: randomization, inﬂuence, eﬀect, confounding, “holding co nstant,” disturbance, spurious correlation, faithfulness/stability, instrume ntal variables, intervention, explanation, attribution, and so on. The former can, while t he latter cannot be deﬁned in term of distribution functions. This demarcation line is extremely useful in causal analysi s for it helps in- vestigators to trace the assumptions that are needed for sub stantiating various types of scientiﬁc claims. Every claim invoking causal conc epts must rely on some premises that invoke such concepts; it cannot be inferr ed from, or even deﬁned in terms statistical associations alone.</p>
+</section>
+<section id="ramiﬁcations-of-the-basic-distinction" class="level3">
+<h3 class="anchored" data-anchor-id="ramiﬁcations-of-the-basic-distinction">2.3. Ramiﬁcations of the basic distinction</h3>
+<p>This principle has far reaching consequences that are not ge nerally recognized in the standard statistical literature. Many researchers, for example, are still convinced that confounding is solidly founded in standard, frequentist statis- tics, and that it can be given an associational deﬁnition say ing (roughly): “ Uis a potential confounder for examining the eﬀect of treatment Xon outcome Y when both UandXandUandYare not independent.” That this deﬁnition and all its many variants must fail ( Pearl,2000a , Section 6.2)2is obvious from the demarcation line above; if confounding were deﬁnable in terms of statistical associations, we would have been able to identify confounde rs from features of nonexperimental data, adjust for those confounders and obt ain unbiased esti- mates of causal eﬀects. This would have violated our golden r ule: behind any causal conclusion there must be some causal assumption, unt ested in obser- vational studies. Hence the deﬁnition must be false. Theref ore, to the bitter disappointment of generations of epidemiologist and socia l science researchers, confounding bias cannot be detected or corrected by statist ical methods alone; one must make some judgmental assumptions regarding causal relationships in the problem before an adjustment (e.g., by stratiﬁcation) c an safely correct for confounding bias. Another ramiﬁcation of the sharp distinction between assoc iational and causal concepts is that any mathematical approach to causal analys is must acquire new notation for expressing causal relations – probability cal culus is insuﬃcient. To illustrate, the syntax of probability calculus does not per mit us to express the simple fact that “symptoms do not cause diseases,” let alone draw mathematical conclusions from such facts. All we can say is that two events are dependent— meaning that if we ﬁnd one, we can expect to encounter the othe r, but we can- not distinguish statistical dependence, quantiﬁed by the c onditional probability P(disease|symptom ) from causal dependence, for which we have no expression in standard probability calculus. Scientists seeking to ex press causal relation- ships must therefore supplement the language of probabilit y with a vocabulary 2For example, any intermediate variable Uon a causal path from XtoYsatisﬁes this deﬁnition, without confounding the eﬀect of XonY. for causality, one in which the symbolic representation for the relation “symp- toms cause disease” is distinct from the symbolic represent ation of “symptoms are associated with disease.”</p>
+</section>
+<section id="two-mental-barriers-untested-assumptions-and-new-nota-tion" class="level3">
+<h3 class="anchored" data-anchor-id="two-mental-barriers-untested-assumptions-and-new-nota-tion">2.4. Two mental barriers: Untested assumptions and new nota tion</h3>
+<p>The preceding two requirements: (1) to commence causal anal ysis with untested,3 theoretically or judgmentally based assumptions, and (2) t o extend the syntax of probability calculus, constitute the two main obstacles to the acceptance of causal analysis among statisticians and among professiona ls with traditional training in statistics. Associational assumptions, even untested, are testable in principle, given suf- ﬁciently large sample and suﬃciently ﬁne measurements. Cau sal assumptions, in contrast, cannot be veriﬁed even in principle, unless one re sorts to experimental control. This diﬀerence stands out in Bayesian analysis. Th ough the priors that Bayesians commonly assign to statistical parameters are un tested quantities, the sensitivity to these priors tends to diminish with incre asing sample size. In contrast, sensitivity to prior causal assumptions, say tha t treatment does not change gender, remains substantial regardless of sample si ze. This makes it doubly important that the notation we use for ex pressing causal assumptions be meaningful and unambiguous so that one can cl early judge the plausibility or inevitability of the assumptions articula ted. Statisticians can no longer ignore the mental representation in which scientist s store experiential knowledge, since it is this representation, and the languag e used to access it that determine the reliability of the judgments upon which the an alysis so crucially depends. How does one recognize causal expressions in the statistica l literature? Those versed in the potential-outcome notation ( Neyman ,1923;Rubin ,1974;Holland , 1988), can recognize such expressions through the subscripts th at are attached to counterfactual events and variables, e.g.&nbsp;Yx(u) orZxy. (Some authors use parenthetical expressions, e.g.&nbsp;Y(0),Y(1),Y(x, u) orZ(x, y).) The expression Yx(u), for example, stands for the value that outcome Ywould take in indi- vidual u, had treatment Xbeen at level x. Ifuis chosen at random, Yxis a random variable, and one can talk about the probability that Yxwould attain a value yin the population, written P(Yx=y) (see Section 4for semantics). Alternatively, Pearl (1995a ) used expressions of the form P(Y=y|set(X=x)) orP(Y=y|do(X=x)) to denote the probability (or frequency) that event (Y=y) would occur if treatment condition X=xwere enforced uniformly over the population.4Still a third notation that distinguishes causal expressio ns is provided by graphical models, where the arrows convey cau sal directionality.5 3By “untested” I mean untested using frequency data in nonexp erimental studies. 4Clearly, P(Y=y|do(X=x)) is equivalent to P(Yx=y). This is what we normally assess in a controlled experiment, with Xrandomized, in which the distribution of Yis estimated for each level xofX. 5These notational clues should be useful for detecting inade quate deﬁnitions of causal concepts; any deﬁnition of confounding,randomization or i nstrumental variables that is cast in However, few have taken seriously the textbook requirement that any intro- duction of new notation must entail a systematic deﬁnition o f the syntax and semantics that governs the notation. Moreover, in the bulk o f the statistical liter- ature before 2000, causal claims rarely appear in the mathem atics. They surface only in the verbal interpretation that investigators occas ionally attach to cer- tain associations, and in the verbal description with which investigators justify assumptions. For example, the assumption that a covariate n ot be aﬀected by a treatment, a necessary assumption for the control of confo unding ( Cox,1958, p.&nbsp;48), is expressed in plain English, not in a mathematical e xpression. Remarkably, though the necessity of explicit causal notati on is now recognized by many academic scholars, the use of such notation has remai ned enigmatic to most rank and ﬁle researchers, and its potentials still la y grossly underuti- lized in the statistics based sciences. The reason for this, can be traced to the unfriendly semi-formal way in which causal analysis has bee n presented to the research community, resting primarily on the restricted pa radigm of controlled randomized trials. The next section provides a conceptualization that overcom es these mental barriers by oﬀering a friendly mathematical machinery for c ause-eﬀect analysis and a formal foundation for counterfactual analysis.</p>
+</section>
+</section>
+<section id="structural-models-diagrams-causal-eﬀects-and-counter-factuals" class="level2">
+<h2 class="anchored" data-anchor-id="structural-models-diagrams-causal-eﬀects-and-counter-factuals">3. Structural models, diagrams, causal eﬀects, and counter factuals</h2>
+<p>Any conception of causation worthy of the title “theory” mus t be able to (1) represent causal questions in some mathematical language, (2) provide a precise language for communicating assumptions under which the que stions need to be answered, (3) provide a systematic way of answering at lea st some of these questions and labeling others “unanswerable,” and (4) prov ide a method of determining what assumptions or new measurements would be n eeded to answer the “unanswerable” questions. A “general theory” should do more. In addition to embracing allquestions judged to have causal character, a general theory must also subsume any other theory or method that scientists have found useful in explor ing the various aspects of causation. In other words, any alternative theor y needs to evolve as a special case of the “general theory” when restrictions are imposed on either the model, the type of assumptions admitted, or the language in which those assumptions are cast. The structural theory that we use in this survey satisﬁes the criteria above. It is based on the Structural Causal Model (SCM) developed in (Pearl,1995a , 2000a ) which combines features of the structural equation models (SEM) used in economics and social science ( Goldberger ,1973;Duncan ,1975), the potential- outcome framework of Neyman (1923) and Rubin (1974), and the graphical models developed for probabilistic reasoning and causal an alysis ( Pearl,1988; Lauritzen ,1996;Spirtes et al.&nbsp;,2000;Pearl,2000a ). standard probability expressions, void of graphs, counter factual subscripts or do(∗) operators, can safely be discarded as inadequate. Although the basic elements of SCM were introduced in the mid 1990’s ( Pearl, 1995a ), and have been adapted widely by epidemiologists ( Greenland et al.&nbsp;, 1999;Glymour and Greenland ,2008), statisticians ( Cox and Wermuth ,2004; Lauritzen ,2001), and social scientists ( Morgan and Winship ,2007), its poten- tials as a comprehensive theory of causation are yet to be ful ly utilized. Its ramiﬁcations thus far include:</p>
+<ol type="1">
+<li>The uniﬁcation of the graphical, potential outcome, stru ctural equations, decision analytical ( Dawid ,2002), interventional ( Woodward ,2003), suf- ﬁcient component ( Rothman ,1976) and probabilistic ( Suppes ,1970) ap- proaches to causation; with each approach viewed as a restri cted version of the SCM.</li>
+<li>The deﬁnition, axiomatization and algorithmization of c ounterfactuals and joint probabilities of counterfactuals</li>
+<li>Reducing the evaluation of “eﬀects of causes,” “mediated eﬀects,” and “causes of eﬀects” to an algorithmic level of analysis.</li>
+<li>Solidifying the mathematical foundations of the potenti al-outcome model, and formulating the counterfactual foundations of structu ral equation models.</li>
+<li>Demystifying enigmatic notions such as “confounding,” “ mediation,” “ig- norability,” “comparability,”“exchangeability (of popu lations),” “superex- ogeneity” and others within a single and familiar conceptua l framework.</li>
+<li>Weeding out myths and misconceptions from outdated tradi tions (Meek and Glymour ,1994;Greenland et al.&nbsp;,1999;Cole and Hern´ an ,2002; Arah,2008;Shrier ,2009;Pearl,2009b ). This section provides a gentle introduction to the structur al framework and uses it to present the main advances in causal inference that have emerged in the past two decades.</li>
+</ol>
+<section id="introduction-to-structural-equation-models" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-structural-equation-models">3.1. Introduction to structural equation models</h3>
+<p>How can one express mathematically the common understandin g that symp- toms do not cause diseases? The earliest attempt to formulat e such relationship mathematically was made in the 1920’s by the geneticist Sewa ll Wright ( 1921). Wright used a combination of equations and graphs to communi cate causal re- lationships. For example, if Xstands for a disease variable and Ystands for a certain symptom of the disease, Wright would write a linear e quation:6 y=βx+uY (1) where xstands for the level (or severity) of the disease, ystands for the level (or severity) of the symptom, and uYstands for all factors, other than the disease in question, that could possibly aﬀect Ywhen Xis held constant. In interpreting 6Linear relations are used here for illustration purposes on ly; they do not represent typical disease-symptom relations but illustrate the historical d evelopment of path analysis. Addi- tionally, we will use standardized variables, that is, zero mean and unit variance. this equation one should think of a physical process whereby Nature examines the values of xanduand, accordingly, assigns variable Ythe value y=βx+uY. Similarly, to “explain” the occurrence of disease X, one could write x=uX, where UXstands for all factors aﬀecting X. Equation ( 1) still does not properly express the causal relationship im plied by this assignment process, because algebraic equations are s ymmetrical objects; if we re-write ( 1) as x= (y−uY)/β (2) it might be misinterpreted to mean that the symptom inﬂuence s the disease. To express the directionality of the underlying process, Wr ight augmented the equation with a diagram, later called “path diagram,” in whi ch arrows are drawn from (perceived) causes to their (perceived) eﬀects, and mo re importantly, the absence of an arrow makes the empirical claim that Nature ass igns values to one variable irrespective of another. In Fig. 1, for example, the absence of arrow fromYtoXrepresents the claim that symptom Yis not among the factors UX which aﬀect disease X. Thus, in our example, the complete model of a symptom and a disease would be written as in Fig. 1: The diagram encodes the possible existence of (direct) causal inﬂuence of XonY, and the absence of causal inﬂuence of YonX, while the equations encode the quantitative relationship s among the variables involved, to be determined from the data . The parameter β in the equation is called a “path coeﬃcient” and it quantiﬁes the (direct) causal eﬀect of XonY; given the numerical values of βandUY, the equation claims that, a unit increase for Xwould result in βunits increase of Yregardless of the values taken by other variables in the model, and regardl ess of whether the increase in Xoriginates from external or internal inﬂuences. The variables UXandUYare called “exogenous;” they represent observed or unobserved background factors that the modeler decides to k eep unexplained, that is, factors that inﬂuence but are not inﬂuenced by the ot her variables (called “endogenous”) in the model. Unobserved exogenous v ariables are some- times called “disturbances” or “errors”, they represent fa ctors omitted from the model but judged to be relevant for explaining the behavior o f variables in the model. Variable UX, for example, represents factors that contribute to the dis - easeX, which may or may not be correlated with UY(the factors that inﬂuence the symptom Y). Thus, background factors in structural equations diﬀer f unda- mentally from residual terms in regression equations. The l atters are artifacts of analysis which, by deﬁnition, are uncorrelated with the r egressors. The form- ers are part of physical reality (e.g., genetic factors, soc io-economic conditions) which are responsible for variations observed in the data; t hey are treated as any other variable, though we often cannot measure their val ues precisely and must resign to merely acknowledging their existence and ass essing qualitatively how they relate to other variables in the system. If correlation is presumed possible, it is customary to conn ect the two vari- ables, UYandUX, by a dashed double arrow, as shown in Fig. 1(b). In reading path diagrams, it is common to use kinship relatio ns such as parent, child, ancestor, and descendent, the interpretati on of which is usually X Y X Y YX β X Y β X YU U U U x = u βy = x + u (b) (a) Fig 1. A simple structural equation model, and its associated dia grams. Unobserved exogenous variables are connected by dashed arrows. self evident. For example, an arrow X→Ydesignates Xas a parent of YandY as a child of X. A “path” is any consecutive sequence of edges, solid or dash ed. For example, there are two paths between XandYin Fig. 1(b), one consisting of the direct arrow X→Ywhile the other tracing the nodes X, U X, UYandY. Wright’s major contribution to causal analysis, aside from introducing the language of path diagrams, has been the development of graph ical rules for writing down the covariance of any pair of observed variable s in terms of path coeﬃcients and of covariances among the error terms. In our s imple example, one can immediately write the relations Cov(X, Y) =β (3) for Fig. 1(a), and Cov(X, Y) =β+Cov(UY, UX) (4) for Fig. 1(b) (These can be derived of course from the equations, but, f or large models, algebraic methods tend to obscure the origin of the d erived quantities). Under certain conditions, (e.g.&nbsp;if Cov(UY, UX) = 0), such relationships may allow one to solve for the path coeﬃcients in term of observed covariance terms only, and this amounts to inferring the magnitude of (direct ) causal eﬀects from observed, nonexperimental associations, assuming of cour se that one is prepared to defend the causal assumptions encoded in the diagram. It is important to note that, in path diagrams, causal assump tions are en- coded not in the links but, rather, in the missing links. An ar row merely in- dicates the possibility of causal connection, the strength of which remains to be determined (from data); a missing arrow represents a clai m of zero inﬂu- ence, while a missing double arrow represents a claim of zero covariance. In Fig. 1(a), for example, the assumptions that permits us to identif y the direct ef- fectβare encoded by the missing double arrow between UXandUY, indicating Cov(UY, UX)=0, together with the missing arrow from YtoX. Had any of these two links been added to the diagram, we would not have been abl e to identify the direct eﬀect β. Such additions would amount to relaxing the assumption Cov(UY, UX) = 0, or the assumption that Ydoes not eﬀect X, respectively. Note also that both assumptions are causal, not association al, since none can be determined from the joint density of the observed variabl es,XandY; the association between the unobserved terms, UYandUX, can only be uncovered in an experimental setting; or (in more intricate models, as in Fig. 5) from other causal assumptions. Z X Y Z X YU U U Z X0x (b)YU U U (a)X Y Z Fig 2. (a) The diagram associated with the structural model of Eq. (5). (b) The diagram associated with the modiﬁed model of Eq. ( 6), representing the intervention do(X=x0). Although each causal assumption in isolation cannot be test ed, the sum to- tal of all causal assumptions in a model often has testable im plications. The chain model of Fig. 2(a), for example, encodes seven causal assumptions, each corresponding to a missing arrow or a missing double-arrow b etween a pair of variables. None of those assumptions is testable in isolati on, yet the totality of all those assumptions implies that Zis unassociated with Yin every stratum ofX. Such testable implications can be read oﬀ the diagrams usin g a graphical criterion known as d-separation (Pearl,1988). Deﬁnition 1 (d-separation) .A set Sof nodes is said to block a path pif either (i)pcontains at least one arrow-emitting node that is in S, or (ii) pcontains at least one collision node that is outside Sand has no descendant in S. IfS blocks allpaths from XtoY, it is said to “ d-separate XandY,” and then, X andYare independent given S, written X⊥ ⊥Y|S. To illustrate, the path UZ→Z→X→Yis blocked by S={Z}and by S={X}, since each emits an arrow along that path. Consequently we c an infer that the conditional independencies UX⊥ ⊥Y|ZandUZ⊥ ⊥Y|Xwill be satisﬁed in any probability function that this model can generate, re gardless of how we parametrize the arrows. Likewise, the path UZ→Z→X←UXis blocked by the null set{∅}but is not blocked by S={Y}, since Yis a descendant of the collider X. Consequently, the marginal independence UZ⊥ ⊥UXwill hold in the distribution, but UZ⊥ ⊥UX|Ymay or may not hold. This special handling of col- liders (e.g., Z→X←UX)) reﬂects a general phenomenon known as Berkson’s paradox (Berkson ,1946), whereby observations on a common consequence of two independent causes render those causes dependent. For e xample, the out- comes of two independent coins are rendered dependent by the testimony that at least one of them is a tail. The conditional independencies induced by d-separation constitute the main opening through which the assumptions embodied in structur al equation models can confront the scrutiny of nonexperimental data. In other words, almost all statistical tests capable of invalidating the model are ent ailed by those implica- tions.7 7Additional implications called “dormant independence” ( Shpitser and Pearl ,2008) may be deduced from some graphs with correlated errors.</p>
+</section>
+<section id="from-linear-to-nonparametric-models-and-graphs" class="level3">
+<h3 class="anchored" data-anchor-id="from-linear-to-nonparametric-models-and-graphs">3.2. From linear to nonparametric models and graphs</h3>
+<p>Structural equation modeling (SEM) has been the main vehicl e for eﬀect analysis in economics and the behavioral and social sciences ( Goldberger ,1972;Duncan , 1975;Bollen ,1989). However, the bulk of SEM methodology was developed for linear analysis and, until recently, no comparable methodo logy has been devised to extend its capabilities to models involving dichotomous variables or nonlinear dependencies. A central requirement for any such extension is to detach the notion of “eﬀect” from its algebraic representation as a coe ﬃcient in an equation, and redeﬁne “eﬀect” as a general capacity to transmit changes among variables. Such an extension, based on simulating hypothetical interv entions in the model, was proposed in ( Haavelmo ,1943;Strotz and Wold ,1960;Spirtes et al.&nbsp;,1993; Pearl,1993a ,2000a ;Lindley ,2002) and has led to new ways of deﬁning and estimating causal eﬀects in nonlinear and nonparametric mo dels (that is, models in which the functional form of the equations is unknown). The central idea is to exploit the invariant characteristic s of structural equa- tions without committing to a speciﬁc functional form. For e xample, the non- parametric interpretation of the diagram of Fig. 2(a) corresponds to a set of three functions, each corresponding to one of the observed v ariables: z=fZ(uZ) x=fX(z, uX) (5) y=fY(x, uY) where UZ, UXandUYare assumed to be jointly independent but, otherwise, arbitrarily distributed. Each of these functions represen ts a causal process (or mechanism) that determines the value of the left variable (o utput) from those on the right variables (inputs). The absence of a variable fr om the right hand side of an equation encodes the assumption that Nature ignor es that variable in the process of determining the value of the output variabl e. For example, the absence of variable Zfrom the arguments of fYconveys the empirical claim that variations in Zwill leave Yunchanged, as long as variables UY, and X remain constant. A system of such functions are said to be structural if they are assumed to be autonomous, that is, each function is invar iant to possible changes in the form of the other functions ( Simon ,1953;Koopmans ,1953). 3.2.1. Representing interventions This feature of invariance permits us to use structural equa tions as a basis for modeling causal eﬀects and counterfactuals. This is done th rough a mathemat- ical operator called do(x) which simulates physical interventions by deleting certain functions from the model, replacing them by a consta ntX=x, while keeping the rest of the model unchanged. For example, to emul ate an interven- tiondo(x0) that holds Xconstant (at X=x0) in model Mof Fig. 2(a), we replace the equation for xin Eq. ( 5) with x=x0, and obtain a new model, Mx0, z=fZ(uZ) x=x0 (6) y=fY(x, uY) the graphical description of which is shown in Fig. 2(b). The joint distribution associated with the modiﬁed model, d enoted P(z, y| do(x0)) describes the post-intervention distribution of variab lesYandZ(also called “controlled” or “experimental” distribution), to b e distinguished from the pre-intervention distribution, P(x, y, z ), associated with the original model of Eq. (5). For example, if Xrepresents a treatment variable, Ya response variable, andZsome covariate that aﬀects the amount of treatment received , then the distribution P(z, y|do(x0)) gives the proportion of individuals that would attain response level Y=yand covariate level Z=zunder the hypothetical situation in which treatment X=x0is administered uniformly to the population. In general, we can formally deﬁne the post-intervention dis tribution by the equation: PM(y|do(x))∆=PMx(y) (7) In words: In the framework of model M, the post-intervention distribution of outcome Yis deﬁned as the probability that model Mxassigns to each outcome levelY=y. From this distribution, one is able to assess treatment eﬃca cy by compar- ing aspects of this distribution at diﬀerent levels of x0. A common measure of treatment eﬃcacy is the average diﬀerence E(Y|do(x/prime 0))−E(Y|do(x0)) (8) where x/prime 0andx0are two levels (or types) of treatment selected for comparis on. Another measure is the experimental Risk Ratio E(Y|do(x/prime 0))/E(Y|do(x0)). (9) The variance V ar(Y|do(x0)), or any other distributional parameter, may also enter the comparison; all these measures can be obtained fro m the controlled dis- tribution function P(Y=y|do(x)) =/summationtext zP(z, y|do(x)) which was called “causal eﬀect” in Pearl (2000a ,1995a ) (see footnote 4). The central question in the analysis of causal eﬀects is the question of identiﬁcation : Can the controlled (post-intervention) distribution, P(Y=y|do(x)), be estimated from data gov- erned by the pre-intervention distribution, P(z, x, y )? The problem of identiﬁcation has received considerable attention in econo- metrics ( Hurwicz ,1950;Marschak ,1950;Koopmans ,1953) and social science (Duncan ,1975;Bollen ,1989), usually in linear parametric settings, were it re- duces to asking whether some model parameter, β, has a unique solution in terms of the parameters of P(the distribution of the observed variables). In the nonparametric formulation, identiﬁcation is more invo lved, since the notion of “has a unique solution” does not directly apply to causal q uantities such as Q(M) =P(y|do(x)) which have no distinct parametric signature, and are de- ﬁned procedurally by simulating an intervention in a causal model M(7). The following deﬁnition overcomes these diﬃculties: Deﬁnition 2 (Identiﬁability ( Pearl,2000a , p.&nbsp;77)) .A quantity Q(M) is iden- tiﬁable, given a set of assumptions A, if for any two models M1andM2that satisfy A, we have P(M1) =P(M1)⇒Q(M1) =Q(M2) (10) In words, the details of M1andM2do not matter; what matters is that the assumptions in A(e.g., those encoded in the diagram) would constrain the variability of those details in such a way that equality o fP’s would entail equality of Q’s. When this happens, Qdepends on Ponly, and should therefore be expressible in terms of the parameters of P. The next subsections exemplify and operationalize this notion. 3.2.2. Estimating the eﬀect of interventions To understand how hypothetical quantities such as P(y|do(x)) orE(Y|do(x0)) can be estimated from actual data and a partially speciﬁed mo del let us be- gin with a simple demonstration on the model of Fig. 2(a). We will show that, despite our ignorance of fX, fY, fZandP(u),E(Y|do(x0)) is nevertheless iden- tiﬁable and is given by the conditional expectation E(Y|X=x0). We do this by deriving and comparing the expressions for these two quan tities, as deﬁned by (5) and ( 6), respectively. The mutilated model in Eq. ( 6) dictates: E(Y|do(x0)) =E(fY(x0, uY)), (11) whereas the pre-intervention model of Eq. ( 5) gives E(Y|X=x0)) = E(fY(X, u Y)|X=x0) =E(fY(x0, uY)|X=x0) (12) =E(fY(x0, uY)) which is identical to ( 11). Therefore, E(Y|do(x0)) =E(Y|X=x0)) (13) Using a similar derivation, though somewhat more involved, we can show that P(y|do(x)) is identiﬁable and given by the conditional probability P(y|x). We see that the derivation of ( 13) was enabled by two assumptions; ﬁrst, Y is a function of XandUYonly, and, second, UYis independent of {UZ, UX}, hence of X. The latter assumption parallels the celebrated “orthogon ality” con- dition in linear models, Cov(X, U Y) = 0, which has been used routinely, often thoughtlessly, to justify the estimation of structural coe ﬃcients by regression techniques. Naturally, if we were to apply this derivation to the linear m odels of Fig. 1(a) or1(b), we would get the expected dependence between Yand the intervention do(x0): E(Y|do(x0)) = E(fY(x0, uY)) =E(βx0+uY) =βx0(14) This equality endows βwith its causal meaning as “eﬀect coeﬃcient.” It is extremely important to keep in mind that in structural (as op posed to regres- sional) models, βis not “interpreted” as an eﬀect coeﬃcient but is “proven” to be one by the derivation above. βwill retain this causal interpretation re- gardless of how Xis actually selected (through the function fX, Fig. 2(a)) and regardless of whether UXandUYare correlated (as in Fig. 1(b)) or uncorrelated (as in Fig. 1(a)). Correlations may only impede our ability to estimate βfrom nonexperimental data, but will not change its deﬁnition as g iven in ( 14). Ac- cordingly, and contrary to endless confusions in the litera ture (see footnote 15) structural equations say absolutely nothing about the cond itional expectation E(Y|X=x). Such connection may be exist under special circumstances , e.g., ifcov(X, U Y) = 0, as in Eq. ( 13), but is otherwise irrelevant to the deﬁnition or interpretation of βas eﬀect coeﬃcient, or to the empirical claims of Eq. ( 1). The next subsection will circumvent these derivations alto gether by reduc- ing the identiﬁcation problem to a graphical procedure. Ind eed, since graphs encode all the information that non-parametric structural equations represent, they should permit us to solve the identiﬁcation problem wit hout resorting to algebraic analysis. 3.2.3. Causal eﬀects from data and graphs Causal analysis in graphical models begins with the realiza tion that all causal eﬀects are identiﬁable whenever the model is Markovian , that is, the graph is acyclic (i.e., containing no directed cycles) and all the er ror terms are jointly independent. Non-Markovian models, such as those involvin g correlated errors (resulting from unmeasured confounders), permit identiﬁc ation only under cer- tain conditions, and these conditions too can be determined from the graph structure (Section 3.3). The key to these results rests with the following basic theorem. Theorem 1 (The Causal Markov Condition) .Any distribution generated by a Markovian model Mcan be factorized as: P(v1, v2, . . ., v n) =/productdisplay iP(vi|pai) (15) where V1, V2, . . ., V nare the endogenous variables in M, and paiare (values of) the endogenous “parents” of Viin the causal diagram associated with M. For example, the distribution associated with the model in F ig.2(a) can be factorized as P(z, y, x ) =P(z)P(x|z)P(y|x) (16) since Xis the (endogenous) parent of Y, Zis the parent of X, and Zhas no parents. Corollary 1 (Truncated factorization) .For any Markovian model, the distri- bution generated by an intervention do(X=x0)on a set Xof endogenous variables is given by the truncated factorization P(v1, v2, . . ., v k|do(x0)) =/productdisplay i|Vi/negationslash∈XP(vi|pai)|x=x0 (17) where P(vi|pai)are the pre-intervention conditional probabilities.8 Corollary 1instructs us to remove from the product of Eq. ( 15) all factors associated with the intervened variables (members of set X). This follows from the fact that the post-intervention model is Markovian as we ll, hence, following Theorem 1, it must generate a distribution that is factorized accordi ng to the modiﬁed graph, yielding the truncated product of Corollary 1. In our example of Fig. 2(b), the distribution P(z, y|do(x0)) associated with the modiﬁed model is given by P(z, y|do(x0)) =P(z)P(y|x0) where P(z) andP(y|x0) are identical to those associated with the pre-interventi on distribution of Eq. ( 16). As expected, the distribution of Zis not aﬀected by the intervention, since P(z|do(x0)) =/summationdisplay yP(z, y|do(x0)) =/summationdisplay yP(z)P(y|x0) =P(z) while that of Yis sensitive to x0, and is given by P(y|do(x0)) =/summationdisplay zP(z, y|do(x0)) =/summationdisplay zP(z)P(y|x0) =P(y|x0) This example demonstrates how the (causal) assumptions emb edded in the model Mpermit us to predict the post-intervention distribution fr om the pre- intervention distribution, which further permits us to est imate the causal eﬀect ofXonYfrom nonexperimental data, since P(y|x0) is estimable from such data. Note that we have made no assumption whatsoever on the f orm of the equations or the distribution of the error terms; it is the st ructure of the graph alone (speciﬁcally, the identity of X’s parents) that permits the derivation to go through. 8A simple proof of the Causal Markov Theorem is given in Pearl (2000a, p.&nbsp;30). This theorem was ﬁrst presented in Pearl and Verma (1991), but it is implicit in the works ofKiiveri et al.&nbsp;(1984) and others. Corollary 1was named “Manipulation Theorem” in Spirtes et al.&nbsp;(1993), and is also implicit in Robins’ ( 1987)G-computation formula. See Lauritzen (2001). Z1 Z3Z2 YX Fig 3. Markovian model illustrating the derivation of the causal eﬀect of XonY, Eq. ( 20). Error terms are not shown explicitly. The truncated factorization formula enables us to derive ca usal quantities directly, without dealing with equations or equation modiﬁ cation as in Eqs. (11)–(13). Consider, for example, the model shown in Fig. 3, in which the er- ror variables are kept implicit. Instead of writing down the corresponding ﬁve nonparametric equations, we can write the joint distributi on directly as P(x, z1, z2, z3, y) =P(z1)P(z2)P(z3|z1, z2)P(x|z1, z3)P(y|z2, z3, x) (18) where each marginal or conditional probability on the right hand side is directly estimable from the data. Now suppose we intervene and set var iableXtox0. The post-intervention distribution can readily be written (using the truncated factorization formula ( 17)) as P(z1, z2, z3, y|do(x0)) =P(z1)P(z2)P(z3|z1, z2)P(y|z2, z3, x0) (19) and the causal eﬀect of XonYcan be obtained immediately by marginalizing over the Zvariables, giving P(y|do(x0)) =/summationdisplay z1,z2,z3P(z1)P(z2)P(z3|z1, z2)P(y|z2, z3, x0) (20) Note that this formula corresponds precisely to what is comm only called “ad- justing for Z1, Z2andZ3” and, moreover, we can write down this formula by inspection, without thinking on whether Z1, Z2andZ3are confounders, whether they lie on the causal pathways, and so on. Though such questi ons can be an- swered explicitly from the topology of the graph, they are de alt with automati- cally when we write down the truncated factorization formul a and marginalize. Note also that the truncated factorization formula is not re stricted to in- terventions on a single variable; it is applicable to simult aneous or sequential interventions such as those invoked in the analysis of time v arying treatment with time varying confounders ( Robins ,1986;Arjas and Parner ,2004). For ex- ample, if XandZ2are both treatment variables, and Z1andZ3are measured covariates, then the post-intervention distribution woul d be P(z1, z3, y|do(x), do(z2)) =P(z1)P(z3|z1, z2)P(y|z2, z3, x) (21) and the causal eﬀect of the treatment sequence do(X=x), do(Z2=z2)9would be P(y|do(x), do(z2)) =/summationdisplay z1,z3P(z1)P(z3|z1, z2)P(y|z2, z3, x) (22) 9For clarity, we drop the (superﬂuous) subscript 0 from x0andz20. This expression coincides with Robins’ ( 1987)G-computation formula, which was derived from a more complicated set of (counterfactual) assumptions. As noted by Robins, the formula dictates an adjustment for cova riates (e.g., Z3) that might be aﬀected by previous treatments (e.g., Z2).</p>
+</section>
+<section id="coping-with-unmeasured-confounders" class="level3">
+<h3 class="anchored" data-anchor-id="coping-with-unmeasured-confounders">3.3. Coping with unmeasured confounders</h3>
+<p>Things are more complicated when we face unmeasured confoun ders. For exam- ple, it is not immediately clear whether the formula in Eq. ( 20) can be estimated if any of Z1, Z2andZ3is not measured. A few but challenging algebraic steps would reveal that one can perform the summation over Z2to obtain P(y|do(x0)) =/summationdisplay z1,z3P(z1)P(z3|z1)P(y|z1, z3, x0) (23) which means that we need only adjust for Z1andZ3without ever measuring Z2. In general, it can be shown ( Pearl,2000a , p.&nbsp;73) that, whenever the graph is Markovian the post-interventional distribution P(Y=y|do(X=x)) is given by the following expression: P(Y=y|do(X=x)) =/summationdisplay tP(y|t, x)P(t) (24) where Tis the set of direct causes of X(also called “parents”) in the graph. This allows us to write ( 23) directly from the graph, thus skipping the algebra that led to ( 23). It further implies that, no matter how complicated the mod el, the parents of Xare the only variables that need to be measured to estimate the causal eﬀects of X. It is not immediately clear however whether other sets of var iables beside X’s parents suﬃce for estimating the eﬀect of X, whether some algebraic manipu- lation can further reduce Eq. ( 23), or that measurement of Z3(unlike Z1, or Z2) is necessary in any estimation of P(y|do(x0)). Such considerations become transparent from a graphical criterion to be discussed next . 3.3.1. Covariate selection – the back-door criterion Consider an observational study where we wish to ﬁnd the eﬀec t ofXonY, for example, treatment on response, and assume that the factors deemed relevant to the problem are structured as in Fig. 4; some are aﬀecting the response, some are aﬀecting the treatment and some are aﬀecting both treatm ent and response. Some of these factors may be unmeasurable, such as genetic tr ait or life style, others are measurable, such as gender, age, and salary level . Our problem is to select a subset of these factors for measurement and adjus tment, namely, that if we compare treated vs.&nbsp;untreated subjects having the same values of the selected factors, we get the correct treatment eﬀect in that subpopulation of subjects. Such a set of factors is called a “suﬃcient set” or “ admissible set” for Z1 Z3Z2 YXW W W1 Fig 4. Markovian model illustrating the back-door criterion. Er ror terms are not shown ex- plicitly. adjustment. The problem of deﬁning an admissible set, let al one ﬁnding one, has baﬄed epidemiologists and social scientists for decades (s ee (Greenland et al.&nbsp;, 1999;Pearl,1998) for review). The following criterion, named “back-door” in ( Pearl,1993a ), settles this problem by providing a graphical method of selecting admiss ible sets of factors for adjustment. Deﬁnition 3 (Admissible sets – the back-door criterion) .A set Sis admissible (or “suﬃcient”) for adjustment if two conditions hold:</p>
+<ol type="1">
+<li>No element of Sis a descendant of X</li>
+<li>The elements of S“block” all “back-door” paths from XtoY, namely all paths that end with an arrow pointing to X.</li>
+</ol>
+<p>In this criterion, “blocking” is interpreted as in Deﬁnitio n1. For example, the setS={Z3}blocks the path X←W1←Z1→Z3→Y, because the arrow- emitting node Z3is inS. However, the set S={Z3}does not block the path X←W1←Z1→Z3←Z2→W2→Y, because none of the arrow-emitting nodes, Z1andZ2, is in S, and the collision node Z3is not outside S. Based on this criterion we see, for example, that the sets {Z1, Z2, Z3},{Z1, Z3}, {W1, Z3}, and{W2, Z3}, each is suﬃcient for adjustment, because each blocks all back-door paths between XandY. The set{Z3}, however, is not suﬃ- cient for adjustment because, as explained above, it does no t block the path X←W1←Z1→Z3←Z2→W2→Y. The intuition behind the back-door criterion is as follows. The back-door paths in the diagram carry spurious associations from XtoY, while the paths directed along the arrows from XtoYcarry causative associations. Blocking the former paths (by conditioning on S) ensures that the measured association between XandYis purely causative, namely, it correctly represents the ta rget quantity: the causal eﬀect of XonY. The reason for excluding descendants of X(e.g., W3or any of its descendants) is given in ( Pearl,2009a , p.&nbsp;338–41). Formally, the implication of ﬁnding an admissible set Sis that, stratifying on Sis guaranteed to remove all confounding bias relative the ca usal eﬀect of X onY. In other words, the risk diﬀerence in each stratum of Sgives the correct causal eﬀect in that stratum. In the binary case, for example , the risk diﬀerence in stratum sofSis given by P(Y= 1|X= 1, S=s)−P(Y= 1|X= 0, S=s) while the causal eﬀect (of XonY) at that stratum is given by P(Y= 1|do(X= 1), S=s)−P(Y= 1|do(X= 0), S=s). These two expressions are guaranteed to be equal whenever Sis a suﬃcient set, such as{Z1, Z3}or{Z2, Z3}in Fig. 4. Likewise, the average stratiﬁed risk diﬀerence, taken over all strata, /summationdisplay s[P(Y= 1|X= 1, S=s)−P(Y= 1|X= 0, S=s)]P(S=s), gives the correct causal eﬀect of XonYin the entire population P(Y= 1|do(X= 1))−P(Y= 1|do(X= 0)). In general, for multivalued variables XandY, ﬁnding a suﬃcient set S permits us to write P(Y=y|do(X=x), S=s) =P(Y=y|X=x, S=s) and P(Y=y|do(X=x)) =/summationdisplay sP(Y=y|X=x, S=s)P(S=s) (25) Since all factors on the right hand side of the equation are es timable (e.g., by regression) from the pre-interventional data, the causal e ﬀect can likewise be estimated from such data without bias. Interestingly, it can be shown that any irreducible suﬃcien t set, S, taken as a unit, satisﬁes the associational criterion that epidemio logists have been using to deﬁne “confounders”. In other words, Smust be associated with Xand, simultaneously, associated with Y, given X. This need not hold for any speciﬁc members of S. For example, the variable Z3in Fig. 4, though it is a member of every suﬃcient set and hence a confounder, can be unassoci ated with both YandX(Pearl,2000a , p.&nbsp;195). Conversely, a pre-treatment variable Zthat is associated with both YandXmay need to be excluded from entering a suﬃcient set. The back-door criterion allows us to write Eq. ( 25) directly, by selecting a suﬃcient set Sdirectly from the diagram, without manipulating the trunca ted factorization formula. The selection criterion can be appl ied systematically to diagrams of any size and shape, thus freeing analysts from ju dging whether “Xis conditionally ignorable given S,” a formidable mental task required in the potential-response framework ( Rosenbaum and Rubin ,1983). The criterion also enables the analyst to search for an optimal set of covar iate—namely, a set Sthat minimizes measurement cost or sampling variability ( Tian et al.&nbsp;,1998). All in all, one can safely state that, armed with the back-doo r criterion, causality has removed “confounding” from its store of enigm atic and controver- sial concepts. 3.3.2. General control of confounding Adjusting for covariates is only one of many methods that per mits us to es- timate causal eﬀects in nonexperimental studies. Pearl (1995a ) has presented examples in which there exists no set of variables that is suﬃ cient for adjust- ment and where the causal eﬀect can nevertheless be estimate d consistently. The estimation, in such cases, employs multi-stage adjustm ents. For example, ifW3is the only observed covariate in the model of Fig. 4, then there exists no suﬃcient set for adjustment (because no set of observed cova riates can block the paths from XtoYthrough Z3), yet P(y|do(x)) can be estimated in two steps; ﬁrst we estimate P(w3|do(x)) =P(w3|x) (by virtue of the fact that there exists no unblocked back-door path from XtoW3), second we estimate P(y|do(w3)) (since Xconstitutes a suﬃcient set for the eﬀect of W3onY) and, ﬁnally, we combine the two eﬀects together and obtain P(y|do(x)) =/summationdisplay w3P(w3|do(x))P(y|do(w3)) (26) In this example, the variable W3acts as a “mediating instrumental variable” (Pearl,1993b ;Chalak and White ,2006). The analysis used in the derivation and validation of such re sults invokes mathematical rules of transforming causal quantities, rep resented by expressions such as P(Y=y|do(x)), into do-free expressions derivable from P(z, x, y ), since onlydo-free expressions are estimable from non-experimental dat a. When such a transformation is feasible, we are ensured that the causal q uantity is identiﬁable. Applications of this calculus to problems involving multip le interventions (e.g., time varying treatments), conditional policies, an d surrogate experiments were developed in Pearl and Robins (1995),Kuroki and Miyakawa (1999), and Pearl (2000a , Chapters 3–4). A recent analysis ( Tian and Pearl ,2002) shows that the key to identiﬁability lies not in blocking paths between XandYbut, rather, in blocking paths between Xand its immediate successors on the pathways to Y. All existing criteria for identiﬁcation are special cases of the one deﬁn ed in the following theorem: Theorem 2 (Tian and Pearl ,2002).A suﬃcient condition for identifying the causal eﬀect P(y|do(x))is that every path between Xand any of its children traces at least one arrow emanating from a measured variable .10 For example, if W3is the only observed covariate in the model of Fig. 4, P(y|do(x)) can be estimated since every path from XtoW3(the only child of X) traces either the arrow X→W3, or the arrow W3→Y, both emanating from a measured variable ( W3). More recent results extend this theorem by (1) presenting a necessary and suf- ﬁcient condition for identiﬁcation ( Shpitser and Pearl ,2006), and (2) extending 10Before applying this criterion, one may delete from the caus al graph all nodes that are not ancestors of Y. the condition from causal eﬀects to any counterfactual expr ession (Shpitser and Pearl, 2007). The corresponding unbiased estimands for these causal qu antities are readable directly from the diagram. 3.3.3. From identiﬁcation to estimation The mathematical derivation of causal eﬀect estimands, lik e Eqs. ( 25) and ( 26) is merely a ﬁrst step toward computing quantitative estimat es of those eﬀects from ﬁnite samples, using the rich traditions of statistica l estimation and ma- chine learning Bayesian as well as non-Bayesian. Although t he estimands derived in (25) and ( 26) are non-parametric, this does not mean that one should refr ain from using parametric forms in the estimation phase of the st udy. Parametriza- tion is in fact necessary when the dimensionality of a proble m is high. For exam- ple, if the assumptions of Gaussian, zero-mean disturbance s and additive inter- actions are deemed reasonable, then the estimand given in ( 26) can be converted to the product E(Y|do(x)) =rW3XrY W3·Xx,where rY Z·Xis the (standardized) coeﬃcient of Zin the regression of YonZandX. More sophisticated estima- tion techniques are the “marginal structural models” of ( Robins ,1999), and the “propensity score” method of ( Rosenbaum and Rubin ,1983) which were found to be particularly useful when dimensionality is high and da ta are sparse (see Pearl (2009a , pp.&nbsp;348–52)). It should be emphasized, however, that contrary to conventi onal wisdom (e.g., (Rubin ,2007,2009)), propensity score methods are merely eﬃcient estimators of the right hand side of ( 25); they cannot be expected to reduce bias in case the setSdoes not satisfy the back-door criterion ( Pearl,2009a ,b,c). Consequently, the prevailing practice of conditioning on as many pre-trea tment measurements as possible should be approached with great caution; some co variates (e.g., Z3 in Fig. 3) may actually increase bias if included in the analysis (see footnote 20). Using simulation and parametric analysis, Heckman and Navarro-Lozano (2004) andWooldridge (2009) indeed conﬁrmed the bias-raising potential of certain co- variates in propensity-score methods. The graphical tools presented in this sec- tion unveil the character of these covariates and show preci sely what covariates should, and should not be included in the conditioning set fo r propensity-score matching (see also ( Pearl and Paz ,2009)). 3.3.4. Bayesianism and causality, or where do the probabili ties come from? Looking back at the derivation of causal eﬀects in Sections 3.2and3.3, the reader should note that at no time did the analysis require nu merical assess- ment of probabilities. True, we assumed that the causal mode lMis loaded with a probability function P(u) over the exogenous variables in U, and we likewise assumed that the functions vi=fi(pai, u) map P(u) into a proba- bility P(v1, v2, . . ., v n) over the endogenous observed variables. But we never used or required any numerical assessment of P(u) nor any assumption on the form of the structural equations fi. The question naturally arises: Where do the numerical values of the post-intervention probabilities P(y|do(x)) come from? The answer is, of course, that they come from the data togethe r with stan- dard estimation techniques that turn data into numerical es timates of statisti- cal parameters (i.e., aspects of a probability distributio n). Subjective judgments were required only in qualitative form, to jump start the identiﬁcation process, the purpose of which was to determine what statistical param eters need be es- timated. Moreover, even the qualitative judgments were not about properties of probability distributions but about cause-eﬀect relati onships, the latter be- ing more transparent, communicable and meaningful. For exa mple, judgments about potential correlations between two Uvariables were essentially judgments about whether the two have a latent common cause or not. Naturally, the inﬂux of traditional estimation techniques into causal analy- sis carries with it traditional debates between Bayesians a nd frequentists, sub- jectivists and objectivists. However, this debate is ortho gonal to the distinct problems confronted by causal analysis, as delineated by th e demarcation line between causal and statistical analysis (Section 2). As is well known, many estimation methods in statistics invo ke subjective judgment at some level or another; for example, what paramet ric family of functions one should select, what type of prior one should as sign to the model parameters, and more. However, these judgments all refer to properties or pa- rameters of a static distribution function and, accordingl y, they are expressible in the language of probability theory. The new ingredient th at causal analysis brings to this tradition is the necessity of obtaining expli cit judgments not about properties of distributions but about the invariants of a di stribution, namely, judgment about cause-eﬀect relationships, and those, as we discussed in Section 2, cannot be expressed in the language of probability. Causal judgments are tacitly being used at many levels of tra ditional sta- tistical estimation. For example, most judgments about con ditional indepen- dence emanate from our understanding of cause eﬀect relatio nships. Likewise, the standard decision to assume independence among certain statistical pa- rameters and not others (in a Bayesian prior) rely on causal i nformation (see discussions with Joseph Kadane and Seraﬁn Moral ( Pearl,2003)). However the causal rationale for these judgments has remained implicit for many decades, for lack of adequate language; only their probabilistic ramiﬁc ations received formal representation. Causal analysis now requires explicit art iculation of the under- lying causal assumptions, a vocabulary that diﬀers substan tially from the one Bayesian statisticians have been accustomed to articulate . The classical example demonstrating the obstacle of causal vocabulary is Simpson’s paradox ( Simpson ,1951) – a reversal phenomenon that earns its claim to fame only through a causal interpretation of the dat a (Pearl,2000a , Chapter 6). The phenomenon was discovered by statisticians a century ago (Pearson et al.&nbsp;,1899;Yule,1903) analyzed by statisticians for half a century (Simpson ,1951;Blyth,1972;Cox and Wermuth ,2003) lamented by statisticians (Good and Mittal ,1987;Bishop et al.&nbsp;,1975) and wrestled with by statisticians till this very day ( Chen et al.&nbsp;,2009;Pavlides and Perlman ,2009). Still, to the best of my knowledge, Wasserman (2004) is the ﬁrst statistics textbook to treat Simpson’s paradox in its correct causal context ( Pearl,2000a, p.&nbsp;200). Lindley and Novick (1981) explained this century-long impediment to the understanding of Simpson’s paradox as a case of linguistic h andicap: “We have not chosen to do this; nor to discuss causation, because the c oncept, although widely used, does not seem to be well-deﬁned” (p.&nbsp;51). Instea d, they attribute the paradox to another untestable relationship in the story —exchangeability (DeFinetti ,1974) which is cognitively formidable yet, at least formally, ca n be cast as a property of some imaginary probability function. The same reluctance to extending the boundaries of probabil ity language can be found among some scholars in the potential-outcome frame work (Section 4), where judgments about conditional independence of counter factual variables, however incomprehensible, are preferred to plain causal ta lk: “Mud does not cause rain.” This reluctance however is diminishing among Bayesians pri marily due to recognition that, orthogonal to the traditional debate bet ween frequentists and subjectivists, causal analysis is about change, and change demands a new vocab- ulary that distinguishes “seeing” from “doing” ( Lindley ,2002) (see discussion with Dennis Lindley ( Pearl,2009a , 2nd Edition, Chapter 11). Indeed, whether the conditional probabilities that enter E qs. (15)–(25) origi- nate from frequency data or subjective assessment matters n ot in causal analysis. Likewise, whether the causal eﬀect P(y|do(x)) is interpreted as one’s degree of belief in the eﬀect of action do(x), or as the fraction of the population that will be aﬀected by the action matters not in causal analysis. What matters is one’s readiness to accept and formulate qualitative judgments ab out cause-eﬀect re- lationship with the same seriousness that one accepts and fo rmulates subjective judgment about prior distributions in Bayesian analysis. Trained to accept the human mind as a reliable transducer of e xperience, and human experience as a faithful mirror of reality, Bayesi an statisticians are beginning to accept the language chosen by the mind to commun icate experience – the language of cause and eﬀect.</p>
+</section>
+<section id="counterfactual-analysis-in-structural-models" class="level3">
+<h3 class="anchored" data-anchor-id="counterfactual-analysis-in-structural-models">3.4. Counterfactual analysis in structural models</h3>
+<p>Not all questions of causal character can be encoded in P(y|do(x)) type ex- pressions, thus implying that not all causal questions can b e answered from experimental studies. For example, questions of attributi on (e.g., what fraction of death cases are due to speciﬁc exposure?) or of susceptibility (what fraction of the healthy unexposed population would have gotten the di sease had they been exposed?) cannot be answered from experimental studie s, and naturally, this kind of questions cannot be expressed in P(y|do(x)) notation.11To answer 11The reason for this fundamental limitation is that no death c ase can be tested twice, with and without treatment. For example, if we measure equal proportions of deaths in the treatment and control groups, we cannot tell how many death c ases are actually attributable to the treatment itself; it is quite possible that many of tho se who died under treatment would such questions, a probabilistic analysis of counterfactua ls is required, one dedi- cated to the relation “ Ywould be yhadXbeenxin situation U=u,” denoted Yx(u) =y. Remarkably, unknown to most economists and philosophers, struc- tural equation models provide the formal interpretation an d symbolic machinery for analyzing such counterfactual relationships.12 The key idea is to interpret the phrase “had Xbeenx” as an instruction to make a minimal modiﬁcation in the current model, which may ha ve assigned X a diﬀerent value, say X=x/prime, so as to ensure the speciﬁed condition X=x. Such a minimal modiﬁcation amounts to replacing the equation for Xby a constant x, as we have done in Eq. ( 6). This replacement permits the constant xto diﬀer from the actual value of X(namely fX(z, uX)) without rendering the system of equations inconsistent, thus yielding a formal interpreta tion of counterfactuals in multi-stage models, where the dependent variable in one e quation may be an independent variable in another. Deﬁnition 4 (Unit-level Counterfactuals, Pearl (2000a , p.&nbsp;98)) .LetMbe a structural model and Mxa modiﬁed version of M, with the equation(s) of X replaced by X=x. Denote the solution for Yin the equations of Mxby the symbol YMx(u). The counterfactual Yx(u) (Read: “The value of Yin unit u, hadXbeenx” is given by: Yx(u)∆=YMx(u). (27) We see that the unit-level counterfactual Yx(u), which in the Neyman-Rubin approach is treated as a primitive, undeﬁned quantity, is ac tually a derived quantity in the structural framework. The fact that we equat e the experimental unituwith a vector of background conditions, U=u, inM, reﬂects the un- derstanding that the name of a unit or its identity do not matt er; it is only the vector U=uof attributes characterizing a unit which determines its be havior or response. As we go from one unit to another, the laws of natu re, as they are reﬂected in the functions fX, fY, etc. remain invariant; only the attributes U=uvary from individual to individual.13 To illustrate, consider the solution of Yin the modiﬁed model Mx0of Eq. ( 6), which Deﬁnition 4endows with the symbol Yx0(uX, uY, uZ). This entity has a be alive if untreated and, simultaneously, many of those who survived with treatment would have died if not treated. 12Connections between structural equations and a restricted class of counterfactuals were ﬁrst recognizedby Simon and Rescher (1966). These were later generalizedby Balke and Pearl (1995) to permit endogenous variables to serve as counterfactual antecedents. 13The distinction between general, or population-level caus es (e.g., “Drinking hemlock causes death”) and singular or unit-level causes (e.g., “So crates’ drinking hemlock caused his death”), which many philosophers have regarded as irreconc ilable ( Eells,1991), introduces no tension at all in the structural theory. The two types of sent ences diﬀer merely in the level of situation-speciﬁc information that is brought to bear on a p roblem, that is, in the speciﬁcity of the evidence ethat enters the quantity P(Yx=y|e). When eincludes allfactors u, we have a deterministic, unit-level causation on our hand; when e co ntains only a few known attributes (e.g., age, income, occupation etc.) while others are assig ned probabilities, a population-level analysis ensues. clear counterfactual interpretation, for it stands for the way an individual with characteristics ( uX, uY, uZ) would respond, had the treatment been x0, rather than the treatment x=fX(z, uX) actually received by that individual. In our example, since Ydoes not depend on uXanduZ, we can write: Yx0(u) =Yx0(uY, uX, uZ) =fY(x0, uY). (28) In a similar fashion, we can derive Yz0(u) =fY(fX(z0, uX), uY), Xz0,y0(u) =fX(z0, uX), and so on. These examples reveal the counterfactual reading of each individual structural equation in the model of Eq. ( 5). The equation x=fX(z, uX), for example, advertises the empirical claim that, regardless o f the values taken by other variables in the system, had Zbeenz0,Xwould take on no other value butx=fX(z0, uX). Clearly, the distribution P(uY, uX, uZ) induces a well deﬁned probability on the counterfactual event Yx0=y, as well as on joint counterfactual events, such as ‘Yx0=yAND Yx1=y/prime,’ which are, in principle, unobservable if x0/negationslash=x1. Thus, to answer attributional questions, such as whether Ywould be y1ifXwere x1, given that in fact Yisy0andXisx0, we need to compute the conditional probability P(Yx1=y1|Y=y0, X=x0) which is well deﬁned once we know the forms of the structural equations and the distribution of th e exogenous variables in the model. For example, assuming linear equations (as in F ig.1), x=uX y=βx+uX, the conditioning events Y=y0andX=x0yieldUX=x0andUY=y0−βx0, and we can conclude that, with probability one, Yx1must take on the value: Yx1=βx1+UY=β(x1−x0) +y0. In other words, if Xwerex1instead of x0, Ywould increase by βtimes the diﬀerence ( x1−x0). In nonlinear systems, the result would also depend on the distribution of {UX, UY}and, for that reason, attributional queries are generally not identiﬁable in non parametric models (see Section 5.2and2000a , Chapter 9). In general, if xandx/primeare incompatible then YxandYx/primecannot be measured simultaneously, and it may seem meaningless to attribute pr obability to the joint statement “ Ywould be yifX=xandYwould be y/primeifX=x/prime.”14 Such concerns have been a source of objections to treating co unterfactuals as jointly distributed random variables ( Dawid ,2000). The deﬁnition of YxandYx/prime in terms of two distinct submodels neutralizes these object ions (Pearl,2000b ), since the contradictory joint statement is mapped into an or dinary event, one where the background variables satisfy both statements sim ultaneously, each in its own distinct submodel; such events have well deﬁned prob abilities. 14For example, “The probability is 80% that Joe belongs to the c lass of patients who will be cured if they take the drug and die otherwise.” The structural deﬁnition of counterfactuals also provides the conceptual and formal basis for the Neyman-Rubin potential-outcome frame work, an approach to causation that takes a controlled randomized trial (CRT) as its ruling paradigm, assuming that nothing is known to the experimenter about the science behind the data. This “black-box” approach, which has thus far been denied the bene- ﬁts of graphical or structural analyses, was developed by st atisticians who found it diﬃcult to cross the two mental barriers discussed in Sect ion2.4. Section 4es- tablishes the precise relationship between the structural and potential-outcome paradigms, and outlines how the latter can beneﬁt from the ri cher representa- tional power of the former.</p>
+</section>
+<section id="an-example-non-compliance-in-clinical-trials" class="level3">
+<h3 class="anchored" data-anchor-id="an-example-non-compliance-in-clinical-trials">3.5. An example: Non-compliance in clinical trials</h3>
+<p>To illustrate the methodology of the structural approach to causation, let us consider the practical problem of estimating treatment eﬀe ct in a typical clinical trial with partial compliance. Treatment eﬀect in such a set ting is in general nonidentiﬁable, yet this example is well suited for illustr ating the four major steps that should be part of every exercise in causal inferen ce:</p>
+<ol type="1">
+<li>Deﬁne: Express the target quantity Qas a function Q(M) that can be computed from any model M.</li>
+<li>Assume: Formulate causal assumptions using ordinary scientiﬁc lan guage and represent their structural part in graphical form.</li>
+<li>Identify: Determine if the target quantity is identiﬁable.</li>
+<li>Estimate: Estimate the target quantity if it is identiﬁable, or approx imate it, if it is not.</li>
+</ol>
+<p>3.5.1. Deﬁning the target quantity The deﬁnition phase in our example is not altered by the speci ﬁcs of the ex- perimental setup under discussion. The structural modelin g approach insists on deﬁning the target quantity, in our case “causal eﬀect,” bef ore specifying the process of treatment selection, and without making functio nal form or distri- butional assumptions. The formal deﬁnition of the causal eﬀ ectP(y|do(x)), as given in Eq. ( 7), is universally applicable to all models, and invokes the f orma- tion of a submodel Mx. By deﬁning causal eﬀect procedurally, thus divorcing it from its traditional parametric representation, the str uctural theory avoids the many confusions and controversies that have plagued the interpretation of structural equations and econometric parameters for the pa st half century (see footnote 15). 3.5.2. Formulating the assumptions – Instrumental variabl es The experimental setup in a typical clinical trial with part ial compliance can be represented by the model of Fig. 5(a) and Eq. ( 5) where Zrepresents a ran- domized treatment assignment, Xis the treatment actually received, and Yis X Y Z X Y Z (a) (b)U U U U U U Z X Y0x Y Z X Fig 5. (a) Causal diagram representing a clinical trial with impe rfect compliance. (b) A diagram representing interventional treatment control. the observed response. The UYterm represents all factors (unobserved) that inﬂuence the way a subject responds to treatments; hence, an arrow is drawn fromUYtoY. Similarly, UXdenotes all factors that inﬂuence the subject’s compliance with the assignment, and UZrepresents the random device used in deciding assignment. The dependence between UXandUYallows for certain fac- tors (e.g., socio economic status or predisposition to dise ase and complications) to inﬂuence both compliance and response. In Eq. ( 5),fXrepresents the pro- cess by which subjects select treatment level and fYrepresents th process that determines the outcome Y. Clearly, perfect compliance would amount to setting fX(z, uX) =zwhile any dependence on uXrepresents imperfect compliance. The graphical model of Fig. 5(a) reﬂects two assumptions.</p>
+<ol type="1">
+<li>The assignment Z does not inﬂuence Ydirectly but rather through the actual treatment taken, X. This type of assumption is called “exclusion” restriction, for it excludes a variable ( Z) from being a determining argu- ment of the function fY, as in Eq. ( 5).</li>
+<li>The variable Z is independent of UYandUX; this is ensured through the randomization of Z, which rules out a common cause for both ZandUY (as well as for Z and UX).</li>
+</ol>
+<p>By drawing the diagram of Fig. 5(a) an investigator encodes an unambiguous speciﬁcation of these two assumptions, and permits the tech nical part of the analysis to commence, under the interpretation provided by Eq. (5). The target of causal analysis in this setting is to estimate t he causal eﬀect of the treatment ( X) on the outcome ( Y), as deﬁned by the modiﬁed model of Eq. (6) and the corresponding distribution P(y|do(x0)). In words, this distribution describes the response of the population to a hypothetical e xperiment in which we administer treatment at level X=x0uniformly to the entire population and let x0take diﬀerent values on hypothetical copies of the populati on. An inspection of the diagram in Fig. 5(a) reveals immediately that this distribution is not identiﬁable by adjusting for confounders. The graphi cal criterion for such identiﬁcation (Deﬁnition 3) requires the existence of observed covariates on the “back-door” path X←UX↔︎UY→Y, that blocks the spurious associations created by that path. Had UX(orUY) been observable, the treatment eﬀect would have been obtained by stratiﬁcation on the levels of UX. P(Y=y|do(x0)) =/summationdisplay uXP(Y=y|X=x0, UX=uX)P(UX=uX) (29) thus yielding an estimable expression that requires no meas urement of UYand no assumptions relative the dependence between UYandUX. However, since UX(andUY) are assumed to be unobserved, and since no other blocking co - variates exist, the investigator can conclude that confoun ding bias cannot be removed by adjustment. Moreover, it can be shown that, in the absence of ad- ditional assumptions, the treatment eﬀect in such graphs ca nnot be identiﬁed by any method whatsoever ( Balke and Pearl ,1997); one must therefore resort to approximate methods of assessment. It is interesting to note that it is our insistence on allowin g arbitrary functions in Eq. ( 5) that curtails our ability to infer the treatment eﬀect from nonexperi- mental data (when UXandUYare unobserved). In linear systems, for example, the causal eﬀect of XonYis identiﬁable, as can be seen by writing:15 y=fY(x, u) =βx+uY; (30) multiplying this equation by zand taking expectations, gives β=Cov(Z, Y)/(Cov(Z, X) (31) which reduces βto correlations among observed measurements. Eq. ( 31) is known as the instrumental variable estimand ( Bowden and Turkington ,1984). Similarly, Angrist and Imbens (1991) have shown that a broader class of nonlin- ear functions fXandfYmay render the causal eﬀect identiﬁable. Angrist et al. (1996) and Heckman and Vytlacil (2005) further reﬁned this analysis by con- sidering a variety of causal eﬀect measures, each applicabl e to a special (albeit non-identiﬁable and transient) segment of the population. 3.5.3. Bounding causal eﬀects When conditions for identiﬁcation are not met, the best one c an do is derive bounds for the quantities of interest—namely, a range of possible v alues that represents our ignorance about the data-generating proces s and that cannot be improved with increasing sample size. In our example, this a mounts to bound- ing the average diﬀerence of Eq. ( 8) subject to the constraint provided by the 15Note that βrepresents the incremental causal eﬀect of XonY, deﬁned by β∆=E(Y|do(x0+ 1)) −E(Y|do(x0)) =δ δxE(Y|do(x)) =δ δxE(Yx). Naturally, all attempts to give βstatistical interpretation have ended in frustrations ( Holland , 1988;Whittaker ,1990;Wermuth ,1992;Wermuth and Cox ,1993), some persisting well into the 21st century ( Sobel,2008). observed distribution P(x, y|z) =/summationdisplay uX,uYP(x, y, u X, uY|z) =/summationdisplay uX,uYP(y|x, uY, uX)P(x|z, uX)P(uY, uX) (32) where the product decomposition is licensed by the conditio nal independencies shown in Fig. 5(a). Likewise, since the causal eﬀect is governed by the modi ﬁed model of Fig. 5(b), it can be written P(y|do(x/prime))−P(y|do(x/prime/prime)) =/summationdisplay u[P(y|x/prime, uY)−P(y|x/prime/prime, uY)]P(uY) (33) Our task is then to bound the expression in Eq. ( 33) given the observed prob- abilities P(y, x|z) as expressed in Eq. ( 32). This task amounts to a constrained optimization exercise of ﬁnding the highest and lowest valu es of Eq. ( 33) subject to the equality constraints in Eq. ( 32), where the maximization ranges over all possible functions P(uY, uX), P(y|x, uY, uX) and P(x|z, uY) that satisfy those constraints. Realizing that units in this example fall into 16 equivalent classes, each representing a binary function X=f(z) paired with a binary function y= g(x),Balke and Pearl (1997) were able to derive closed-form solutions for these bounds.16They showed that despite the imperfection of the experiment s, the derived bounds can yield signiﬁcant and sometimes accurate information on the treatment eﬃcacy. Chickering and Pearl (1997) further used Bayesian tech- niques (with Gibbs sampling) to investigate the sharpness o f these bounds as a function of sample size. 3.5.4. Testable implications of instrumental variables The two assumptions embodied in the model of Fig. 5(a), that Zis randomized and has no direct eﬀect on Y, are untestable in general ( Bonet ,2001). However, if the treatment variable may take only a ﬁnite number of values , the combination of these two assumptions yields testable implications, and these can be used to alert investigators to possible violations of these assu mptions. The testable implications take the form of inequalities which restrict a spects of the observed conditional distribution P(x, y|z) from exceeding certain bounds ( Pearl,1995b ). One specially convenient form that these restrictions assu me is given by the inequality max x/summationdisplay y[max zP(x, y|z)]≤1 (34) Pearl (1995b ) called this restriction an instrumental inequality , because it con- stitutes a necessary condition for any variable Zto qualify as an instrument 16These equivalence classes were later called “principal str atiﬁcation” by Frangakis and Rubin ( 2002). Looser bounds were derived earlier by Robins (1989) and Manski (1990). relative to the pair ( X, Y). This inequality is sharp for binary valued X, but becomes loose when the cardinality of Xincreases.17 If all observed variables are binary, Eq. ( 34) reduces to the four inequalities P(Y= 0, X= 0|Z= 0) + P(Y= 1, X= 0|Z= 1)≤1 P(Y= 0, X= 1|Z= 0) + P(Y= 1, X= 1|Z= 1)≤1 P(Y= 1, X= 0|Z= 0) + P(Y= 0, X= 0|Z= 1)≤1 P(Y= 1, X= 1|Z= 0) + P(Y= 0, X= 1|Z= 1)≤1 (35) We see that the instrumental inequality is violated when the controlling instru- mentZmanages to produce signiﬁcant changes in the response varia bleYwhile the direct cause, X, remains constant. The instrumental inequality can be used in the detection of u ndesirable side- eﬀects. Violations of this inequality can be attributed to o ne of two possibilities: either there is a direct causal eﬀect of the assignment ( Z) on the response ( Y), unmediated by the treatment ( X), or there is a common causal factor inﬂu- encing both variables. If the assignment is carefully rando mized, then the latter possibility is ruled out and any violation of the instrument al inequality (even un- der conditions of imperfect compliance) can safely be attri buted to some direct inﬂuence of the assignment process on subjects’ response (e .g., psychological aversion to being treated). Alternatively, if one can rule o ut any direct eﬀects ofZonY, say through eﬀective use of a placebo, then any observed vio lation of the instrumental inequality can safely be attributed to s purious dependence between ZandUY, namely, to selection bias.</p>
+</section>
+</section>
+<section id="the-potential-outcome-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-potential-outcome-framework">4. The potential outcome framework</h2>
+<p>This section compares the structural theory presented in Se ctions 1–3to the potential-outcome framework, usually associated with the names of Neyman (1923) and Rubin (1974), which takes the randomized experiment as its rul- ing paradigm and has appealed therefore to researchers who d o not ﬁnd that paradigm overly constraining. This framework is not a conte nder for a com- prehensive theory of causation for it is subsumed by the stru ctural theory and excludes ordinary cause-eﬀect relationships from its assu mption vocabulary. We here explicate the logical foundation of the Neyman-Rubin f ramework, its for- mal subsumption by the structural causal model, and how it ca n beneﬁt from the insights provided by the broader perspective of the stru ctural theory. The primitive object of analysis in the potential-outcome f ramework is the unit-based response variable, denoted Yx(u), read: “the value that outcome Y would obtain in experimental unit u, had treatment Xbeen x.” Here, unit may stand for an individual patient, an experimental subjec t, or an agricultural plot. In Section 3.4(Eq. ( 27) we saw that this counterfactual entity has a nat- ural interpretation in the SCM; it is the solution for Yin a modiﬁed system 17The inequality is sharp in the sense that every distribution P(x,y, z) satisfying Eq. ( 34) can be generated by the model deﬁned in Fig. 5(a). of equations, where unitis interpreted a vector uof background factors that characterize an experimental unit. Each structural equati on model thus carries a collection of assumptions about the behavior of hypotheti cal units, and these assumptions permit us to derive the counterfactual quantit ies of interest. In the potential-outcome framework, however, no equations are av ailable for guidance andYx(u) is taken as primitive, that is, an undeﬁned quantity in term s of which other quantities are deﬁned; not a quantity that can be deriv edfromthe model. In this sense the structural interpretation of Yx(u) given in ( 27) provides the formal basis for the potential-outcome approach; the forma tion of the submodel Mxexplicates mathematically how the hypothetical condition “hadXbeenx” is realized, and what the logical consequences are of such a c ondition.</p>
+<section id="the-black-box-missing-data-paradigm" class="level3">
+<h3 class="anchored" data-anchor-id="the-black-box-missing-data-paradigm">4.1. The “Black-Box” missing-data paradigm</h3>
+<p>The distinct characteristic of the potential-outcome appr oach is that, although investigators must think and communicate in terms of undeﬁn ed, hypothetical quantities such as Yx(u), the analysis itself is conducted almost entirely within the axiomatic framework of probability theory. This is acco mplished, by postu- lating a “super” probability function on both hypothetical and real events. If Uis treated as a random variable then the value of the counterf actual Yx(u) becomes a random variable as well, denoted as Yx. The potential-outcome analy- sis proceeds by treating the observed distribution P(x1, . . ., x n) as the marginal distribution of an augmented probability function P∗deﬁned over both observed and counterfactual variables. Queries about causal eﬀects (written P(y|do(x)) in the structural analysis) are phrased as queries about the ma rginal distribution of the counterfactual variable of interest, written P∗(Yx=y). The new hypo- thetical entities Yxare treated as ordinary random variables; for example, they are assumed to obey the axioms of probability calculus, the l aws of conditioning, and the axioms of conditional independence. Naturally, these hypothetical entities are not entirely wh imsy. They are as- sumed to be connected to observed variables via consistency constraints ( Robins , 1986) such as X=x=⇒Yx=Y, (36) which states that, for every u, if the actual value of Xturns out to be x, then the value that Ywould take on if ‘ Xwerex’ is equal to the actual value of Y. For example, a person who chose treatment xand recovered, would also have recovered if given treatment xby design. When Xis binary, it is sometimes more convenient to write ( 36) as: Y=xY1+ (1−x)Y0 Whether additional constraints should tie the observables to the unobservables is not a question that can be answered in the potential-outco me framework; for it lacks an underlying model to deﬁne its axioms. The main conceptual diﬀerence between the two approaches is that, whereas the structural approach views the intervention do(x) as an operation that changes a distribution but keeps the variables the same, the potenti al-outcome approach views the variable Yunder do(x) to be a diﬀerent variable, Yx, loosely con- nected to Ythrough relations such as ( 36), but remaining unobserved whenever X/negationslash=x. The problem of inferring probabilistic properties of Yx, then becomes one of “missing-data” for which estimation techniques have been developed in the statistical literature. Pearl (2000a , Chapter 7) shows, using the structural interpretation of Yx(u), that it is indeed legitimate to treat counterfactuals as joi ntly distributed random variables in all respects, that consistency constraints li ke (36) are automatically satisﬁed in the structural interpretation and, moreover, t hat investigators need not be concerned about any additional constraints except th e following two: Yyz=yfor all y,subsets Z,and values zforZ (37) Xz=x⇒Yxz=Yzfor all x,subsets Z,and values zforZ (38) Equation ( 37) ensures that the interventions do(Y=y) results in the condition Y=y, regardless of concurrent interventions, say do(Z=z), that may be applied to variables other than Y. Equation ( 38) generalizes ( 36) to cases where Zis held ﬁxed, at z.</p>
+</section>
+<section id="problem-formulation-and-the-demystiﬁcation-of-ignora-bility" class="level3">
+<h3 class="anchored" data-anchor-id="problem-formulation-and-the-demystiﬁcation-of-ignora-bility">4.2. Problem formulation and the demystiﬁcation of “ignora bility”</h3>
+<p>The main drawback of this black-box approach surfaces in pro blem formula- tion, namely, the phase where a researcher begins to articul ate the “science” or “causal assumptions” behind the problem at hand. Such knowl edge, as we have seen in Section 1, must be articulated at the onset of every problem in causal analysis – causal conclusions are only as valid as the causal assumptions upon which they rest. To communicate scientiﬁc knowledge, the potential-outcom e analyst must express assumptions as constraints on P∗, usually in the form of conditional independence assertions involving counterfactual variab les. For instance, in our example of Fig. 5(a), to communicate the understanding that Zis randomized (hence independent of UXandUY), the potential-outcome analyst would use the independence constraint Z⊥ ⊥{Yz1, Yz2, . . ., Y zk}.18To further formulate the understanding that Zdoes not aﬀect Ydirectly, except through X, the analyst would write a, so called, “exclusion restriction”: Yxz=Yx. A collection of constraints of this type might sometimes be s uﬃcient to permit a unique solution to the query of interest. For example, if on e can plausibly assume that, in Fig. 4, a set Zof covariates satisﬁes the conditional independence Yx⊥ ⊥X|Z (39) (an assumption termed “conditional ignorability” by Rosenbaum and Rubin (1983),) then the causal eﬀect P(y|do(x)) =P∗(Yx=y) can readily be evaluated 18The notation Y⊥ ⊥X|Zstands for the conditional independence relationship P(Y= y, X=x|Z=z) =P(Y=y|Z=z)P(X=x|Z=z) (Dawid ,1979). to yield P∗(Yx=y) =/summationdisplay zP∗(Yx=y|z)P(z) =/summationdisplay zP∗(Yx=y|x, z)P(z) (using ( 39)) =/summationdisplay zP∗(Y=y|x, z)P(z) (using ( 36)) =/summationdisplay zP(y|x, z)P(z). (40) The last expression contains no counterfactual quantities (thus permitting us to drop the asterisk from P∗) and coincides precisely with the standard covariate- adjustment formula of Eq. ( 25). We see that the assumption of conditional ignorability ( 39) qualiﬁes Zas an admissible covariate for adjustment; it mirrors therefo re the “back-door” criterion of Deﬁnition 3, which bases the admissibility of Zon an explicit causal structure encoded in the diagram. The derivation above may explain why the potential-outcome approach ap- peals to mathematical statisticians; instead of construct ing new vocabulary (e.g., arrows), new operators ( do(x)) and new logic for causal analysis, almost all mathematical operations in this framework are conducted wi thin the safe con- ﬁnes of probability calculus. Save for an occasional applic ation of rule ( 38) or (36)), the analyst may forget that Yxstands for a counterfactual quantity—it is treated as any other random variable, and the entire deriv ation follows the course of routine probability exercises. This orthodoxy exacts a high cost: Instead of bringing the th eory to the problem, the problem must be reformulated to ﬁt the theory; a ll background knowledge pertaining to a given problem must ﬁrst be transla ted into the lan- guage of counterfactuals (e.g., ignorability conditions) before analysis can com- mence. This translation may in fact be the hardest part of the problem. The reader may appreciate this aspect by attempting to judge whe ther the assump- tion of conditional ignorability ( 39), the key to the derivation of ( 40), holds in any familiar situation, say in the experimental setup of Fig .2(a). This assump- tion reads: “the value that Ywould obtain had Xbeenx, is independent of X, given Z”. Even the most experienced potential-outcome expert woul d be unable to discern whether any subset Zof covariates in Fig. 4would satisfy this conditional independence condition.19Likewise, to derive Eq. ( 39) in the language of potential-outcome (see ( Pearl,2000a , p.&nbsp;223)), one would need to convey the structure of the chain X→W3→Yusing the cryptic expression: W3x⊥ ⊥{Yw3, X}, read: “the value that W3would obtain had Xbeenxis inde- pendent of the value that Ywould obtain had W3beenw3jointly with the value ofX.” Such assumptions are cast in a language so far removed from ordinary 19Inquisitive readers are invited to guess whether Xz⊥ ⊥Z|Yholds in Fig. 2(a), then reﬂect on why causality is so slow in penetrating statistical educa tion. understanding of scientiﬁc theories that, for all practica l purposes, they cannot be comprehended or ascertained by ordinary mortals. As a res ult, researchers in the graph-less potential-outcome camp rarely use “condi tional ignorability” (39) to guide the choice of covariates; they view this condition as a hoped-for miracle of nature rather than a target to be achieved by reaso ned design.20 Replacing “ignorability” with a conceptually meaningful c ondition (i.e., back- door) in a graphical model permits researchers to understan d what conditions covariates must fulﬁll before they eliminate bias, what to w atch for and what to think about when covariates are selected, and what experime nts we can do to test, at least partially, if we have the knowledge needed for covariate selection. Aside from oﬀering no guidance in covariate selection, form ulating a problem in the potential-outcome language encounters three additi onal hurdles. When counterfactual variables are not viewed as byproducts of a d eeper, process-based model, it is hard to ascertain whether allrelevant judgments have been articu- lated, whether the judgments articulated are redundant , or whether those judg- ments are self-consistent. The need to express, defend, and manage formidable counterfactual relationships of this type explain the slow acceptance of causal analysis among health scientists and statisticians, and wh y most economists and social scientists continue to use structural equation m odels ( Wooldridge , 2002;Stock and Watson ,2003;Heckman ,2008) instead of the potential-outcome alternatives advocated in Angrist et al.&nbsp;(1996);Holland (1988);Sobel (1998, 2008). On the other hand, the algebraic machinery oﬀered by the coun terfactual no- tation, Yx(u), once a problem is properly formalized, can be extremely po werful in reﬁning assumptions ( Angrist et al.&nbsp;,1996;Heckman and Vytlacil ,2005), de- riving consistent estimands ( Robins ,1986), bounding probabilities of necessary and suﬃcient causation ( Tian and Pearl ,2000), and combining data from exper- imental and nonexperimental studies ( Pearl,2000a ). The next subsection ( 4.3) presents a way of combining the best features of the two appro aches. It is based on encoding causal assumptions in the language of diagrams, translating these assumptions into counterfactual notation, performing the mathematics in the algebraic language of counterfactuals (using ( 36), (37), and ( 38)) and, ﬁnally, interpreting the result in graphical terms or plain causal l anguage. The media- tion problem of Section 5.1illustrates how such symbiosis clariﬁes the deﬁnition and identiﬁcation of direct and indirect eﬀects. In contrast, when the mediation problem is approached from a n orthodox potential-outcome viewpoint, void of the structural guida nce of Eq. ( 27), para- doxical results ensue. For example, the direct eﬀect is deﬁn able only in units absent of indirect eﬀects ( Rubin ,2004,2005). This means that a grandfather 20The opaqueness of counterfactual independencies explains why many researchers within the potential-outcome camp are unaware of the fact that addi ng a covariate to the analysis (e.g., Z3in Fig. 4,Zin Fig. 5a) may actually increase confounding bias in propensity-score matching. Paul Rosenbaum, for example, writes: “there is li ttle or no reason to avoid adjust- ment for a true covariate, a variable describing subjects be fore treatment” ( Rosenbaum ,2002, p.&nbsp;76). Rubin (2009) goes as far as stating that refraining from conditioning on an available measurement is “nonscientiﬁcad hockery” for it goes agains t the tenets of Bayesian philosophy (see (Pearl,2009b ,c;Heckman and Navarro-Lozano ,2004) for a discussion of this fallacy). would be deemed to have no direct eﬀect on his grandson’s beha vior in families where he has had some eﬀect on the father. This precludes from the analy- sis all typical families, in which a father and a grandfather have simultaneous, complementary inﬂuences on children’s upbringing. In line ar systems, to take a sharper example, the direct eﬀect would be undeﬁned wheneve r indirect paths exist from the cause to its eﬀect. The emergence of such parad oxical conclusions underscores the wisdom, if not necessity of a symbiotic anal ysis, in which the counterfactual notation Yx(u) is governed by its structural deﬁnition, Eq. ( 27).21</p>
+</section>
+<section id="combining-graphs-and-potential-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="combining-graphs-and-potential-outcomes">4.3. Combining graphs and potential outcomes</h3>
+<p>The formulation of causal assumptions using graphs was disc ussed in Section 3. In this subsection we will systematize the translation of th ese assumptions from graphs to counterfactual notation. Structural equation models embody causal information in bo th the equa- tions and the probability function P(u) assigned to the exogenous variables; the former is encoded as missing arrows in the diagrams the la tter as missing (double arrows) dashed arcs. Each parent-child family ( PAi, Xi) in a causal diagram Gcorresponds to an equation in the model M. Hence, missing arrows encode exclusion assumptions, that is, claims that manipul ating variables that are excluded from an equation will not change the outcome of t he hypothetical experiment described by that equation. Missing dashed arcs encode independen- cies among error terms in two or more equations. For example, the absence of dashed arcs between a node Yand a set of nodes {Z1, . . ., Z k}implies that the corresponding background variables, UYand{UZ1, . . ., U Zk}, are independent inP(u). These assumptions can be translated into the potential-out come notation using two simple rules ( Pearl,2000a , p.&nbsp;232); the ﬁrst interprets the missing arrows in the graph, the second, the missing dashed arcs. 1.Exclusion restrictions: For every variable Yhaving parents PAYand for every set of endogenous variables Sdisjoint of PAY, we have YpaY=YpaY,s. (41) 2.Independence restrictions: IfZ1, . . ., Z kis any set of nodes not connected toYvia dashed arcs, and PA1, . . ., PA ktheir respective sets of parents, we have YpaY⊥ ⊥{Z1pa1, . . ., Z k pa k}. (42) The exclusion restrictions expresses the fact that each par ent set includes all direct causes of the child variable, hence, ﬁxing the parent s ofY, determines the value of Yuniquely, and intervention on any other set Sof (endogenous) variables can no longer aﬀect Y. The independence restriction translates the 21Such symbiosis is now standard in epidemiology research ( Robins ,2001;Petersen et al.&nbsp;, 2006;VanderWeele and Robins ,2007;Hafeman and Schwartz ,2009;VanderWeele ,2009) yet still lacking in econometrics ( Heckman ,2008;Imbens and Wooldridge ,2009). independence between UYand{UZ1, . . ., U Zk}into independence between the corresponding potential-outcome variables. This follows from the observation that, once we set their parents, the variables in {Y, Z1, . . ., Z k}stand in func- tional relationships to the Uterms in their corresponding equations. As an example, the model shown in Fig. 5(a) displays the following parent sets: PAZ={∅}, PAX={Z}, PAY={X}. (43) Consequently, the exclusion restrictions translate into: Xz=Xyz Zy=Zxy=Zx=Z (44) Yx=Yxz the absence of any dashed arc between Zand{Y, X}translates into the inde- pendence restriction Z⊥ ⊥{Yx, Xz}. (45) This is precisely the condition of randomization; Zis independent of all its non-descendants, namely independent of UXandUYwhich are the exogenous parents of YandX, respectively. (Recall that the exogenous parents of any variable, say Y, may be replaced by the counterfactual variable YpaY, because holding PAYconstant renders Ya deterministic function of its exogenous par- entUY.) The role of graphs is not ended with the formulation of causal assumptions. Throughout an algebraic derivation, like the one shown in Eq . (40), the analyst may need to employ additional assumptions that are entailed by the original exclusion and independence assumptions, yet are not shown e xplicitly in their respective algebraic expressions. For example, it is hardl y straightforward to show that the assumptions of Eqs. ( 44)–(45) imply the conditional independence (Yx⊥ ⊥Z|{Xz, X}) but do not imply the conditional independence ( Yx⊥ ⊥Z|X). These are not easily derived by algebraic means alone. Such i mplications can, however, easily be tested in the graph of Fig. 5(a) using the graphical read- ing for conditional independence (Deﬁnition 1). (See ( Pearl,2000a, pp.&nbsp;16–17, 213–215).) Thus, when the need arises to employ independenc ies in the course of a derivation, the graph may assist the procedure by vividl y displaying the independencies that logically follow from our assumptions .</p>
+</section>
+</section>
+<section id="counterfactuals-at-work" class="level2">
+<h2 class="anchored" data-anchor-id="counterfactuals-at-work">5. Counterfactuals at work</h2>
+<section id="mediation-direct-and-indirect-eﬀects" class="level3">
+<h3 class="anchored" data-anchor-id="mediation-direct-and-indirect-eﬀects">5.1. Mediation: Direct and indirect eﬀects</h3>
+<p>5.1.1. Direct versus total eﬀects: The causal eﬀect we have analyzed so far, P(y|do(x)), measures the totaleﬀect of a variable (or a set of variables) Xon a response variable Y. In many cases, this quantity does not adequately represent the target of invest igation and attention is focused instead on the direct eﬀect of XonY. The term “direct eﬀect” is meant to quantify an eﬀect that is not mediated by other varia bles in the model or, more accurately, the sensitivity of Yto changes in Xwhile all other factors in the analysis are held ﬁxed. Naturally, holding those fact ors ﬁxed would sever all causal paths from XtoYwith the exception of the direct link X→Y, which is not intercepted by any intermediaries. A classical example of the ubiquity of direct eﬀects involve s legal disputes over race or sex discrimination in hiring. Here, neither the eﬀect of sex or race on applicants’ qualiﬁcation nor the eﬀect of qualiﬁcation o n hiring are targets of litigation. Rather, defendants must prove that sex and ra ce do not directly inﬂuence hiring decisions, whatever indirect eﬀects they m ight have on hiring by way of applicant qualiﬁcation. Another example concerns the identiﬁcation of neural pathw ays in the brain or the structural features of protein-signaling networks i n molecular biology (Brent and Lok ,2005). Here, the decomposition of eﬀects into their direct and indirect components carries theoretical scientiﬁc import ance, for it predicts be- havior under a rich variety of hypothetical interventions. In all such examples, the requirement of holding the mediati ng variables ﬁxed must be interpreted as (hypothetically) setting the in termediate variables to constants by physical intervention, not by analytical me ans such as selection, conditioning, or adjustment. For example, it will not be suﬃ cient to measure the association between gender ( X) and hiring ( Y) for a given level of qualiﬁ- cation Z, because, by conditioning on the mediator Z, we may create spurious associations between XandYeven when there is no direct eﬀect of XonY (Pearl,1998;Cole and Hern´ an ,2002). This can easily be illustrated in the model X→Z←U→Y, where Xhas no direct eﬀect on Y. Physically holding Z constant would sustain the independence between XandY, as can be seen by deleting all arrows entering Z. But if we were to condition on Z, a spurious association would be created through U(unobserved) that might be construed as a direct eﬀect of XonY.22 Using the do(x) notation, and focusing on diﬀerences of expectations, thi s leads to a simple deﬁnition of controlled direct eﬀect : CDE∆=E(Y|do(x/prime), do(z))−E(Y|do(x), do(z)) or, equivalently, using counterfactual notation: CDE∆=E(Yx/primez)−E(Yxz) (46) where Zis any set of mediating variables that intercept all indirec t paths be- tween XandY. Graphical identiﬁcation conditions for expressions of th e type E(Y|do(x), do(z1), do(z2), . . ., do (zk)) were derived by Pearl and Robins (1995) (see ( Pearl,2000a , Chapter 4)) using sequential application of the back-door condition (Deﬁnition 3). 22According to Rubin (2004,2005), R.A. Fisher made this mistake in the context of agri- culture experiments. Fisher, in fairness, did not have grap hs for guidance. 5.1.2. Natural direct eﬀects In linear systems, Eq. ( 46) yields the path coeﬃcient of the link from XtoY; independent of the values at which we hold Z, independent of the distribution of the error terms, and regardless of whether those coeﬃcien ts are identiﬁable or not. In nonlinear systems, the values at which we hold Zwould, in general, modify the eﬀect of XonYand thus should be chosen carefully to represent the target policy under analysis. For example, it is not uncommo n to ﬁnd employers who prefer males for the high-paying jobs (i.e., high z) and females for low- paying jobs (low z). When the direct eﬀect is sensitive to the levels at which we ho ldZ, it is often meaningful to deﬁne the direct eﬀect relative to a “nat ural representative” of those levels or, more speciﬁcally, as the expected change inYinduced by changing Xfromxtox/primewhile keeping all mediating factors constant at whatever value they would have obtained under do(x). This hypothetical change, which Robins and Greenland (1992) called “pure” and Pearl (2001) called “natural,” mirrors what lawmakers instruct us to consider in race or sex discrimination cases: “The central question in any employment-discrimina tion case is whether the employer would have taken the same action had the employe e been of a diﬀerent race (age, sex, religion, national origin etc.) an d everything else had been the same.” (In Carson versus Bethlehem Steel Corp.&nbsp;, 70 FEP Cases 921, 7th Cir. (1996)). Extending the subscript notation to express nested counter factuals, Pearl (2001) gave the following deﬁnition for the “natural direct eﬀect”: DEx,x/prime(Y)∆=E(Yx/prime,Zx)−E(Yx). (47) Here, Yx/prime,Zxrepresents the value that Ywould attain under the operation of setting Xtox/primeand, simultaneously, setting Zto whatever value it would have obtained under the original setting X=x. We see that DEx,x/prime(Y), the natural direct eﬀect of the transition from xtox/prime, involves probabilities of nested coun- terfactuals and cannot be written in terms of the do(x) operator. Therefore, the natural direct eﬀect cannot in general be identiﬁed, even wi th the help of ideal, controlled experiments (see footnote 11for intuitive explanation). Pearl (2001) has nevertheless shown that, if certain assumptions of “unc onfoundedness” are deemed valid, the natural direct eﬀect can be reduced to DEx,x/prime(Y) =/summationdisplay z[E(Y|do(x/prime, z))−E(Y|do(x, z))]P(z|do(x)). (48) The intuition is simple; the natural direct eﬀect is the weig hted average of the controlled direct eﬀect ( 46), using the causal eﬀect P(z|do(x)) as a weighing function. One suﬃcient condition for the identiﬁcation of ( 47) is that Zx⊥ ⊥Yx/prime,z|W holds for some set Wof measured covariates. However, this condition in itself, like the ignorability condition of ( 42), is close to meaningless for most investiga- tors, as it is not phrased in terms of realized variables. The symbiotic analysis of Section 4.3can be invoked at this point to unveil the graphical interpre tation of this condition (through Eq. ( 45).) It states that Wshould be admissible (i.e., satisfy the back-door condition) relative the path(s) from ZtoY. This condition is readily comprehended by empirical researchers, and the t ask of selecting such measurements, W, can then be guided by the available scientiﬁc knowledge. Se e details and graphical criteria in Pearl (2001,2005) and in Petersen et al.&nbsp;(2006). In particular, expression ( 48) is both valid and identiﬁable in Markovian models, where each term on the right can be reduced to a “ do-free” expression using Eq. ( 24). 5.1.3. Indirect eﬀects and the Mediation Formula Remarkably, the deﬁnition of the natural direct eﬀect ( 47) can easily be turned around and provide an operational deﬁnition for the indirect eﬀect – a concept shrouded in mystery and controversy, because it is impossib le, using the do(x) operator, to disable the direct link from XtoYso as to let Xinﬂuence Ysolely via indirect paths. The natural indirect eﬀect, IE, of the transition from xtox/primeis deﬁned as the expected change in Yaﬀected by holding Xconstant, at X=x, and changing Zto whatever value it would have attained had Xbeen set to X=x/prime. Formally, this reads ( Pearl,2001): IEx,x/prime(Y)∆=E((Yx,Zx/prime)−E(Yx)), (49) which is almost identical to the direct eﬀect (Eq. ( 47)) save for exchanging x andx/prime. Indeed, it can be shown that, in general, the total eﬀect TEof a transition is equal to the diﬀerence between the direct eﬀect of that transition and the indirect eﬀect of the reverse transition. Formally, TEx,x/prime(Y)∆=E(Yx/prime−Yx) =DEx,x/prime(Y)−IEx/prime,x(Y). (50) In linear systems, where reversal of transitions amounts to negating the signs of their eﬀects, we have the standard additive formula TEx,x/prime(Y) =DEx,x/prime(Y) +IEx,x/prime(Y). (51) Since each term above is based on an independent operational deﬁnition, this equality constitutes a formal justiﬁcation for the additiv e formula used routinely in linear systems. For completeness, we explicate (from ( 48) and ( 51)) the expression for indirect eﬀects under conditions of nonconfoundedness: IEx,x/prime(Y) =/summationdisplay zE(Y|x, z)[P(z|x/prime)−P(z|x)] (52) This expression deserves the label Mediation Formula , due to its pivotal role in mediation analysis ( Imai et al.&nbsp;,2008), which has been a thorny issue in several sciences ( Shrout and Bolger ,2002;MacKinnon et al.&nbsp;,2007;Mortensen et al.&nbsp;, 2009). When the outcome Yis binary (e.g., recovery, or hiring) the ratio (1 − IE)/TE represents the fraction of responding individuals who owe t heir re- sponse to direct paths, while (1 −DE)/TErepresents the fraction who owe their response to Z-mediated paths. In addition to providing researchers with a principled, parametric-free target quantity that is valid in both linear and non- linear models, the formula can also serve as an analytical la boratory for testing the eﬀectiveness of various estimation techniques under va rious types of model mispeciﬁcation ( VanderWeele ,2009). Note that, although it cannot be expressed in do-notation, the indirect eﬀect has clear policy-making implications. For example: in the h iring discrimination context, a policy maker may be interested in predicting the g ender mix in the work force if gender bias is eliminated and all applicants ar e treated equally— say, the same way that males are currently treated. This quan tity will be given by the indirect eﬀect of gender on hiring, mediated by factor s such as education and aptitude, which may be gender-dependent. More generally, a policy maker may be interested in the eﬀect of issuing a directive to a select set of subordinate employees, or in car efully controlling the routing of messages in a network of interacting agents. S uch applications motivate the analysis of path-speciﬁc eﬀects , that is, the eﬀect of XonYthrough a selected set of paths ( Avin et al.&nbsp;,2005). Note that in all these cases, the policy intervention invoke s the selection of signals to be sensed, rather than variables to be ﬁxed. Pearl (2001) has suggested therefore that signal sensing is more fundamental to the notion of causation thanmanipulation ; the latter being but a crude way of testing the former in experimental setup. The mantra “No causation without manip ulation” must be rejected. (See ( Pearl,2000a , Section 11.4.5.).) It is remarkable that counterfactual quantities like DEandIDthat could not be expressed in terms of do(x) operators, and appear therefore void of empiri- cal content, can, under certain conditions be estimated fro m empirical studies. A general characterization of those conditions is given in ( Shpitser and Pearl , 2007). Additional examples of this “marvel of formal analysis” are given in the next section and in ( Pearl,2000a , Chapters 7, 9, 11). It constitutes an unassailable argument in defense of counterfactual analysis, as express ed in Pearl (2000b ) against the stance of Dawid (2000).</p>
+</section>
+<section id="causes-of-eﬀects-and-probabilities-of-causation" class="level3">
+<h3 class="anchored" data-anchor-id="causes-of-eﬀects-and-probabilities-of-causation">5.2. Causes of eﬀects and probabilities of causation</h3>
+<p>The likelihood that one event was the cause of another guides much of what we understand about the world (and how we act in it). For examp le, knowing whether it was the aspirin that cured my headache or the TV pro gram I was watching would surely aﬀect my future use of aspirin. Likewi se, to take an example from common judicial standard, judgment in favor of a plaintiﬀ should be made if and only if it is “more probable than not” that the da mage would not have occurred but for the defendant’s action ( Robertson ,1997). These two examples fall under the category of “causes of eﬀec ts” because they concern situations in which we observe both the eﬀect, Y=y, and the putative cause X=xand we are asked to assess, counterfactually, whether the former would have occurred absent the latter. We have remarked earlier (footnote 11) that counterfactual probabilities con- ditioned on the outcome cannot in general be identiﬁed from o bservational or even experimental studies. This does not mean however that s uch probabilities are useless or void of empirical content; the structural per spective may guide us in fact toward discovering the conditions under which the y can be assessed from data, thus deﬁning the empirical content of these count erfactuals. Following the 4-step process of structural methodology – de ﬁne, assume, iden- tify, and estimate – our ﬁrst step is to express the target qua ntity in counterfac- tual notation and verify that it is well deﬁned, namely, that it can be computed unambiguously from any fully-speciﬁed causal model. In our case, this step is simple. Assuming binary events, wit hX=xand Y=yrepresenting treatment and outcome, respectively, and X=x/prime,Y=y/prime their negations, our target quantity can be formulated dire ctly from the English sentence: “Find the probability that Ywould be y/primehadXbeen x/prime, given that, in reality, Yis actually yandXisx,” to give: PN(x, y) =P(Yx/prime=y/prime|X=x, Y=y) (53) This counterfactual quantity, which Robins and Greenland (1989a ) named “probability of causation” and Pearl (2000a , p.&nbsp;296) named “probability of ne- cessity” (PN), to be distinguished from other nuances of “ca usation,” is certainly computable from any fully speciﬁed structural model, i.e., one in which P(u) and all functional relationships are given. This follows fr om the fact that every structural model deﬁnes a joint distribution of counterfac tuals, through Eq. ( 27). Having written a formal expression for PN, Eq. ( 53), we can move on to the formulation and identiﬁcation phases and ask what assumpti ons would permit us to identify PN from empirical studies, be they observatio nal, experimental or a combination thereof. This problem was analyzed by Pearl (2000a , Chapter 9) and yielded the following results: Theorem 3. IfYis monotonic relative to X, i.e., Y1(u)≥Y0(u), then PNis identiﬁable whenever the causal eﬀect P(y|do(x))is identiﬁable and, moreover, PN =P(y|x)−P(y|x/prime) P(y|x)+P(y|x/prime)−P(y|do(x/prime)) P(x, y). (54) The ﬁrst term on the r.h.s. of ( 54) is the familiar excess risk ratio (ERR) that epidemiologists have been using as a surrogate for PN in court cases ( Cole, 1997;Robins and Greenland ,1989a ). The second term represents the correction needed to account for confounding bias, that is, P(y|do(x/prime))/negationslash=P(y|x/prime). This suggests that monotonicity and unconfoundedness were tacitly assumed by the many authors who proposed or derived ERR as a measure fo r the “frac- tion of exposed cases that are attributable to the exposure” (Greenland ,1999). Equation ( 54) thus provides a more reﬁned measure of causation, which can be used in situations where the causal eﬀect P(y|do(x)) can be estimated from either randomized trials or graph-assisted observational studies (e.g., through Theorem 2or Eq. ( 25)). It can also be shown ( Tian and Pearl ,2000) that the expression in ( 54) provides a lower bound for PN in the general, nonmonotonic case. (See also ( Robins and Greenland ,1989b ).) In particular, the tight upper and lower bounds on PN are given by: max/braceleftBig 0,P(y)−P(y|do(x/prime)) P(x,y)/bracerightBig ≤PN≤min/braceleftBig 1,P(y/prime|do(x/prime))−P(x/prime,y/prime) P(x,y)/bracerightBig (55) It is worth noting that, in drug related litigation, it is not uncommon to obtain data from both experimental and observational studi es. The former is usually available at the manufacturer or the agency that app roved the drug for distribution (e.g., FDA), while the latter is easy to obtain by random surveys of the population. In such cases, the standard lower bound used by epidemiologists to establish legal responsibility, the Excess Risk Ratio, c an be substantially im- proved using the lower bound of Eq. ( 55). Likewise, the upper bound of Eq. ( 55) can be used to exonerate drug-makers from legal responsibil ity.Cai and Kuroki (2006) analyzed the statistical properties of PN. Pearl (2000a , p.&nbsp;302) shows that combining data from experimental and ob- servational studies which, taken separately, may indicate no causal relations between XandY, can nevertheless bring the lower bound of Eq. ( 55) to unity, thus implying causation with probability one . Such extreme results dispel all fears and trepidations conc erning the empir- ical content of counterfactuals ( Dawid ,2000;Pearl,2000b ). They demonstrate that a quantity PN which at ﬁrst glance appears to be hypothet ical, ill-deﬁned, untestable and, hence, unworthy of scientiﬁc analysis is ne vertheless deﬁnable, testable and, in certain cases, even identiﬁable. Moreover , the fact that, under certain combination of data, and making no assumptions what soever, an im- portant legal claim such as “the plaintiﬀ would be alive had h e not taken the drug” can be ascertained with probability one, is a remarkab le tribute to formal analysis. Another counterfactual quantity that has been fully charac terized recently is the Eﬀect of Treatment on the Treated (ETT): ETT =P(Yx=y|X=x/prime) ETT has been used in econometrics to evaluate the eﬀectivene ss of social pro- grams on their participants ( Heckman ,1992) and has long been the target of research in epidemiology, where it came to be known as “the eﬀ ect of exposure on the exposed,” or “standardized morbidity” ( Miettinen ,1974; Greenland and Robins, 1986). Shpitser and Pearl (2009) have derived a complete characterization of those models in which ETT can be identiﬁed from either experimenta l or observa- tional studies. They have shown that, despite its blatant co unterfactual char- acter, (e.g., “I just took an aspirin, perhaps I shouldn’t ha ve?”) ETT can be evaluated from experimental studies in many, though not all cases. It can also be evaluated from observational studies whenever a suﬃcien t set of covariates can be measured that satisﬁes the back-door criterion and, m ore generally, in a wide class of graphs that permit the identiﬁcation of condit ional interventions. These results further illuminate the empirical content of c ounterfactuals and their essential role in causal analysis. They prove once aga in the triumph of logic and analysis over traditions that a-priori exclude from the analysis quantities that are not testable in isolation. Most of all, they demonst rate the eﬀective- ness and viability of the scientiﬁc approach to causation whereby the dominant paradigm is to model the activities of Nature, rather than th ose of the experi- menter. In contrast to the ruling paradigm of conservative s tatistics, we begin with relationships that we know in advance will never be esti mated, tested or falsiﬁed. Only after assembling a host of such relationship s and judging them to faithfully represent our theory about how Nature operates, we ask whether the parameter of interest, crisply deﬁned in terms of those theo retical relationships, can be estimated consistently from empirical data and how. I t often does, to the credit of progressive statistics.</p>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">6. Conclusions</h2>
+<p>Traditional statistics is strong in devising ways of descri bing data and infer- ring distributional parameters from sample. Causal infere nce requires two ad- ditional ingredients: a science-friendly language for art iculating causal knowl- edge, and a mathematical machinery for processing that know ledge, combining it with data and drawing new causal conclusions about a pheno menon. This paper surveys recent advances in causal analysis from the un ifying perspective of the structural theory of causation and shows how statisti cal methods can be supplemented with the needed ingredients. The theory invok es non-parametric structural equations models as a formal and meaningful lang uage for deﬁning causal quantities, formulating causal assumptions, testi ng identiﬁability, and ex- plicating many concepts used in causal discourse. These inc lude: randomization, intervention, direct and indirect eﬀects, confounding, co unterfactuals, and attri- bution. The algebraic component of the structural language coincides with the potential-outcome framework, and its graphical component embraces Wright’s method of path diagrams. When uniﬁed and synthesized, the tw o components oﬀer statistical investigators a powerful and comprehensi ve methodology for empirical research.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Angrist, J. andImbens, G. (1991). Source of identifying information in eval- uation models. Tech. Rep.&nbsp;Discussion Paper 1568, Departmen t of Economics, Harvard University, Cambridge, MA. Angrist, J. ,Imbens, G. andRubin, D. (1996). Identiﬁcation of causal ef- fects using instrumental variables (with comments). Journal of the American Statistical Association 91444–472. Arah, O. (2008). The role of causal reasoning in understanding Simp- son’s paradox, Lord’s paradox, and the suppression eﬀect: C ovariate se- lection in the analysis of observational studies. Emerging Themes in Epidemiology 4doi:10.1186/1742–7622–5–5. Online at &lt;http://www.ete- online.com/content/5/1/5 &gt;. Arjas, E. andParner, J. (2004). Causal reasoning from longitudinal data. Scandinavian Journal of Statistics 31171–187. Avin, C. ,Shpitser, I. andPearl, J. (2005). Identiﬁability of path-speciﬁc eﬀects. In Proceedings of the Nineteenth International Joint Confere nce on Artiﬁcial Intelligence IJCAI-05 . Morgan-Kaufmann Publishers, Edinburgh, UK. Balke, A. andPearl, J. (1995). Counterfactuals and policy analysis in struc- tural models. In Uncertainty in Artiﬁcial Intelligence 11 (P. Besnard and S. Hanks, eds.). Morgan Kaufmann, San Francisco, 11–18. Balke, A. andPearl, J. (1997). Bounds on treatment eﬀects from studies with imperfect compliance. Journal of the American Statistical Association 921172–1176. Berkson, J. (1946). Limitations of the application of fourfold table an alysis to hospital data. Biometrics Bulletin 247–53. Bishop, Y. ,Fienberg, S. andHolland, P. (1975). Discrete multivariate analysis: theory and practice . MIT Press, Cambridge, MA. Blyth, C. (1972). On Simpson’s paradox and the sure-thing principle. Journal of the American Statistical Association 67364–366. Bollen, K. (1989). Structural Equations with Latent Variables . John Wiley, New York. Bonet, B. (2001). Instrumentality tests revisited. In Proceedings of the Sev- enteenth Conference on Uncertainty in Artiﬁcial Intellige nce. Morgan Kauf- mann, San Francisco, CA, 48–55. Bowden, R. andTurkington, D. (1984). Instrumental Variables . Cambridge University Press, Cambridge, England. Brent, R. andLok, L. (2005). A ﬁshing buddy for hypothesis generators. Science 308523–529. Cai, Z. andKuroki, M. (2006). Variance estimators for three ‘probabilities of causation’. Risk Analysis 251611–1620. Chalak, K. andWhite, H. (2006). An extended class of instrumental variables for the estimation of causal eﬀects. Tech. Rep.&nbsp;Discussion P aper, UCSD, Department of Economics. Chen, A. ,Bengtsson, T. andHo, T. (2009). A regression paradox for linear models: Suﬃcient conditions and relation to Simpson’s para dox.The Ameri- can Statistician 63218–225. Chickering, D. andPearl, J. (1997). A clinician’s tool for analyzing non- compliance. Computing Science and Statistics 29424–431. Cole, P. (1997). Causality in epidemiology, health policy, and law. Journal of Marketing Research 2710279–10285. Cole, S. andHern´an, M. (2002). Fallibility in estimating direct eﬀects. In- ternational Journal of Epidemiology 31163–165. Cox, D. (1958). The Planning of Experiments . John Wiley and Sons, NY. Cox, D. andWermuth, N. (2003). A general condition for avoiding eﬀect reversal after marginalization. Journal of the Royal Statistical Society, Series B (Statistical Methodology) 65937–941. Cox, D. andWermuth, N. (2004). Causality: A statistical view. International Statistical Review 72285–305. Dawid, A. (1979). Conditional independence in statistical theory. Journal of the Royal Statistical Society, Series B 411–31. Dawid, A. (2000). Causal inference without counterfactuals (with co mments and rejoinder). Journal of the American Statistical Association 95407–448. Dawid, A. (2002). Inﬂuence diagrams for causal modelling and inferen ce.In- ternational Statistical Review 70161–189. DeFinetti, B. (1974). Theory of Probability: A Critical Introductory Treat- ment. Wiley, London. 2 volumes. Translated by A. Machi and A. Smit h. Duncan, O. (1975). Introduction to Structural Equation Models . Academic Press, New York. Eells, E. (1991). Probabilistic Causality . Cambridge University Press, Cam- bridge, MA. Frangakis, C. andRubin, D. (2002). Principal stratiﬁcation in causal infer- ence.Biometrics 121–29. Glymour, M. andGreenland, S. (2008). Causal diagrams. In Modern Epi- demiology (K. Rothman, S. Greenland and T. Lash, eds.), 3rd ed.&nbsp;Lippinc ott Williams &amp; Wilkins, Philadelphia, PA, 183–209. Goldberger, A. (1972). Structural equation models in the social sciences. Econometrica: Journal of the Econometric Society 40979–1001. Goldberger, A. (1973). Structural equation models: An overview. In Struc- tural Equation Models in the Social Sciences (A. Goldberger and O. Duncan, eds.). Seminar Press, New York, NY, 1–18. Good, I. andMittal, Y. (1987). The amalgamation and geometry of two-by- two contingency tables. The Annals of Statistics 15694–711. Greenland, S. (1999). Relation of probability of causation, relative ris k, and doubling dose: A methodologic error that has become a social problem. Amer- ican Journal of Public Health 891166–1169. Greenland, S. ,Pearl, J. andRobins, J. (1999). Causal diagrams for epi- demiologic research. Epidemiology 1037–48. Greenland, S. andRobins, J. (1986). Identiﬁability, exchangeability, and epidemiological confounding. International Journal of Epidemiology 15413– ## 419. Haavelmo, T. (1943). The statistical implications of a system of simulta neous equations. Econometrica 111–12. Reprinted in D.F. Hendry and M.S. Mor- gan (Eds.), The Foundations of Econometric Analysis , Cambridge University Press, 477–490, 1995. Hafeman, D. andSchwartz, S. (2009). Opening the black box: A motivation for the assessment of mediation. International Journal of Epidemiology 3 838–845. Heckman, J. (1992). Randomization and social policy evaluation. In Evalu- ations: Welfare and Training Programs (C. Manski and I. Garﬁnkle, eds.). Harvard University Press, Cambridge, MA, 201–230. Heckman, J. (2008). Econometric causality. International Statistical Review 761–27. Heckman, J. andNavarro-Lozano, S. (2004). Using matching, instrumental variables, and control functions to estimate economic choi ce models. The Review of Economics and Statistics 8630–57. Heckman, J. andVytlacil, E. (2005). Structural equations, treatment eﬀects and econometric policy evaluation. Econometrica 73669–738. Holland, P. (1988). Causal inference, path analysis, and recursive str uctural equations models. In Sociological Methodology (C. Clogg, ed.). American Sociological Association, Washington, D.C., 449–484. Hurwicz, L. (1950). Generalization of the concept of identiﬁcation. In Sta- tistical Inference in Dynamic Economic Models (T. Koopmans, ed.). Cowles Commission, Monograph 10, Wiley, New York, 245–257. Imai, K. ,Keele, L. andYamamoto, T. (2008). Identiﬁcation, inference, and sensitivity analysis for causal mediation eﬀects. Tech. re p., Department of Politics, Princton University. Imbens, G. andWooldridge, J. (2009). Recent developments in the econo- metrics of program evaluation. Journal of Economic Literature 47. Kiiveri, H. ,Speed, T. andCarlin, J. (1984). Recursive causal models. Journal of Australian Math Society 3630–52. Koopmans, T. (1953). Identiﬁcation problems in econometric model const ruc- tion. In Studies in Econometric Method (W. Hood and T. Koopmans, eds.). Wiley, New York, 27–48. Kuroki, M. andMiyakawa, M. (1999). Identiﬁability criteria for causal eﬀects of joint interventions. Journal of the Royal Statistical Society 29105–117. Lauritzen, S. (1996). Graphical Models . Clarendon Press, Oxford. Lauritzen, S. (2001). Causal inference from graphical models. In Com- plex Stochastic Systems (D. Cox and C. Kluppelberg, eds.). Chapman and Hall/CRC Press, Boca Raton, FL, 63–107. Lindley, D. (2002). Seeing and doing: The concept of causation. International Statistical Review 70191–214. Lindley, D. andNovick, M. (1981). The role of exchangeability in inference. The Annals of Statistics 945–58. MacKinnon, D. ,Fairchild, A. andFritz, M. (2007). Mediation analysis. Annual Review of Psychology 58593–614. Manski, C. (1990). Nonparametric bounds on treatment eﬀects. American Economic Review, Papers and Proceedings 80319–323. Marschak, J. (1950). Statistical inference in economics. In Statistical Inference in Dynamic Economic Models (T. Koopmans, ed.). Wiley, New York, 1–50. Cowles Commission for Research in Economics, Monograph 10. Meek, C. andGlymour, C. (1994). Conditioning and intervening. British Journal of Philosophy Science 451001–1021. Miettinen, O. (1974). Proportion of disease caused or prevented by a given exposure, trait, or intervention. Journal of Epidemiology 99325–332. Morgan, S. andWinship, C. (2007). Counterfactuals and Causal Inference: Methods and Principles for Social Research (Analytical Met hods for Social Research) . Cambridge University Press, New York, NY. Mortensen, L. ,Diderichsen, F. ,Smith, G. andAndersen, A. (2009). The social gradient in birthweight at term: quantiﬁcation of th e mediating role of maternal smoking and body mass index. Human Reproduction To appear, doi:10.1093/humrep/dep211. Neyman, J. (1923). On the application of probability theory to agricul tural experiments. Essay on principles. Section 9. Statistical Science 5465–480. Pavlides, M. andPerlman, M. (2009). How likely is Simpson’s paradox? The American Statistician 63226–233. Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems . Morgan Kauf- mann, San Mateo, CA. Pearl, J. (1993a). Comment: Graphical models, causality, and interv ention. Statistical Science 8266–269. Pearl, J. (1993b). Mediating instrumental variables. Tech. Rep.&nbsp;TR- 210, &lt;http://ftp.cs.ucla.edu/pub/stat ser/R210.pdf &gt;, Department of Computer Science, University of California, Los Angeles. Pearl, J. (1995a). Causal diagrams for empirical research. Biometrika 82 669–710. Pearl, J. (1995b). On the testability of causal models with latent and instru- mental variables. In Uncertainty in Artiﬁcial Intelligence 11 (P. Besnard and S. Hanks, eds.). Morgan Kaufmann, San Francisco, CA, 435–44 3. Pearl, J. (1998). Graphs, causality, and structural equation models .Sociolog- ical Methods and Research 27226–284. Pearl, J. (2000a). Causality: Models, Reasoning, and Inference . Cambridge University Press, New York. 2nd edition, 2009. Pearl, J. (2000b). Comment on A.P. Dawid’s, Causal inference without coun- terfactuals. Journal of the American Statistical Association 95428–431. Pearl, J. (2001). Direct and indirect eﬀects. In Proceedings of the Seventeenth Conference on Uncertainty in Artiﬁcial Intelligence . Morgan Kaufmann, San Francisco, CA, 411–420. Pearl, J. (2003). Statistics and causal inference: A review. Test Journal 12 281–345. Pearl, J. (2005). Direct and indirect eﬀects. In Proceedings of the American Statistical Association, Joint Statistical Meetings . MIRA Digital Publishing, Minn., MN, 1572–1581. Pearl, J. (2009a). Causality: Models, Reasoning, and Inference . 2nd ed.&nbsp;Cam- bridge University Press, New York. Pearl, J. (2009b). Letter to the editor: Remarks on the method of propensity scores. Statistics in Medicine 281415–1416. &lt;http://ftp.cs.ucla.edu/pub/stat ser/r345-sim.pdf &gt;. Pearl, J. (2009c). Myth, confusion, and science in causal analy- sis. Tech. Rep.&nbsp;R-348, University of California, Los Angele s, CA. &lt;http://ftp.cs.ucla.edu/pub/stat ser/r348.pdf &gt;. Pearl, J. andPaz, A. (2009). Confounding equivalence in observational studies. Tech. Rep.&nbsp;TR-343, University of California, Los A ngeles, CA. &lt;http://ftp.cs.ucla.edu/pub/stat ser/r343.pdf &gt;. Pearl, J. andRobins, J. (1995). Probabilistic evaluation of sequential plans from causal models with hidden variables. In Uncertainty in Artiﬁcial Intelli- gence 11 (P. Besnard and S. Hanks, eds.). Morgan Kaufmann, San Franci sco, 444–453. Pearl, J. andVerma, T. (1991). A theory of inferred causation. In Princi- ples of Knowledge Representation and Reasoning: Proceedin gs of the Second International Conference (J. Allen, R. Fikes and E. Sandewall, eds.). Morgan Kaufmann, San Mateo, CA, 441–452. Pearson, K. ,Lee, A. andBramley-Moore, L. (1899). Genetic (reproduc- tive) selection: Inheritance of fertility in man. Philosophical Transactions of the Royal Society A 73534–539. Petersen, M. ,Sinisi, S. andvan der Laan, M. (2006). Estimation of direct causal eﬀects. Epidemiology 17276–284. Robertson, D. (1997). The common sense of cause in fact. Texas Law Review 751765–1800. Robins, J. (1986). A new approach to causal inference in mortality stud ies with a sustained exposure period – applications to control of the healthy workers survivor eﬀect. Mathematical Modeling 71393–1512. Robins, J. (1987). A graphical approach to the identiﬁcation and estim ation of causal parameters in mortality studies with sustained ex posure periods. Journal of Chronic Diseases 40139S–161S. Robins, J. (1989). The analysis of randomized and non-randomized aids treat- ment trials using a new approach to causal inference in longi tudinal studies. In Health Service Research Methodology: A Focus on AIDS (L. Sechrest, H. Free- man and A. Mulley, eds.). NCHSR, U.S. Public Health Service, Washington, D.C., 113–159. Robins, J. (1999). Testing and estimation of directed eﬀects by repara meter- izing directed acyclic with structural nested models. In Computation, Cau- sation, and Discovery (C. Glymour and G. Cooper, eds.). AAAI/MIT Press, Cambridge, MA, 349–405. Robins, J. (2001). Data, design, and background knowledge in etiologi c infer- ence.Epidemiology 12313–320. Robins, J. andGreenland, S. (1989a). The probability of causation under a stochastic model for individual risk. Biometrics 451125–1138. Robins, J. andGreenland, S. (1989b). Estimability and estimation of excess and etiologic fractions. Statistics in Medicine 8845–859. Robins, J. andGreenland, S. (1992). Identiﬁability and exchangeability for direct and indirect eﬀects. Epidemiology 3143–155. Rosenbaum, P. (2002). Observational Studies . 2nd ed.&nbsp;Springer-Verlag, New York. Rosenbaum, P. andRubin, D. (1983). The central role of propensity score in observational studies for causal eﬀects. Biometrika 7041–55. Rothman, K. (1976). Causes. American Journal of Epidemiology 104587–592. Rubin, D. (1974). Estimating causal eﬀects of treatments in randomiz ed and nonrandomized studies. Journal of Educational Psychology 66688–701. Rubin, D. (2004). Direct and indirect causal eﬀects via potential out comes. Scandinavian Journal of Statistics 31161–170. Rubin, D. (2005). Causal inference using potential outcomes: Design , modeling, decisions. Journal of the American Statistical Association 100322–331. Rubin, D. (2007). The design versus the analysis of observational studies for causal eﬀects: Parallels with the design of randomized tria ls.Statistics in Medicine 2620–36. Rubin, D. (2009). Author’s reply: Should observational studies be de signed to allow lack of balance in covariate distributions across t reatment group? Statistics in Medicine 281420–1423. Shpitser, I. andPearl, J. (2006). Identiﬁcation of conditional interventional distributions. In Proceedings of the Twenty-Second Conference on Uncertaint y in Artiﬁcial Intelligence (R. Dechter and T. Richardson, eds.). AUAI Press, Corvallis, OR, 437–444. Shpitser, I. andPearl, J. (2007). What counterfactuals can be tested. In Proceedings of the Twenty-Third Conference on Uncertainty in Artiﬁcial In- telligence . AUAI Press, Vancouver, BC, Canada, 352–359. Also, Journal of Machine Learning Research , 9:1941–1979, 2008. Shpitser, I. andPearl, J. (2008). Dormant independence. In Proceedings of the Twenty-Third Conference on Artiﬁcial Intelligence . AAAI Press, Menlo Park, CA, 1081–1087. Shpitser, I. andPearl, J. (2009). Eﬀects of treatment on the treated: Iden- tiﬁcation and generalization. In Proceedings of the Twenty-Fifth Conference on Uncertainty in Artiﬁcial Intelligence . AUAI Press, Montreal, Quebec. Shrier, I. (2009). Letter to the editor: Propensity scores. Statistics in Medicine 281317–1318. See also Pearl 2009 &lt;http://ftp.cs.ucla.edu/pub/stat ser/r348.pdf &gt;. Shrout, P. andBolger, N. (2002). Mediation in experimental and non- experimental studies: New procedures and recommendations .Psychological Methods 7422–445. Simon, H. (1953). Causal ordering and identiﬁability. In Studies in Econometric Method (W. C. Hood and T. Koopmans, eds.). Wiley and Sons, Inc., New York, NY, 49–74. Simon, H. andRescher, N. (1966). Cause and counterfactual. Philosophy and Science 33323–340. Simpson, E. (1951). The interpretation of interaction in contingency t ables. Journal of the Royal Statistical Society, Series B 13238–241. Sobel, M. (1998). Causal inference in statistical models of the proce ss of socioeconomic achievement. Sociological Methods &amp; Research 27318–348. Sobel, M. (2008). Identiﬁcation of causal parameters in randomized s tudies with mediating variables. Journal of Educational and Behavioral Statistics 33230–231. Spirtes, P. ,Glymour, C. andScheines, R. (1993). Causation, Prediction, and Search . Springer-Verlag, New York. Spirtes, P. ,Glymour, C. andScheines, R. (2000). Causation, Prediction, and Search . 2nd ed.&nbsp;MIT Press, Cambridge, MA. Stock, J. andWatson, M. (2003). Introduction to Econometrics . Addison Wesley, New York. Strotz, R. andWold, H. (1960). Recursive versus nonrecursive systems: An attempt at synthesis. Econometrica 28417–427. Suppes, P. (1970). A Probabilistic Theory of Causality . North-Holland Pub- lishing Co., Amsterdam. Tian, J. ,Paz, A. andPearl, J. (1998). Finding minimal separating sets. Tech. Rep.&nbsp;R-254, University of California, Los Angeles, CA . Tian, J. andPearl, J. (2000). Probabilities of causation: Bounds and identi- ﬁcation. Annals of Mathematics and Artiﬁcial Intelligence 28287–313. Tian, J. andPearl, J. (2002). A general identiﬁcation condition for causal eﬀects. In Proceedings of the Eighteenth National Conference on Artiﬁ cial Intelligence . AAAI Press/The MIT Press, Menlo Park, CA, 567–573. VanderWeele, T. (2009). Marginal structural models for the estimation of direct and indirect eﬀects. Epidemiology 2018–26. VanderWeele, T. andRobins, J. (2007). Four types of eﬀect modiﬁcation: A classiﬁcation based on directed acyclic graphs. Epidemiology 18561–568. Wasserman, L. (2004). All of Statistics: A Concise Course in Statistical In- ference . Springer Science+Business Media, Inc., New York, NY. Wermuth, N. (1992). On block-recursive regression equations. Brazilian Jour- nal of Probability and Statistics (with discussion) 61–56. Wermuth, N. andCox, D. (1993). Linear dependencies represented by chain graphs. Statistical Science 8204–218. Whittaker, J. (1990). Graphical Models in Applied Multivariate Statistics . John Wiley, Chichester, England. Woodward, J. (2003). Making Things Happen . Oxford University Press, New York, NY. Wooldridge, J. (2002). Econometric Analysis of Cross Section and Panel Data. MIT Press, Cambridge and London. Wooldridge, J. (2009). Should instrumental vari- ables be used as matching variables? Tech. Rep. &lt;https://www.msu.edu/ ∼ec/faculty/wooldridge/current%20research/treat1r6.p df&gt;, Michigan State University, MI. Wright, S. (1921). Correlation and causation. Journal of Agricultural Research 20557–585. Yule, G. (1903). Notes on the theory of association of attributes in s tatistics. Biometrika 2121–134.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/transdocs\.modellings\.art");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../extracted/Sobel.html" class="pagination-link" aria-label="DISCUSSION - ‘THE SCIENTIFIC MODEL OF CAUSALITY’">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DISCUSSION - ‘THE SCIENTIFIC MODEL OF CAUSALITY’</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../extracted/Causal Inference in the Social and Behavioral Sciences2.html" class="pagination-link" aria-label="Chapter 1 Causal Inference in the Social and Behavioral Sciences">
+        <span class="nav-page-text">Chapter 1 Causal Inference in the Social and Behavioral Sciences</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This work © 2024 by Sungkyun Cho is licensed under CC BY-NC-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

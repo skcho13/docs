@@ -56,6 +56,10 @@ website:
           - href: extracted/Probably Overthinking It.qmd
           - href: extracted/The Book of Why - Judea Pearl.qmd
           - href: extracted/nun_study.qmd
+          - href: extracted/Counterfactuals and Causal Inference.qmd
+          - href: extracted/Sobel.qmd
+          - href: extracted/Causal inference in statistics An overview2.qmd
+          - href: extracted/Causal Inference in the Social and Behavioral Sciences2.qmd
 format:
   html:
     toc: true

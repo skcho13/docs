@@ -1,0 +1,1879 @@
+---
+title: Chapter 1 Causal Inference in the Social and Behavioral Sciences
+author: Michael E. Sobel
+---
+
+MICHAEL E. SOBEL • Department of Sociology, University of Arizona, Tucson, Arizona 85721, USA. •
+For helpful comments and discussion, I am grateful to Gerhard Arminger, Peter Brantley, Henry Byerly, David
+R. Cox, Otis Dudley Duncan, Judea Pearl, and Herbert L. Smith. Portions of this material were presented at
+the August 1991 meetings of the American Sociological Association in Cincinnati, Ohio.
+
+Handbook ofS tatistical Mo delingfor the Social andB ehavioral Sciences, edited by Gerhard Arminger, Clif-
+ford C. Clogg, and Michael E. Sobel. Plenum Press, New York, 1995.
+
+## 1 Introduction
+
+The human propensity to think in causal terms is well known (Young 1978), and the manner
+
+in which judgments about causation are made in everyday life has been studied extensively
+by psychologists (Einhorn and Hogarth 1986; White 1990). No doubt this propensity con-
+tributes, for better or worse, to the persistence of causal language in scientific discourse,
+despite some influential attempts (for example, Russell1913) to banish such talk to the
+prescientific era.
+
+In the social and behavioral sciences, causal talk is currently abundant, and at least
+in some quarters in sociology, especially since the introduction of path analysis (Wright
+1921) to the sociological community (Duncan 1966), the impression that explanation and
+causation are one and the same is given. (Duncan himself does not make such claims.)
+Furthermore, with a little bit of substantive theory and some data, inferences about causal
+relations are readily made using statistics. One simply uses selected variables to draw a path
+diagram that purports to correspond with some theoretical notions of interest, uses data to
+estimate the parameters of linear equations corresponding to said diagram, and these pa-
+rameter estimates, and functions of these, give the effects of interest. In reaction to such
+excesses, several writers (Cliff 1983; Freedman 1987; Holland 1988; Sobel1990, 1993,
+1994) have criticized the cavalier approach to the assessment of causal relations that is
+often associated with the utilization of modern path models and covariance structure mod-
+els (often called causal models). Similarly, economists (Judge, Griffiths, Hall, Liitkepohl,
+and Lee 1985; Leamer 1985; Zellner [ 1979] 1984) have expressed dissatisfaction with the
+concept of Granger causation, which is often used in conjunction with time series models.
+
+This chapter critically examines the literature on causal inference in the social and be-
+havioral sciences. For a related examination, with emphasis on epidemiology, see Cox
+(1992). Insofar as the term "causal inference" is vague, it is important to understand that
+throughout I shall use this term to refer to the act of using evidence to infer causal relations.
+
+Attention focuses on the relationship between causal inference and an account of causation
+to which many social scientists who make causal inferences ascribe, if only implicitly.
+
+Several contributions are offered. First, I bring together a philosophical account of
+causation (Collingwood [ 1940] 1948; Gasking 1955; Harre and Madden 1975; von Wright
+1971) that hinges on notions such as manipulability with a formalization of this account
+and a resulting approach to causal inference (Rubin 1974, 1977, 1978, 1980, 1990) that
+derives from the statistical literature on experimental design.
+
+It is important to note that the account, its formalization, and the approach are general:
+the account is not limited to the case where the manipulations can actually take place, and
+the approach in no way hinges on the ability to actually perform an experiment, randomized
+or otherwise. The formalization comports well with the general idea behind the account,
+but the account leaves room for other formalizations as well. Some details will be given
+later. The close correspondence between the account, its formalization, and the resulting
+approach to causal inference appears to have gone largely unnoticed: philosophers (with
+the possible exception of Giere (1980)) have done little to attempt to formalize the account
+and/or implement an approach to causal inference based on this account of causation, and
+statisticians have done little to say how their work ties to a causal account. By noting
+how this formal approach to causal inference, which is applicable to both experimental and
+nonexperimental (observational) studies, dovetails with the account of causation, thereby
+bringing epistemological and conceptual aspects of the causal relationship into correspon-
+dence, I accomplish several things. First, once this account (hereafter called a manipula-
+tive account) is modified slightly, the correspondence privileges the foregoing approach to
+causal inference (hereafter referred to as an experimental approach) without committing
+the sin of verificationism. Further, if other approaches to causal inference fail to square
+with this approach, it is because these approaches are deficient, provided a manipulative
+account of causation is under consideration. Of course, if an alternative account of causa-
+tion is under consideration, a different approach to inference might be privileged.
+
+Given the foregoing relationship between causal accounts and causal inference, it is
+important that researchers understand the causal concepts they are using. In that vein,
+empirical workers almost never explicitly indicate the causal concepts they are using, but
+they often implicitly commit to a manipulative account when interpreting empirical re-
+sults. Similar remarks apply to methodologists and statisticians when they indicate how
+model parameters ought to be interpreted. Unfortunately, many researchers do not appear
+to understand the consequences of adopting this view for the collection, analysis, and in-
+terpretation of data. Thus, I show how the experimental approach to causal inference relies
+on considerations external to the data and models that are typically employed in nonexperi-
+mental (observational) studies. Further, the considerations are not the usual ones identified
+in the social and behavioral science literatures. It is also hoped that recognition of the issues
+above will encourage social scientists who wish to make causal inferences (in this experi-
+mental sense) to put a higher premium on evidence from well-designed experiments (when
+these are possible).
+
+I also identify a number of problems with various treatments of causation and/or causal
+inference in philosophy, economics, statistics, psychology, and sociology. Some of the
+problems identified appear fatal to the corresponding treatment (in the sense that the ap-
+proach does not support the accompanying connotations that are typically imparted), sug-
+gesting that social scientists would be well advised to not hinge causal inferences on such
+treatments. Other treatments appear to be more promising, but these have not been fully
+worked through for the cases that interest social scientists. Some suggestions for further
+work are also given.
+
+Finally, empirical workers in the social sciences often incorrectly equate explanation
+with causation. Although this chapter focuses on the causal relation and causal inference,
+and does not take up the more general subject of explanation, I hope to indicate, if only by
+elimination and suggestion, that many of the processes and phenomena that are of interest
+to social and behavioral scientists are not causal or at least not entirely causal. Explicit
+recognition of this fact should help researchers to think more clearly about what they are
+actually attempting to find out, and to make more appropriate inferences about the phe-
+nomenon under investigation. For example, researchers are often interested in processes
+that operate over time, such as human development or the intergenerational flow of status.
+
+Here, statistical modeling can help to give a parsimonious description of the relationships
+among successive events. In many cases, researchers simply equate such a description
+with "causal explanation" without even attempting to say what the terms "causation" and
+"explanation" mean. In doing so, they lose sight of other types of explanation that may
+actually be of more interest. In addition, by virtue of an implicit commitment to a manipu-
+lative account of causation, these researchers incur the additional risk of falling into the trap
+of thinking that the statistical analysis supports policy interventions. For further material
+on the types of noncausal questions that are central in scientific activity, see, for example,
+Bunge (1979).
+
+Since empirical research in the social and behavioral sciences often involves the use
+of statistical models, attention centers on" statistical" or "probabilistic" accounts of causa-
+tion. However, probabilistic accounts historically derive from corresponding deterministic
+accounts, and therefore it is useful to begin by examining the literature on deterministic
+causation. The chapter is organized as follows: Section 2 selectively reviews the philo-
+sophical literature on deterministic causation. Here attention focuses on regularity theories
+and manipulative accounts of causation. Section 3 considers some accounts of probabilistic
+causation in philosophy (for example, Suppes 1970) that may be viewed as an outgrowth
+of deterministic regularity theories. Previous criticisms of these accounts are discussed,
+and a number of new criticisms are offered. Next, the related notion of Granger causa-
+tion (Granger 1969), which is used in economics, is examined. Previous criticisms of this
+notion are also discussed, and a number of new criticisms are offered. Section 4 forma-
+lizes the manipulative account and takes up the resulting approach to causal inference. I
+relate this approach to the usual model-based approaches to causal inference in the social
+and behavioral sciences, using single-equation models to show the dependence of the usual
+approaches on a number of assumptions that are usually implicit (at best). Next, some lim-
+itations and ambiguities of the account and its formalization are identified. In Section 5,
+the discussion is extended to the simultaneous-equation models (causal models) that are
+often used in social sciences to draw causal inferences, and some recent attempts in the
+econometric literature to redefine exogeneity and causality (though not Granger causality)
+are examined. In addition, the usual approach to causal inference in sociology (and some
+parts of psychology), which involves notions of direct, total, and indirect effects, is con-
+sidered. It is concluded that these new econometric concepts do not correspond strongly
+to the causal notions they are intended to capture. Similar remarks apply to the effect de-
+compositions that come from sociology and psychometrics. I conclude by examining an
+approach due to Holland ( 1988) that offers promise, if suitably generalized.
+
+## 2 Deterministic Causation in Philosophy
+
+Aristotle construed causation broadly, equating this with what would now be called expla-
+
+nation. Two of the types of causes identified by Aristotle, the material and formal causes,
+connect objects or events to their concomitant properties by supplying a linkage that is not
+typically viewed as causal now. In plainer terms, material and formal causes are invoked to
+answer questions of the form "why" by statements of the form "because" (Barnes 1982). In
+post-medieval science, it is usual to distinguish between causation and explanation, seeing
+causation as a special type of explanation. Thus, current discussions of causation focus on
+either efficient or final causes, the other two types identified by Aristotle. These are most
+readily associated with the notion that causation is or involves some form of action, and
+both efficient and final causes are featured in explanations in the social and behavioral sci-
+ences. In this chapter, causation is also viewed as a special kind of explanation, and only
+efficient causation is explicitly discussed. The exclusion of final causes is not intended
+to suggest that teleological causation is strictly reducible to efficient causation, as some
+philosophers have argued. At the same time, the causal processes that underlie teleological
+accounts can generally be described in terms of efficient causes (Mackie 1974), and it is
+this fact that warrants such an exclusion.
+
+In this section, two deterministic causal accounts are examined. Roughly speaking, reg-
+ularity theories take the cause (sometimes called the full cause or the philosophical cause)
+of a generic event E to be the complex of generic antecedents necessary, sufficient, or nec-
+essary and sufficient for E. It is understood here that the antecedents are "distinct" from
+E. For further material on the notion of "distinctness" see Mackie ( 1974). Under this ac-
+count, a successful causal explanation is one that yields "the causes of effects," to borrow
+language from Mill ([1843] 1973). According to Collingwood ([1940] 1948, p. 287) ex-
+planations of this form are the goal that is sought in "the theoretical sciences of nature." By
+way of contrast, in a manipulative account an event C causes an event E if E occurs when
+the experimenter induces C, and Ec (the complement of E) occurs when the experimenter
+cc.
+
+induces Here, attention focuses on the "effect of causes" and there is no presumption
+that C is the full cause of E. Collingwood argues that this notion of causation dominates
+in the applied sciences, such as medicine.
+
+I begin by considering regularity accounts. Since Hume is often regarded as a precursor
+to such treatments, his analysis of causation ([1739] 1978, [1740] 1988, [1748] 1988) pro-
+vides a convenient starting point for the discussion. The prototypical example that Hume
+considered is the case of two colliding billiard balls. Here, one ball is moving toward a
+second ball at rest. The two balls collide, setting the second ball in motion. In analyzing
+this situation, Hume notes that the motion of the first ball preceded that of the second, and
+that the collision between the two balls sets the second ball in motion. On the basis of these
+observations, he argues that temporal priority and spatio-temporal contiguity are intrinsic
+components of cause-effect relationships. However, Hume adds that a singular instance
+of the colliding billiard balls does not, in and of itself, lead to a causal inference. Such an
+inference is warranted only by the additional observation that every time the setup has been
+repeated (or adequately approximated), the same effect appeared. This is the criterion of
+constant conjunction. According to Hume, these three components exhaust the ontological
+aspect of causation.
+
+The constant conjunction criterion means that the events C and E featured in a causal
+statement of the form "C caused E" are general, referring to classes of instances, as opposed
+to a singular instance. (This creates some problems that cannot be taken up here.) From
+this point of view, a causal statement of the form "C caused E", where C and E are now
+viewed as singular instances, means only that C both preceded and was contiguous toE,
+and that the instance in hand can be subsumed under a wider class of observed instances.
+
+In this sense, singular causal statements are completely derivative from the broader class.
+
+Second, insofar as the analysis purports to be exhaustive, the causal relation resides, given
+contiguity and temporal priority, only in the relation of constant conjunction, and not in
+any necessity that goes beyond constant conjunction, logical or otherwise, by which the
+cause suffices for the effect. Our idea of the causal relation may involve such notions of
+necessity, for example, productive principles (powers, forces, or in modern terminology,
+causal mechanisms) by which a cause brings about an effect, but according to Hume, these
+notions exist only in our minds, and not in the world itself. (At some points Hume ([1748]
+1988), in dealing with necessity as production, appears to take the weaker position that even
+if such forces exist in the world, they will always be unknowable to us.) Third, insofar as
+causation hinges on regularities of succession that have been observed in past instances, and
+as the previous analysis exhausts the meaning of causation, inference to future instances is
+not warranted in any logical sense. Rather, such inductive inferences depend solely upon
+beliefs in the uniformity of nature.
+
+Hume's analysis has been criticized extensively. First, it is not general enough to ac-
+complish the goals of a regularity theory. Mill ([1843] 1973), who accepts Hume's critique
+of necessity as production and the temporal priority criterion, points out that E may follow
+C whenever C occurs, but it may also follow B whenever B occurs, even if C fails to
+occur. That is, there may be a plurality of causes. The full cause might then be ( C U B) ,
+where U is the operator "or" in set theory. Second, he points out that the cause C might be
+conjunctive, that is, C = ( C 1 n Cz), where n is the operator "and" in set theory. (Although
+Hume does not refer to conjunctive causes, there is nothing in his analysis that excludes
+such a case.)
+Second, the relevance of the contiguity criterion has also been questioned. Properly
+understood, the criterion permits events that are not spatially proximate to be causally re-
+lated, provided there is a chain of contiguous causes connecting the cause and effect (Hume
+[1739] 1978). As Bunge (1979) points out, this turns the criterion into a hypothesis that
+does not derive from experience. And as a hypothesis, some have argued that it is suspect,
+citing the case of quantum theory in physics. Here, there are relationships (supported by
+experimental evidence) that apparently feature action at a distance, and some authors have
+interepreted these as causal. For a brief account, see Skyrms (1988). From this point of
+view, although contiguity may be a feature of most real-world causal relationships, it ap-
+pears that a completely general concept of causation which purports to have ontological
+support would not include the contiguity criterion.
+
+Third, the temporal priority criterion has been widely debated. Philosophers such as
+Russell and Schopenhauer have sided with Hume, while others have argued that cause and
+effect can occur contemporaneously. Kant, for example, took up the case of a ball resting
+upon a cushion, thereby creating an indentation. And Collingwood ([1940] 1948) argues
+that when the full cause of an event is sought, cause and effect must be contemporaneous.
+
+Otherwise, the effect that actually happens could depend on events that occur during the
+time interval between cause and effect (Cook and Campbell 1979). Others, like Bunge
+( 1979), distinguish between the concept of causation and physical causation in the world.
+
+According to Bunge, the concept of causation is independent of temporal priority, but when
+causes and effects are separated by a distance, physical causation involves temporal priority
+(at least according to 20th-century theories in physics).
+
+Fourth, and perhaps most importantly, as Mackie ( 197 4) points out, by denying that the
+causal relationship contains any form of necessity, Hume loses the ability to distinguish
+causal sequences from sequences, like night and day, that most philosophers and scientists
+do not intuitively accept as causal, and therefore wish to call noncausal. Mill, who was also
+aware of this, attempts to deal with the problem by incorporating a notion of necessity into
+his account. He argues that it is not enough for the cause to be the invariable antecedent in
+the Humean sense of de facto regularity. In addition, the cause must also be the uncondi-
+tional invariable antecedent. By this Mill means that the effect will occur in the presence
+of the putative cause, even under changed circumstances in other antecedents, which may
+have to be imagined because they have not been observed. For example let C, E, and B
+be three events, with C and B antecedent toE, and suppose Cis necessary and sufficient
+forE in the observed data. Suppose also that B always occurs in the observed data. Mill
+is saying that before we conclude C causes E, we must be able to say that Cis necessary
+and sufficient forE even if the event Be (the complement of the event B) had occurred.
+
+This event may never be observed in the actual data, which means that Mill is arguing that
+a causal statement must be capable of sustaining certain kinds of counterfactuals.
+
+Modern regularity theorists often argue that legitimate causal statements should sustain
+counterfactual conditionals, and they use this criterion to distinguish causal sequences from
+sequences that merely exhibit universal de facto association. Mackie (1974), who accepts
+the idea that a causal statement should sustain a counterfactual conditional, nonetheless
+argues by way of several examples that Mill's attempt to distinguish between causal and
+noncausal sequences is inadequate. According to him, it is necessary to also include a no-
+tion of causal priority before causal and noncausal sequences can be distinguished. Further,
+as he notes, since the examples are ones in which there is a clear temporal order among the
+events discussed, temporal priority in and of itself cannot accomplish the job of causal pri-
+ority. This is a blow to regularity theories that put forth the temporal priority criterion and
+then equate this with causal priority.
+
+Philosophers who either accept Mackie's argument or simply argue that causes and
+effects may be contemporaneous are thus faced with the problem of introducing a suitable
+notion of causal priority (causal order). In the absence of such a notion, when C and E are
+contemporaneous, instead of saying C causes E, one might just as well say that E causes C.
+
+For that matter, one might just as well say that C and E cause each other, thereby robbing the
+concept of causation of its essential asymmetry. But philosophers do not typically accept
+either of these alternatives as meaningful.
+
+Scientists usually argue that theory dictates the nature of causal ordering, where theory
+is usually understood to mean statements about causal mechanisms. In other words, causal
+ordering depends upon the notion of causal mechanism, whose ontological status is denied
+by followers of the Humean tradition. This maneuver, to be successful, requires explication
+of the concept of causal mechanism. For some attempts to explicate this concept, see, for
+example, Harre (1972). It is not clear that such attempts have been successful.
+
+Mackie ( 197 4) argues that the notion of a causal mechanism should hinge on the prior
+notion of causal order, and he identifies causal order with a notion he calls "fixity," that is,
+he takes the statement "Cis causally prior toE" to mean that the event Cis fixed prior to the
+time that E is fixed. Note that this does not preclude C and E from being contemporaneous,
+as a future event may be determined by a sufficient set of events in the past. Nor does this
+appear to rule out "backward" causation.
+
+One way to obtain fixity is by human intervention. But Mackie argues that the con-
+cept of fixity is broader than the anthropomorphic notion that would result if fixity were
+obtainable only through intervention by a human (or human-like) agent. However, except
+for brief mention (p. 185) of the notion of an explanatory account (which seems like an
+appeal to the notion of causal mechanism, a notion Mackie already argued requires expo-
+sition in terms of the concept of causal priority, and not vice versa), Mackie does little to
+indicate how fixity can be obtained. These points are important, not only because of the
+potential circularity of Mackie's argument, but because the relationship of C toE could
+easily depend upon the manner in which said fixity is obtained, at least in the nondetermin-
+istic cases that are of interest in this chapter. To see this; consider the following example,
+in which educational level precedes subsequent earnings. Under the first scenario, persons
+choose their level of education, and under the second, persons are randomly assigned by an
+experimenter to levels of education. Will the relationship between education and earnings
+be the same under the two different scenarios? Of course not. Under the first scenario, if
+persons want to maximize lifetime earnings and have good information on how much they
+would earn under their various educational choices, they will choose the level of education
+that allows them to maximize lifetime earnings. Under the second scenario, such behavior
+is precluded. It is clear that under the second scenario, Mackie would take education to
+be causally prior to subsequent earnings. Under the first scenario, most persons might still
+to preclude this, especially if the good information persons have is stochastic, that is, good
+on average, but not necessarily with respect to any particular case.
+
+On the logical front, Simon ( 1952) argues that a proposition a1 has causal precedence
+over a 2 if the set of laws determining a1 are a proper subset of the laws determining a 2•
+Subsequent work by Simon (1953) and Simon and Rescher (1966) carries this argument
+over to variables and functions embedded in systems of equations, and identifies the func-
+tions with mechanisms. Connections between the concepts of exogeneity, endogeneity, and
+causal order are given. Simon (1952) carefully points out that his efforts to formalize the
+notion of causal order are not ontological in character. By way of contrast, Bunge (1979)
+argues that causal priority is essentially an ontological problem; as such, syntactic treat-
+ments are inadequate. According to him, the meaning of causal priority remains an open
+issue.
+
+The issues raised in the preceding discussion are important to social and behavioral
+scientists who use causal language. But regularity theories have also been criticized by
+philosophers who argue that such accounts, which are unsuccessful in any case, do not
+comport with the manner in which the word "cause" is used in either ordinary or scientific
+language (von Wright 1971). In this vein, Collingwood ([1940] 1948, p. 285) argues that
+scientists often use the word "cause" in his second sense, where "that which is 'caused' is
+an event in nature, and its 'cause' is an event or state of things by producing or preventing
+which we can produce or preventthat whose cause it is said to be." When the word "cause"
+is used in this sense, which is certainly closer to the way an experimentalist uses causal
+terminology, a different picture emerges.
+
+First, under this account, there is no presumption that the cause is the full cause that
+is required in a regularity account. Rather, the cause is simply the state the experimenter
+produces by manipulating a particular variable. To see how this notion corresponds with
+a regularity account, let us suppose, to keep matters simple and in accord with the philo-
+sophical literature, that variable X has two states, x and xc. Similarly, Y, W, and Z are
+variables with two states, y and yc, wand we, and z and zc, respectively. Suppose that y
+occurs if and only ifthe full cause ((x n w) U z) occurs. In light of the previous remarks
+concerning fixity, it may be important to know how the full cause comes about, but for the
+moment I suppose that no matter how it comes about, y occurs. Now, suppose for the mo-
+ment that variables X, W, and Z can be manipulated, at least hypothetically. Viewing X
+as the manipulated variable, y occurs when the experimenter assigns the value x to X, pro-
+vided W = w or Z = z, wherethevaluesofW or Z mightbeviewedasbackgroundfactors
+or standing conditions. This point was recognized by Anderson (1938), who argued that
+the background constitutes a field in which the cause operates. Note also that in the case
+at hand, had the experimenter assigned X the value xc, y would not have occurred (unless
+Z = z ); thus the manipulative account is theoretically capable of sustaining counterfactual
+conditionals.
+
+Second, it is just as legitimate to view W as the experimental yariable, in which case
+W, rather than X, is manipulated. Now the values of the variables X and Z constitute the
+causal field. Thus, causes are relative (Collingwood [ 1940] 1948). The relativity of causa-
+tion is important, for it implies that alternative causal explanations of a given phenomenon
+are not necessarily at odds. Typically, in the social sciences, however, researchers proceed
+as if the particular explanation they are proposing is inimical to others. Thus, for example,
+sociologists often spend a great deal of time attacking psychological and economic expla-
+nations, as well as one another; similarly, researchers from these other disciplines often
+deny the validity of sociological explanations. From the standpoint here, many of these
+attacks are misdirected. To be concrete, a physiologist might attempt to explain the onset
+of depression by altered chemical activity in the brain while a sociologist might with equal
+legitimacy attempt to give an account that makes reference to dramatic life changes, such
+as divorce, death of a parent, etcetera. In making this last statement, I do not mean to imply
+that either the physiologist or the sociologist could actually manipulate the cause in the real
+world, only that they could hypothetically manipulate the cause. Similarly, a manipulation
+of social structure may produce declines in birth rates in third-world countries; so might
+the introduction of birth-control clinics and technologies.
+
+Third, under this account, the issue of causal priority is neatly resolved, for the state y
+may be said to be causally prior to x if it is Y that is manipulated, and x is causally prior to
+y if it is X that is manipulated. Further, since the effect of the cause is measured subsequent
+to the manipulation, the causal relation apparently features temporal priority. Collingwood
+( [ 1940] 1948) claims that temporal priority is an integral feature of the causal relation in the
+manipulative account. Subsequently, I shall argue that this is incorrect and that to argue for
+temporal priority on the grounds that the effect is measured subsequent to the imposition
+of the cause is tantamount to verificationism.
+
+Fourth, if the cause is manipulated independently of variables that are temporally prior
+to it, the problem of distinguishing noncausal from causal sequences is partially resolved,
+for at least the cause is not confounded with the effect of prior variables, that is, there are
+no prior variables that screen offthe relationship between the cause and the effect. (Some
+philosophers would also require that there be no variables occuring in the time interval
+between cause and effect that screen off the relationship, a point to which I shall return.)
+The causal accounts considered in this section are deterministic, and hence the discus-
+sion may appear irrelevant to current research in the social and behavioral sciences, with
+its emphasis on statistical relations. This is not so, for two reasons.
+
+First, many historical and comparative sociologists and political scientists compare case
+studies in a deterministic framework, and the foregoing discussion is relevant to such work.
+
+A limited methodological attempt to help these workers systematize and formalize these
+comparisons is given by Ragin (1987), who attempted to implement Mill's methods (and
+variants thereof). Ragin appears to be unaware of earlier treatments, such as that in Mack-
+ie (1974, pp. 297-321). Ragin argues that statistical methods are inappropriate when re-
+searchers have few cases, and hence that other methods are needed. Especially in such
+instances, he argues that his approach is superior to a statistical approach. Apart from the
+dubious logic of the argument, which suggests that a choice between statistical and non-
+statistical methods can be made on the basis of the number of cases, as opposed to the nature
+of the phenomenon underinvestigation, Ragin subsequently fails to appreciate Mill's point
+that casual statements should sustain counterfactuals. The implication of Mill's point is
+that the observed data can be used to eliminate causes, but not, per se, to establish causal
+relationships. And in this vein, it is evident that with more observed data (in general) more
+causes can be eliminated. Conversely, with fewer cases, fewer causes can be eliminated.
+
+But Ragin fails to see the relation between elimination and the number of cases and he also
+equates (incorrectly) the failure to eliminate causes with the establishment of causal rela-
+tionships. Thus, he ends up making the curious argument that the methods he proposes are
+especially well suited to establishing causal relationships with few cases.
+
+Second, there have been numerous attempts to make causal accounts nondeterministic.
+
+As noted, historically these attempts hinge on the deterministic accounts, and as such, many
+of the critical issues that arise in discussing the adequacy of the nondeterministic accounts
+are similar to the issues just considered.
+
+## 3 Probabilistic Causation: Variations on a Deterministic Regularity Account
+
+3.1 Philosophical Treatments
+
+A number of authors have argued the need for a nondeterministic treatment of causation
+(Good 1961, 1962; Reichenbach 1956; Salmon 1984; Skyrms 1988; Suppes 1970). Var-
+ious grounds have been given, including: (1) the observation that in everyday life and in
+scientific activity, causal language is used to discuss phenomena that are not transparently
+deterministic; (2) the argument that the world is nondeterministic, as purportedly evidenced
+by quantum theory; and (3) the argument that even if the world is deterministic, matters are
+often too complicated to permit a deterministic account.
+
+Much of the philosophical literature on probabilistic causation may be viewed as an
+attempt to use probability theory to abandon the constant conjunction criterion, while re-
+taining many other features of a regularity account. (An exception is Giere 1980.) As
+such, many of the issues debated in the deterministic context carry over to the probabilistic
+context.
+
+In addition, new concerns are also raised, since at least according to some, it is necessary
+to exposit the meaning of the term "probabilistic causation" (Fetzer 1988; Salmon 1984;
+Skyrms 1988). This is because the axioms of probability theory do not speak for them-
+selves. This means that either a notion of deterministic causation from which probabilistic
+causation arises must be explicated (philosophers who write on the subject of probabilis-
+tic causation have not taken this route), or alternatively, the term "probability" must be
+explicated and tied to some suitable notion of "probabilistic cause," for example, causal
+propensity. The concerns above are critical to the approach of this section. However, space
+considerations preclude detailed discussion; hence, in this section, I will assume (without
+committing myself to the assumption) that the following accounts can be buttressed by a
+suitable notion of "probabilistic causation." Thus, the criticisms outlined in this section
+are "internal" to the basic account, that is, these criticisms do not question the fundamen-
+tal premises of the argument. A critique on "external grounds" is a subject for a different
+manuscript; for some steps in this direction, see Holland (1986) and Sobel (1993).
+
+Recall that a successful regularity account should distinguish causal from noncausal
+sequences. This is the key consideration that motivates most probabilistic accounts. In the
+deterministic context, it was seen that some writers attempted to distinguish between causal
+sequences and sequences that merely exhibit de facto universal association by requiring
+causal sequences to fulfill some additional conditions that transcend the observed data.
+
+Philosophers working in the probabilistic context have taken another tack. Instead of trying
+to say what causation is, most have attempted to characterize noncausal relations. In some
+treatments, the basic argument is that if two events are associated, but the relationship is not
+causal, there must be a set of prior (not necessarily in the strictly temporal sense) events that
+"accounts" for this association. This turns the issue of probabilistic causation into the issue
+of spurious association (Simon 1954), and on the surface this approach seems to have the
+advantage that it does not require the use of counterfactual conditionals that transcend the
+observed (or potentially observed) data. Instead, if spuriousness is suspected, one looks
+for the prior events that account for the association. In principle, by collecting the right
+data, that is, finding the correct prior events, the causal issue can apparently be decided
+empirically.
+
+A typical approach is Suppes' ( 1970) attempt to modify the Humean account, which I
+now briefly examine. Suppes begins (p. 12) by defining an event Ct' to be a prima facie
+cause of an event Et if and only if ( 1) t' refers to a time point prior to timet, (2) the event
+Ct' has positive probability, and (3) Ct' is positively relevant to Et, that is, the conditional
+probability of Et given Ct', denotedPr(Et I Ct'), satisfies Pr(Et I Ct') > Pr(Et). He then
+gives several definitions of spuriousness. For convenience, I examine his second definition
+(p. 25). Here, Ct' is a spurious cause of Et if and only if (4) Ct' is a prima facie cause of
+Et, (5) there is a time period t" prior tot' and a partition lit" made up of events Bt" such
+that for all events in the partition (a) the event Bt" n Ct' has positive probability, and (b)
+Ct'IIEt I Bt", where the symbol II taken fromDawid (1979) is used to denote independence.
+
+Suppes also considers indirect causes and a number of other issues, but these shall not
+concern us here.
+
+Suppes' account has been criticized extensively. With respect to (1) recall that some
+philosophers would allow causes and effects to be contemporaneous (which raises some
+problems for a probabilistic theory that Suppes discussed). With respect to (2), events
+with probability 0 occur all the time. As for (3), Skyrms (1988) notes that independence
+between two events does not imply conditional independence of the events, given a third
+event, and thus Ct' could be a genuine (in some sense) cause without being a prima facie
+cause, as required by (4). But this is not really a criticism of the definition of spuriousness,
+per se. However, others (Davis 1988; Salmon 1984) have criticized the positive relevance
+criterion in (3). With respect to (5), Davis (1988) argues that by requiring t" to precede t',
+Suppes cannot assign the accidental generalization to the class of spurious causes. He gives
+the example of a pitcher who tips his hat at time t' before throwing his infamous fastball
+and striking out the batter. Finally, although Suppes intends his analysis to apply to both
+frequentist and subjective notions of probability, he offers no support for this intent, nor
+does he offer a causal account from which probability relations may be derived.
+
+The remarks above show that Suppes' analysis at best might tell us if two associated
+events Ct' and Et are spuriously related, on the basis of prior events. But problems remain.
+
+Most philosophers want to take spuriousness to mean that Ct' and Et share a common cause,
+and many interpret Suppes in this light as well, although Suppes does not claim this. This
+interpretation, however, is incorrect (as illustrated by the example below).
+
+The principle of the common cause, put forth in philosophy by Reichenbach ( 1956),
+is the idea that if two distinct events C and E are associated, it is either because they are
+causally related or they share a distinct common cause B. (B must occur no later than C,
+the putative cause, which occurs no later than E.) In the latter case, it is argued that C
+and E should be independent, given B. Intuitively, this idea appears to have some appeal.
+
+But philosophers like Salmon (1984) have given examples (called interactive forks) where
+one would want to say that two events share a common cause, but conditioning on the
+common cause does not render the two events independent. This is a criticism of (5b).
+
+At the same time, these examples neither suggest nor fail to suggest whether B should be
+called a common cause in the case where B does screen off C and E. In that vein, it is
+always possible to find a partition such that clause (5) in Suppes' definition is satisfied.
+
+Good ( 1962) points this out in commenting on similar proposals by Reichenbach ( 1956)
+and Good (1961). Evidently there is no such thing as probabilistic causation at all.
+
+There are several ways to deal with the foregoing problem. One is to argue, following
+Hempel ( 1968), for a partition based on the current knowledge situation. A second way is
+to partition on the history of the world before C. This is the tactic taken by Granger ( 1969).
+
+At the inferential level, both ways are identical, for Granger's definition is clearly nonop-
+erational. But even when such strategies are followed, it is not hard to produce genuine
+probabilistic examples (as opposed to examples which mix deterministic and probabilistic
+events) where the relationship between the putative cause and the effect is screened off by
+a prior event that one may not want to call a common cause. To the best of my knowledge,
+examples of this type have not been given in the literature. A simple example follows.
+
+Let the random vector (X1, X2, EB, Ec, EE)' follow a normal distribution with mean
+vector 0 and covariance matrix:
+1 O'
+
+1
+1 1 0'
+0 0 h
+where 1 =I 0 and I 3 denotes the identity matrix of order 3. Let
+(1.1)
+( 1.2)
+(1.3)
+where a =/ 0, f3 =I 0. To ( 1.2) and ( 1.3) I append a "causal" interpretation, namely that X
+1
+probabilistically causes C, and X2 probabilistically causes E. B, however, is just a linear
+combination of the respective causal variables, and the error, as opposed to a genuine cause
+of C and/or E. Temporal subscripts could be placed on these variables, if desired. (Saying
+that one variable causes another is an abuse of language that is common among scientists.
+
+Provided it is understood that the actual referent is to events which can be constructed from
+these random variables, no special problems are created by this language, which I shall
+use freely.) With these assumptions, the covariance between C and E is afh, which is
+nonzero. Now (to conform with philosophical treatments that require considerations of
+events with nonzero probability) let C' and E' be Borel sets with positive probability such
+that Pr( C E C', E E E') =/ Pr( C E C')Pr(E E E'). So C' is a prima facie cause of E'.
+
+(Note I have not shown C' is positively relevant toE', but the events can be chosen so that
+this criterion is also satisfied, if desired.) Using standard results on the normal distribution
+I
+(Anderson 1984, chapter 2), the distribution of ((C, E) B) is normal with covariance
+matrix:
+Setting the covariance to 0, that is, making C and E independent, given B, and solving
+for 1 yields 1 .618, irrespective of the values of (3 and a, which are only assumed to be
+nonzero (as X 1 causes C and Xz causes E). The result now follows by forming the events
+C' and E' from C and E.
+
+The previous example suggests, along the lines of Mackie's (1974) argument for the
+deterministic case, that probability relations cannot, in the absence of a concept of causal
+priority, distinguish causal from noncausal sequences. Otte (1981) has also made this ar-
+gument. However, every example he gives relies on deterministic causation. Thus, what
+Otte really shows is that Suppes' analysis cannot handle deterministic causes, contrary to
+Suppes' claims. No support for the more general conclusion Otte reaches is given in his
+paper or in the literature. However, it is easy to establish the argument in a purely stochastic
+framework. To that end, I show (in the simplest case), using variables B, C, and E, that it
+is impossible, by using probability relations alone, to distinguish between wedges (Band
+C cause E), forks (B causes C and B causes E), and simple causal chains (B causes C
+and C causes E).
+
+Let (B, C, E)' follow a normal distribution with mean vector 0 and variance covariance
+matrix:
+1 /1 /2 )
+( 11 1 13
+12 13 1
+Linear equations corresponding to the case of a (interactive) fork are:
+C = f3cBFB + cc
+E = f3EBFB + CE, (1.4)
+where cc and cE are normal random variables uncorrelated with B, with variances a;c
+and a;E, respectively, and covariance aeceE· Regarding the variance of B as given, and
+choosing f3cBF = 11· f3EBF = 12· a;c = 1 -If, a;E = 1 - li. aeceE = 13 - 11"12· the
+covariance matrix above is reproduced. For the case of a wedge, a linear equation is:
+a';
+where lEis a normal random variable uncorrelated with Band C, with variance Treat- E.
+
+ing the variances of Band C, and the covariance of Band C as given, the covariance matrix
+1D,
+is reproduced by setting f3EBW = b2-/1/3)/(1-,f), f3EGW = (r3-/1/2)/(1- and
+a;E
+= 1 - + + 2f3EBwf3EGW ). Finally, linear equations for a chain are:
+=
+C f3GBGB +
+E = f3EGGC + c:E:, (1.6)
+a;.
+
+where c:; and c:E: are normal random variables uncorrelated with B, with variances and
+a;. , a a;. It, c
+
+respectively, and covariance e• e• • Setting f3G BG = /I. = 1 - (3 EGG = 12/ /I,
+
+E C E C
+iiht-
+
+ae• e• = /3- 12/'YI· and a;. = 1 + 2/3/2//I reproduces the covariance matrix.
+
+
+C E E
+The example above illustrates the more general point that causal order, viewed as a
+concept, is a property of a model and not of the data. Econometricians have known this
+since at least Basmann ( 1965). The example strongly suggests that philosophers would do
+well to abandon attempts to characterize probabilistic causality without reference to some
+notion of causal priority that goes beyond temporal priority. As noted, some philosophers
+have also argued this, and there have been attempts, using recursive structural equation
+models, to deal with such issues, for example, Cartwright ( 1989).
+
+Another recent attempt to derive causal statements from the probability distribution of a
+set of observed variables is due to Pearl and Verma (1991), who, according to Cox ( 1992),
+replace the notion of causal priority by the notion of simple structure. They use recur-
+sive structural equation models to express the conditional independence relations among
+variables in as simple a way as possible. By requiring the class of models to be recur-
+sive from the outset (see definition 2 of a causal theory in Pearl and Verma 1991), these
+authors exclude from further consideration cases like (1.4) and (1.6) where t:G and c:E are
+correlated. Pearl (personal communication) has argued that it is not so much that a model
+with correlated errors cannot be causal, but rather, because of the principle of the common
+cause (applied to the errors), such a model is incomplete. Note that this argument rests on
+acceptance of the principle of the common cause.
+
+In addition, Pearl and Verma (1991) give general definitions of spurious association
+(both with and without temporal information) and genuine causation, claiming that their
+definitions comport with a manipulative account of causation. For a criticism of this at-
+tempt, see Sobel (1993).
+
+I now turn to a discussion of the notion of Granger causation.
+
+3.2 Granger Causation in Economics
+Economists have proposed several approaches to causal inference that are of interest. One
+approach, which is now common in empirical work in sociology and psychology and to
+which I shall return, stems from econometric research on simultaneous equation models
+in the 1940s. Here, a set of variables is partitioned into exogenous and endogenous sub-
+sets, and a stochastic model (with as many equations as endogenous variables) is proposed.
+
+The exogenous variables are viewed as being determined outside the model, and until re-
+cently the exogeneity assumption was considered untestable. Exogenous variables are also
+typically viewed as causes of the endogenous variables, and some endogenous variables
+are causally prior to others. Causal priority is a property of the model that is not testable.
+
+Dissatisfaction with this approach, in particular with the arbitrariness of assumptions about
+causal priority, for example, the arbitrary classification of variables as exogenous or en-
+dogenous and the assumptions used to identify the model, led econometricians to develop
+probabilistic accounts that are similar to those proposed by Suppes ( 1970). The idea was
+to free empirical researchers from the reliance on untestable assumptions by providing a
+notion of probabilistic causation and an approach to causal inference that relies on the data
+alone. Not surprisingly, the critiques ofthese ideas by economists led back to the conclu-
+sion that some notion of causal priority is indispensable if inferences that might be called
+causal were to be drawn.
+
+Granger (1980), whose earlier work (1969) on causation in time series models touched
+off a large and technical literature on the subject (see Geweke 1984 for an excellent review),
+proceeds as follows. He defines [ln as the history of the world up to and including the
+discrete time n, excluding deterministic relations among components of this history. Let
+Y n denotetherandomvectorYattimen. Granger says that Y n causes Xn+1 if Pr(Xn+1 E
+A I [}n) =I Pr(Xn+1 E A I [ln- Y n) for some set A. One can also considerthe history of
+Y up to time n, that is, Y n = {Yt}t<n• and define Y nasa cause of X n+1 if Pr(Xn+1 E
+A I [}n) =I Pr(X n+1 E A I [ln - Y n) for some set A, as in some other treatments. If
+I
+(Xn+diYn) ([}n- Yn),onecouldsayYn doesnotcauseXn+1 (FlorensandMouchart,
+1982).-Granger (1980) does not actually define noncausation for the exact case at hand,
+though his definition of noncausation is consistent with the above. The definition by Florens
+and Mouchart is also consistent with the above, except that their definition, which refers
+to the entire history of the sequences, requires the statement above to hold at all times.
+
+Granger ( 1969) also discusses feedback systems and instantaneous causation. In the present
+context, a feedback system refers to the case where Y n (or Y n) causes X n+1 and X n (or
+X toY
+
+n• defined analogously n) causes Y n+1· Finally, Y n causes X n instantaneously if
+
+Pr(Xn E A I [ln-1 U Y n) =I Pr(Xn E A I [ln-1) for some set A. Granger (1980) also
+discusses a weaker form of causation, called causation in mean, which need not concern us
+further.
+
+The foregoing definitions are not operational because the stochastic history of the world
+is inaccessible. Granger operationalizes these definitions by (1) replacing [ln with an in-
+(Xn. Y n•
+
+formation set that includes sequencesofdistinctrandom vectors, that is, =
+
+Zn). and (2) relativizing the previous definitions with respect to This is akin to the
+strategy of partitioning suggested by Hempel ( 1968).
+
+Granger's account has distinct advantages over that of Suppes (1970). First, Granger
+does not need to define prima facie causes (in the sense of Suppes), nor does he include
+the criterion of positive statistical relevance. His definitions can handle conditional distri-
+butions, where the event conditioned on has probability zero. Further, partitioning on the
+stochastic history of the world (or in the operational case, on a particular information set)
+is tantamount to choosing a fixed partition, thereby avoiding the problem that one can al-
+ways find a partition such that the putative cause and effect are independent, given events in
+the partition. In addition, Granger's account excludes deterministic causation, and thereby
+avoids the type of objections Otte (1981) raised against Suppes.
+
+While Granger's account, see also related material by Chamberlain ( 1982) and Florens
+and Mouchart ( 1982), avoids some of the technical pitfalls in Suppes ( 1970), it is open to a
+number of criticisms previously raised. For these reasons, some economists have objected
+to the use of the term causation in this context. For example, Leamer (1985) argues for
+simply using the term "precedence." (A better term would be "predictive precedence.")
+Judge et al. ( 1985) state that the notion of causation used here is not philosophically ac-
+ceptable. Zellner ([1979] 1984) notes that the definitions above merely serve to indicate
+whether one time series predicts another. He argues, following Feigl (1953, p. 408), that
+causality should be defined as "predictability according to a law" (or set of laws). Thus,
+Granger's account or similar accounts are causal, from Zellner's point of view, only if eco-
+nomic theory suggests a relation between the series in question. For criticism of the notion
+that the causal relation should be equated with predictability according to a law, see Bunge
+1979, Byerly 1990, and Wold 1966. Briefly, these authors argue that predictability and
+causation are different (unless one adopts a Humean position) and there are many different
+types of lawfulness that one might not call causal.
+
+The critiques above suggest, albeit in different language, that causal priority should
+not be reduced to temporal priority, as in the bulk of Granger's account. Sims (1977),
+a proponent of the approach, also recognizes this point. He attempts to provide a deeper
+rationale for Granger's notion of causation. In so doing, he reintroduces considerations that
+transcend the available data. To begin, Sims (1977) generalizes Simon's (1952) definition
+of causal order. He defines S as the set of possible outcomes, and A and B as subsets of S
+that arise from imposing restrictions. Functions Px and Py mapS to X andY, respectively.
+
+He then says that the ordered pair of restrictions (A, B) determines a causal order from X
+toY ifandonlyif Px(AnB) == Px(A) and Py(A) == Y. The generalization is defective, for
+if Px(A) ==X andPy(An B)== Py(A) == Y, there is both acausalorderfromX toY and a
+causal order from Y to X. Since causal order is viewed as a property of the model, and not
+as a property of the world, Sims also proposes the concept of structure to link the model to
+real-world phenomena. Roughly, the idea is that if X is causally prior toY, and one inputs
+a set of restrictions (in the form of the set A above) the model describes the real world if the
+outputs in the real world correspond with Py(AnB). Recalling the previous discussion, the
+idea of structure is related to Mackie's idea of fixity; in short, structure produces fixity by
+means of intervention. Thus, in Sim's account, structure not only connects the model to the
+real world, it also links the notion of causation to intervention (even if these interventions
+cannot actually take place). This does not necessarily make the account satisfactory, but it
+does seems to be an improvement on previous treatments of probabilistic causation, both
+in philosophy and economics, where almost any variable, no matter how it comes about, is
+sometimes viewed as causal. For further details, the reader should consult Sims (1977) or
+Geweke (1984).
+
+There is one other remark that should be made before leaving this topic. Although
+Granger actually believes that temporal priority is a necessary feature of the causal rela-
+tionship, economists have worked with his notion of instantaneous causation. In that vein,
+the definition previously given is equivalent to the statement that instantaneous causation
+holds if X n[IY n I Dn-1 fails to hold. Thus, by the symmetry of independence, the state-
+ment Y n causes X n instantaneously implies the statement X n causes Y n instantaneously.
+
+Hence, instantaneous causation, as operationalized by the econometricians, entails a com-
+mitment to the further conclusion that cause and effect instantaneously cause each other.
+
+But this is at odds with all previous work on the subject of causation; despite many differ-
+ent treatments of causation in the philosophical literature, the causal relationship is viewed
+as intrinsically asymmetric. Therefore (unless one wants to attempt to argue against this
+tradition for a causal account that is not asymmetric), the concept of instantaneous causa-
+tion is inherently defective, even when concepts such as structure and the like are added to
+attempt to shore up the formal account.
+
+## 4 Causation and Statistics: An Experimental Approach
+
+The manipulative account of causation discussed in Section 2 suggests an alternative ap-
+
+proach to causal inference. The idea there is to manipulate an independent variable and see
+how the value of a response variable Y depends upon the value of the manipulated variable.
+
+While the manipulative account has a number of positive features, philosophers have done
+little to indicate how this account could be implemented, and the examples discussed in the
+literature tend to use simple types of effects in conjunction with counterfactual condition-
+als that warrant strong belief. For example, the conclusion that turning the ignition switch
+caused the car to start (in any given instance or in general) is sustained by the belief that
+had the ignition not been turned, the car would not have started. Matters are much less
+clear, however, if we want to study the effect of exposure versus no exposure to a training
+program on subsequent earnings of workers (Heckman and Hotz 1989; Heckman, Hotz,
+and Dabos 1987). Here, a particular person can be exposed to the training program, but
+unlike the case of the car, it would be unreasonable to believe that we know the value of
+earnings that would result were that person not exposed. The same remark would hold true
+on average. Some headway could be made if it were reasonable to assume that an individ-
+ual's pre-exposure earnings and his post-exposure earnings without training are identical,
+but such an assumption would not be reasonable in this substantive context; see Holland
+and Rubin ( 1983) for further material on the foregoing type of assumption.
+
+The foregoing remarks indicate that it will generally be impossible to ascertain the effect
+of a manipulated variable in a particular instance, at least without imposing some strong
+assumptions that are not verifiable. (See Holland 1986 for further material on this issue.)
+That is, a singular causal statement will rely upon a counterfactual conditional, and in many
+cases of scientific interest, we shall not have the type of information that is needed to form
+(or believe) the relevant counterfactual.
+
+Rubin (1974, 1977, 1978, 1980), drawing on work by writers such as Neyman ([1923]
+1990), Kempthorne ( 1952), and Cox ( 1958), proposes a model for experimental and non-
+experimental studies that can be regarded as a formalization of a manipulative account.
+
+Under the model, certain quantities (parameters) are to be estimated, and estimates from
+the observed data either are good or poor estimates of these parameters (in a sense to be
+made precise).
+
+The key idea is to begin with the effect in the singular instance. Although this quantity,
+sometimes called the unit causal effect, cannot typically be observed, the average of the unit
+causal effects (sometimes called the average causal effect) can be estimated under the right
+conditions. (Since an effect is by definition causal, the term "causal effect" is redundant, and
+therefore, despite convention, I shall simply use the term "effect"instead.) For the simplest
+case (which shall be extended later), Rubin proceeds as follows. To begin, he assumes a
+population of units, (which we shall index as { i : i E I}), and a set oftreatments { k : k =
+1, ... , K}. To keep matters simple, let Yik denote the response when treatment k is applied
+to unit i, and suppose the Yik are drawn from the distribution of a random variable Yk. Note
+that Yik is defined for every element of the population, whether or not that element is actually
+assigned to treatment k. Further, it is assumed that this value is unambiguously defined,
+in the sense that it does not depend on the treatments to which other units are asssigned.
+
+This is the stable unit treatment value assumption (SUTVA). Next, define the unit effect of
+treatment k versus treatment k' (which might be no treatment) as some function of Yik and
+Yik'• for example, Yik - Yik'· This effect is typically unobservable, but it may be possible
+to estimate the average (over the population) effect E(Yk-Yk' ). In the typical experiment,
+an investigator assigns experimental units to one of the K treatments. LetT be the random
+variable denoting treatment assignment. Then the actual data observed by the investigator
+consist of drawings from the pairs (Y;k, T;), typically obtained from a sample (hopefully
+random), where T;, which equals k, denotes the treatment to which unit i was assigned. The
+investigator is interested in estimating the average effects of treatments k versus alternative
+treatments k'. For fixed k and k', this is defined as E(Yk - Yk') = E(Yk) - E(Yk')· To
+estimate the average effect, the investigator uses the data on units assigned to treatment k
+to compute an estimate of E(Yk), for example, Yk. the sample mean among units assigned
+to treatment k, and he uses the data on units assigned to treatment k' to estimate E(Yk').
+
+I = I =
+
+In actuality, however, the investigator has estimated E(Yk T k) and E(Yk' T k').
+
+
+In general, the latter quantities are not equal to the respective unconditional expectations.
+
+However, randomization makes the assumption (Yi, · · ·, YK)IIT plausible. In tum, this
+implies E(Yk I T = k) = E(Yk) for all k. Randomization therefore allows the investigator
+to use Yk - Yk' as an estimate of the average effect of treatment k versus treatment k'. In
+essence, randomization works because the units assigned to treatment k can be viewed as
+a random subsample from Yk.
+
+The approach above is also important for the analysis of data from experimental studies
+without randomization and nonexperimental (observational) studies, for it clearly reveals
+the types of assumptions that most social and behavioral scientists implicitly make when
+using data from such studies to make causal inferences. This is because most social sci-
+entists, without respect to the study design, use experimental language when interpreting
+empirical results, thereby entailing a commitment (sometimes not recognized) to a manip-
+ulative account of causation. See Sobel ( 1990, 1994) for more on this point in the context
+of covariance structure analysis.
+
+Inferences from nonexperimental studies in the social and behavioral sciences are typi-
+cally model based, and it is therefore important to relate Rubin's approach to the model
+based approach. I begin with the case corresponding to the simple setup previously de-
+scribed. For this setup, to compare the differences among the K treatments, most re-
+searchers would estimate a one-way analysis of variance model:
+(1.7)
+where k indexes the treatment to which the unit is actually assigned, and e:ik is a random
+variable with mean 0. Then, it is assumed (generally implicitly) that /-Lk = E(Yk), but
+this is not true in general, and in fact, /-Lk = E(Yk I T = k). In the absence of random
+assignment, the sample means Yk. which are also the ordinary least squares estimates for
+/-Lk. are consistent (under mild conditions). Nevertheless, Yk is not a consistent estimator of
+E(Yk). Therefore Yk - Yk' does not consistently estimate the average effect of treatment k
+versus k'. However, if (Yi, · · ·, E(YkiT = k) = E(Yk). In this case, because Yk is
+a consistent estimator of /-Lk. it is also a consistent estimator of E(Yk). Therefore, Yk - Yk'
+consistently estimates the average effect of treatment k versus treatment k'. In short, under
+random assignment, the average effect is estimated. But (as seen above) the model can also
+hold without sustaining the desired interpretation.
+
+In addition to making the implicit assumption that /-Lk = E(Yk), many researchers also
+interpret the model to mean that unit and average effects are identical, that is, the unob-
+served quantity Yik- Yik' = E(Yk-Yk' ). This is tantamount to assuming the error for unit
+i is invariant across potential treatments. That is, if the error for unit i under treatment k
+is E:ik. the assumption is E:ik = E:ik', where k' = 1, · · · , K. (The reason for distinguishing
+between e:ik of (1.7) and E:ik is that e:ik = Yik - E(Yk I T = k), whereas E:ik = Yik - E(Yk).
+
+I
+and the two errors are identical only if E(Yk) = E(Yk T = k) ). As before, the model given
+by ( 1. 7) can hold without implying this interpretation.
+
+To see the points above in a substantive context, consider the following (oversimpli-
+fied) nonexperimental study, in which K = 2. A researcher wants to know the average
+effect of college going (versus not going to college) on subsequent earnings. To estimate
+the effect, he computes the mean difference in subsequent earnings between college goers
+and non-college goers. This is valid when T is independent of subsequent earnings (un-
+der either nonexperimental treatment). If T is not independent of subsequent earnings, as
+would be the case if people attend or do not attend college based on a good estimate of
+their subsequent earnings under the two conditions, the researcher would have perfectly
+I
+good estimates of E(Yk T = k), but not E(Yk). In this case, the mean difference in earn-
+ings between college goers and non-college goers estimates the actual average difference
+between the two groups, but this latter quantity is not the average effect. Economists are
+also familiar with the types of problems involved in making causal inferences from non-
+experimental data. In economic parlance, this comes under the heading of selection bias
+(Heckman 1974, 1976). (Note, however, that until recently, economists did not describe
+such problems using the explicit notation suggested by Rubin's approach. This notation
+lends considerable clarity to the issue.)
+The simple setup can be extended to the case where treatment assignment is based on
+a probabilistic rule that depends on a vector of observed covariates Z (Rubin 1977). The
+covariates usually refer to variables that are temporally prior to the cause. For exceptions,
+see Rosenbaum ( 1984b) . For this case, for any given value of the covariates Z, T and Z
+are assumed to have a joint distribution with Pr(T = k I Z = z) > 0 for all z and k.
+
+liT) I
+
+Asssume now that ( (}!, · · · , YK) Z. This is the assumption that treatment assignment
+
+is independent of the response, given a set of covariates. In experimental work, when,
+given a set of covariates, the investigator uses randomization to assign subjects to treatment
+groups, this assumption becomes plausible. (In the literature, the two assumptions above
+are sometimes referred to as the assumption that treatment assignment is strongly ignorable,
+given Z.)
+The importance of strongly ignorable treatment assignment for drawing causal infer-
+ences from nonexperimental studies cannot be overemphasized. In the previous setup,
+I
+E(Yk) and the conditional expectation E(Yk T = k) coincided when((}!,···, YK )liT).
+
+In nonexperimental studies, this assumption is generally much too strong, as illustrated by
+the previous example. This suggests that social researchers who want to make appropriate
+causal inferences must either perform an experiment, which is often impossible, or find
+another way. Attempting to find a set of covariates that accounts for treatment assignment
+in nonexperimental work, while not at all trivial, nor fully testable, allows the social re-
+searcher the hope of drawing more plausible causal inferences, when treatment assignment
+itself is not random; details follow.
+
+Analogously to the case previously discussed, under strongly ignorable treatment as-
+I I I
+
+signment, E(}k Z, T) = E(}k Z). Now let Ykz be a consistent estimate of E(}k Z =
+
+z, T = k). (The notation suggests that the estimate is a sample average, but this need not
+be the case.) Under strongly ignorable treatment assignment, fkz - fk,z is a consistent es-
+timate ofthe average effect of treatment k versus k' when the covariates have value z. An
+estimate of the average effect, if desired, is then obtained (at least in theory) by averaging
+over the distribution of Z.
+
+Several remarks appear to be in order at this point. First, in practice, an investigator may
+not wish to average over the distribution of Z, but may be more interested in the treatment
+effect at particular levels of the covariates. In some instances, the distribution of Z may
+not be known, and a good estimate may not be available. Even if it is possible to estimate
+this distribution accurately, when there is heterogeneity in these effects across levels, more
+refined inferences can be obtained by focusing on particular levels. Of course, in general
+the question of whether or not to average across levels depends upon the purposes of the
+investigation. In some instances, the investigator may wish to average over some of the
+I
+components of Z, but not others. In fact, the investigator can estimate E(Yk Z 1), where
+I
+Z = ( by averaging over the conditional distribution Z 2 Z 1•
+Second, if one is interested in how the response varies with the covariates, say at values
+I = I =
+
+z and z*, one can compare the estimates of E(Yk Z z) and E(Yk Z z*). This
+
+does not mean that the comparison is to be given a causal interpretation, for Z is treated
+as a covariate and not as a cause. Note also (Holland 1986) that such a comparison would
+involve comparisons across units, which is not consistent with the manner in which the
+basic building blocks (the unit causal effects) are used to define average effects.
+
+Third, as previously noted, the approach above carries over to the analysis of data from
+nonexperimental studies, and this is its most important application for social scientists.
+
+However, the approach appears to require measurements of the covariates. In this vein, it
+is important to note that when one or more of the covariates are unmeasured, it may still be
+possible, under certain types of assumptions, to estimate the effect of the causal variable in
+some cases (Heckman and Hotz 1989). When this is not the case, sensitivity analyses can
+be very informative; see Rosenbaum ( 1992) and the references therein.
+
+Fourth, if Z is a discrete random vector and the number of possible values that Z takes
+is sufficiently small (relative to the sample size), under random assignment, conditional on
+Z, E(Yk I Z = z) can be estimated by averaging over units with value k of the cause, and
+covariates z. Estimates of average effects can then be obtained in the manner described
+above, provided the distribution of Z is known, or the sample studied is a random sam-
+ple from the population of interest. When Z takes on many values, other techniques must
+be used (in either experimental or nonexperimental studies) to obtain estimates of interest.
+
+These techniques, which are not our primary concern here, go under the headings of match-
+ing, subclassification, and covariance adjustment (for example, see Rosenbaum and Rubin
+1983) in the statistics literature. For an example of matching (on the propensity score) in
+educational research, see Rosenbaum ( 1986).
+
+Fifth, the assumption of strongly ignorable treatment assignment, which is typically
+made (implicitly) by social researchers who estimate causal models, should not be taken
+lightly. By introducing other auxiliary assumptions, it is sometimes possible to test this
+assumption (Rosenbaum 1984a, 1987; Heckmann and Hotz 1989). More work remains to
+be done on this topic. However, the test is only as good as these auxiliary assumptions,
+and if substantive knowledge in an area is limited, the failure to reject the assumption of
+strongly ignorable treatment assignment should not be taken as seriously as in the case
+where subject matter knowledge is extensive.
+
+To illustrate some of the foregoing material in a simple case, I elaborate on the earnings
+example, introducing the covariate gender, with Z = 1 if male, Z = 2 if female. Suppose
+thatO < Pr(T = k I Z = z) < 1 forz = 1,2andk = 1,2. Inthiscase,underthe
+strongly ignorable treatment assignment assumption, estimates of E(Yk I Z) can be formed
+by averaging over units with identical values of Z and T. The researcher who wants an
+estimate ofthe average effect in the population can use these estimates as described above.
+
+I
+The researcher who is interested in gender differences can compare the estimates of E(Yk
+Z = 1) with E(Yk I Z = 2), for college goers and non-college goers, respectively. This
+will give estimates of the average gender difference in earnings among college goers and
+non-college goers, respectively. In light of the previous points, however, such a comparison
+is descriptive and these average differences should not be confused with average effects.
+
+Suppose now that the strongly ignorable treatment assignment assumption does not hold,
+that is, gender is not sufficient for treatment assignment. In that case, the level of the causal
+variable taken on by a subject also depends on covariates other than gender, and it will not
+be possible to estimate the average effect in the usual way. For example, suppose that Y;
+measures earnings of the ith survey respondent, and T; = 1 if this respondent does not go to
+college, T; = 2 otherwise. Suppose that treatment assignment is strongly ignorable among
+men. Then the average effect of college going among men can be estimated by computing
+the mean difference between college going and non college going males. Suppose now that
+women who do not intend to work attend college in order to marry men who will earn high
+incomes. In this case, treatment assignment will not be strongly ignorable among women.
+
+This means that a comparison of mean incomes among college- and non-college-going
+women would not estimate the average effect of college versus lack of college on female
+incomes. Nor would comparing the mean difference for men with the mean difference for
+women tell us the difference between the effects for men and women. Finally, note that if
+women who attend college end up marrying men with higher incomes and subsequently do
+not work, independently of their reasons for going to college, treatment assignment may be
+strongly ignorable among women. In this case, the average effect of college going (versus
+non-college going) on earnings could be estimated among women.
+
+Rubin's approach has been extended to the case where the set of treatments is not finite
+by Pratt and Schlaifer (1988). In this formulation, the key ingredients are: (1) a population
+I, as before, (2) a set of factors {a: : a: E [2}, where, for convenience of exposition, [2
+RK; factors are analogous to treatments; (3) for every value a: E [2 and for every member
+of I, a vector valued set of concomitants Zxi and a set of disturbances U xzi with a joint
+distribution; for any particular value a:, the disturbances are independent and identically
+distributed, for a given value of the concomitants; concomitants are analogous to covariates,
+and as suggested by the notation, are allowed to depend on the value of the factor; ( 4) a set
+of hypothetical random vectors {Y xzi} that describes the value of the outcome when the
+factors have value a: and the random variable Zxi = z; (5) a functiong(a:, z, U xzi) = Y xzi·
+The assumptions above suffice to generate the conditional distribution of the response
+at a: when the concomitants have value z, hereafter D(Yx z), and this is the distribution the
+researcher wishes to estimate. Inferences about the effect of factors, when the concomitants
+have value z, can be obtained by comparing D(Yx z) across levels ofthe factors, provided
+this distribution can be estimated. The distribution D(Yx z) is not the distribution of the
+data; the data are drawn from the distribution D(Y I (X, Z)), where Y denotes the ob-
+served response vector, and X is a random vector taking values in D. However, D(Yxz)
+can in principle be estimated from the observed data if (Y xzi II X;) I Z xi for every member
+of I. This condition, which Pratt and Schlaifer call the observability condition, is anal-
+ogous to assumption of strongly ignorable treatment assignment. Note, however, it does
+not require conditional independence of X; and the set of all hypothetical responses, taken
+jointly. Note also the possible dependence of the covariates on the cause(s).
+
+To see how this works for the case of regression analysis, consider the case of a uni-
+variate response. The causal regression model is:
+Yxzi =a+ f3':.c + '"'/1 Zxi + Cxzi, ( 1.8)
+where E(cxzi I Zxi = z) = 0 for every member of I. Elements of f3 measure the unit effect
+of the factors, while elements of'"'/ are ordinary regression coefficients.
+
+In practice, the researcher observes only the realizations of the random variable li cor-
+responding to the one value of Xi observed and the one value of Z xi, Zi, that is observed.
+
+The regression model considered by the researcher is:
+_,
+li = a+f3 xi +i'Zi +c::, ( 1.9)
+with the usual exogeneity assumption E( c:; I Z i = z, Xi = a:) = 0 for every member of I.
+
+(Analogous to the discussion following ( 1. 7), the reason for distinguishing between c:£ and
+Cxzi is thatc:£ = Yxzi- E(Yxzi I Zxi = z, xi= a:), whereas Cxzi = Yxzi- E(Yxzi I Zxi = z),
+and the two errors are identical only if E(Yxzi I z xi = z) = E(Yxzi I z xi = z, xi =a:).)
+From the fact that E(ci I Z; = z, X; = :t:) = E(c;zi I Zxi = z, X, = a:), it fol-
+lows immediately that the parameters of (1.9) are equal to the parameters of (1.8) if the
+observability condition is satisfied (because the errors are the same when this condition is
+satisfied). When this condition does not hold, the parameters are not generally equal, and
+=! ')',
+
+thus elements do not measure the unit effect of die factors. Further, 1 that is,
+
+the regression coefficients in the two models are not identical. Note also that the regression
+model can hold without sustaining a causal interpretation. That is, if the exogeneity as-
+sumption in (1.9) is true, the population regression coefficients of (1.9) can be (under mild
+conditions) consistently estimated by least squares.
+
+The results above have several implications for the manner in which sociologists and
+psychologists use (and should use) regressions to draw causal inferences. First, contrary to
+opinions that are often held in sociology and psychology, a properly specified regression
+need not sustain a causal interpretation, and in particular, exogeneity by itself does not
+suffice to permit a causal interpretation. (In making this last remark, which appears to
+echo the remarks of econometricians who have studied the relationship between Granger
+causation and exogeneity, it is important to note that here a different notion of causation is
+being used.) Second, most social scientists do not draw a clear distinction between factors
+(causes) and concomitants. Typically, all independent variables are treated as if they are
+factors, and all regression coefficients are interpreted as unit effects (sometimes called direct
+effects). Since there are no concomitants in such an analysis, the observability condition
+in this case is tantamount to the assumption of random assignment to levels ofthe factors.
+
+In most instances in social research such an assumption will not be justified. This suggests
+that social scientists should first consider which variables are to be treated as causes, and
+then attempt to measure concomitants that suffice (in the sense of making the observability
+condition hold) for assignment to levels of the factors. In some instances, a variable that
+an investigator would like to treat as a cause should be treated as a concomitant because
+assignment to levels of this variable has not been randomized and the investigator cannot
+measure or does not know the variables that are sufficient for treatment assignment. The
+regression coefficient corresponding to such a variable should not be interpreted as a unit
+effect.
+
+The manipulative account and the resulting approach to inference, as outlined above,
+has several advantages over the notions of probabilistic causation treated previously. First,
+when randomization or conditional randomization is possible to implement, the issue of
+spuriousness does not arise (at least with respect to variables prior to the cause). Sec-
+ond, causal inference is tied to explicit counterfactual conditionals at the unit level; the
+notion that a causal inference supports a counterfactual conditional is typically lacking in
+the probabilistic versions discussed in Section 3 (though not in some of the justifications
+for the intuition underlying the definitions). Third, the quantity that one wants to estimate
+is clearly defined, irrespective of the study design; this too is lacking in much of the econo-
+metric work discussed in Section 3. Fourth, issues concerning causal priority do not tend
+to arise as the causes are variables that are manipulated and the effects are measured later.
+
+The experimental approach is not without its practical difficulties. Causal inferences are
+sometimes difficult to make in randomized experiments because of internal validity prob-
+lems such as nonrandom experimental mortality. A number of external validity problems
+also arise (Campbell and Stanley [1963] 1966). Some authors have raised these issues in
+responding to the account (for example, Granger 1986). From the point of view here, most
+of these issues are relevant, indeed critical to the implementation of an adequate experi-
+ment, but not particularly relevant to the fundamental perspective offered by the account
+itself.
+
+Nor is randomization a panacea for all problems. Various authors (Conlisk 1985; Gail,
+Wieand, and Piantodosi 1984; Smith 1990) have shown that randomization does not allow
+consistent estimation of unit treatment effects in models where a covariate, omitted from
+the analysis, interacts with a treatment variable. Thus, if an investigator wants to estimate
+the unit treatment effect (as opposed to the average effect), randomization will not always
+allow this.
+
+Other difficulties arise when the manipulative account is transferred over to the nonex-
+perimental domain. Philosophers and statisticians have argued aboutt he types of pheno-
+mena that could be causes. Must a cause be an event or state that can actually be induced
+in practice? If so, the manipulative account is irrelevant to many sociologists. At the other
+extreme, sociologists and psychologists who use causal models often seem to think that
+anything can be a cause. For example, in these disciplines the usual view is that latent
+variables do not correspond to any real-world entities, but are only hypothetical constructs
+around which theoretical work is organized. However, this does not stop anyone from
+speaking explicitly of the effects of these variables (for example, Joreskog 1977) or from
+reporting estimates of these. Evidently, latent variables are not really real, but these not
+really real constructs cause real-world effects nevertheless. In some instances the response
+variable is a latent variable; in this case the not really real constructs cause a real-world
+effect that is not really real, either. For further treatment of causal inference in models with
+latent variables, see Sobel (1994).
+
+Collingwood ([1940] 1948) points out (in the deterministic context)t hat the manipula-
+tive account of causation is both anthropocentric and anthropomorphic. G. H. von Wright
+( 1971) argues that the manipulative account does not hinge on the actual ability to manipu-
+late the cause, but it does hinge on the ability to potentially manipulate the cause. Holland
+(1986) also makes this argument. Mackie (1974) finds such accounts unacceptable, for (in
+part) they imply that causation is inherently linked to the activities of human beings (or en-
+tities that operate like humans, such as Nature and Prankster in Pratt and Schlaifer 1984).
+
+In the absence of such agents, causation does not exist. (But see also Section 2 for criticism
+of Mackie's attempt to fix the problem in a nonanthropomorphic manner.)
+Pratt and Schlaifer ( 1988), who eschew commitment to a particular notion of causation,
+point out, with respect to the observability condition previously discussed, that it does not
+matter if the investigator selects case i with value a: or sets the value of the factors on this
+case to a:. This seems to suggest that one could reduce the dependence of the manipula-
+tive account on the notion of manipulation by removing this notion and imagining, without
+saying how, that all observations can receive any value of the factor. This seems true in a
+formal sense, thereby making the account nonanthropomorphic. On the other hand, it has
+already been argued that the manner in which the cause is brought about may be critical
+for understanding the meaning of an effect. Without attempting to definitively settle this
+issue, when the factors are set to some value a: E [l, either in actuality or in theory, the
+investigator is forced to indicate how this occurs. This clarifies the meaning of the factors,
+and hence of the effects. It also allows the investigator to think about the concomitants that
+are sufficient for assignment to levels of the factors. Finally, the content of the counterfac-
+tual conditional on which causal inferences rest is clarified (although it may still be difficult
+to form this counterfactual). If cases were simply selected with value a:, the investigator
+does not have to indicate how an alternative value could come about, and hence the coun-
+terfactual conditional is vague, as is the meaning of the factors and their effects. In this
+case, it is also virtually impossible to imagine the concomitants that are sufficient for as-
+signment to treatment levels. A natural way to surmount the difficulties raised by selection,
+as opposed to manipulation, is to reintroduce manipulation by imagining the experiment in
+which cases are assigned to levels of the factors. Unless there is some other way of dealing
+with the problems raised by selection (and I do not see another way), it appears that the
+ability to manipulate the factors, at least hypothetically, is central, at least at the level of
+implementation in a real case.
+
+Second, issues concerning causal priority do not tend to arise under a manipulative
+account. This is because the cause is under the control of the investigator. In addition,
+the effect is measured subsequent to the cause, so the causal relation apparently features
+temporal priority (see Section 2). Some authors (for example, Collingwood [ 1940] 1948;
+Holland 1986) view temporal priority as an inherent part of the causal relation. Sobel
+( 1990) also requires causes to precede effects in time. In his paper, some of the results
+would change if instantaneous causation were allowed; as he notes, in most instances in
+the social sciences, the causal relation of interest features temporal priority.
+
+It is important to note, however, that the manipulative account does not satisfactorily
+resolve the issue of temporal priority. The key to this account is the ability to manipulate
+(if only hypothetically) the cause; the fact that the effect is measured subsequently should
+be viewed as part of the research design, that is, as part of the experimental approach to
+inference. But philosophers and statisticians alike have failed to take such a view; in so
+doing, they have committed the sin ofverificationism.
+
+I propose to resolve this problem by distinguishing between the time at which there-
+sponse is measured and the value of the response at different times, incorporating this dis-
+tinction into the previous formalization of the account. Since a full treatment is beyond the
+scope of this chapter, matters are kept as simple as possible. Consider the case where the
+cause takes values k = 0 (say, no treatment) and k = 1 (treatment). Let t0 denote the time
+at which treatment is initiated and let (Yik)t ,t denote the response of unit i to level k of
+0 1
+the cause at the time t1, where t1 2:: to. Similarly, let (Yii - Yio)(to,t 1) denote the effect for
+unit i. Under the usual manipulative account, t 1 denotes a fixed time at which the response
+is measured, and insofar as it is not possible to actually measure the response at the fixed
+time t0, t1 > t0• The fact that the response is measured subsequent to the cause appears to
+be the basis for the claim that temporal priority is an integral feature of the causal relation
+under a manipulative account. This, however, confuses the approach with the ontological
+aspect of the causal relation.
+
+With fixed times t0 and t 1, as in the foregoing paragraph, there is no real reason to
+actually introduce the temporal subscripts into the notation for the unit effect. Suppose
+now we interpret the unit effect in the previous paragraph as a unit effect function, with
+arguments t 0 and it, subject as above to the restriction it 2 to. For simplicity, suppose
+also that for all initiation times to the unit effect function is a step function, that is, (lit -
+lio)(to,t 1) = Lli if it 2 t0+ >.i. 0 otherwise, where Ai is a fixed real number on the nonnegative
+portion of the real line. For simplicity, suppose the unit effect function is a "constant" effect
+function, that is, Lli = L1 and Ai = >.. Suppose also that L1 =I 0. (Note how the constant effect
+case corresponds to a treatment that is akin to the deterministic manipulative account.) In
+the case at hand, it seems reasonable to say that for every unit the cause is temporally
+prior to the effect if>. > 0, and to view the case >. = 0 as an instance of instantaneous
+causation. Thus, temporal priority does not appear to be an integral feature of the causal
+relation under a (suitably modified) manipulative account. Of course, the experimental
+approach will not allow for the measurement of instantaneous effects, should these exist.
+
+Thus, an experimental approach that appears to allow instantaneous causation will rely on
+some untestable assumptions.
+
+A serious limitation of the usual experimental approach, especially for some types of
+sociological research, stems from utilization of the stable unit treatment value assumption
+(SUTVA) (Rubin 1978, 1980). In essence, this assumption states that the same value of
+the response for unit i to treatment k will occur no matter what treatments have been as-
+signed to the other units of the population. Pratt and Schlaifer ( 1988) avoid making this
+assumption explicitly, but assume that the response Y i that is observed when Xi = a: and
+the other observations have whatever values on the factors and concomitants they take on,
+corresponds to the value Y xzi that would be observed (a counterfactual) if all observations
+had value a: on the factors. In other words, Pratt and Schlaifer (1988) do not avoid this
+issue; they merely do not discuss it.
+
+Relaxations of the SUTVA assumption for limited types of violations have been dis-
+cussed in the literature (for example, Cox 1958; Holland 1987; Rosenbaum 1987). But
+these relaxations do not suffice to allow consideration of many questions that most philoso-
+phers and scientists would consider causal. For example, does poverty cause crime? Under
+the formalization of the manipulative account under consideration here, this is not even
+a sensible question if poverty is defined as lying below some percentile on the income
+distribution. If, however, poverty is defined by reference to some dollar amount, use of
+the SUTVA assumption (or the assumption of Pratt and Schlaifer) is tantamount to the as-
+sumption that the criminal behavior of respondent i is the same whether all persons have the
+same income or there is an income distribution featuring vast disparities. But this is simply
+not believable. Further, the problem does not lie with the question, which admits a causal
+interpretation under a manipulative account. Evidently, use of the SUTVA assumption pre-
+cludes consideration of certain types of questions that social scientists ask all the time. In
+philosophy, causal questions with answers that are dependent on distributional properties
+of the population have been termed frequency dependent by Sober ( 1982), whose examples
+are drawn from evolutionary biology.
+
+## 5 Causal Inference in "Causal Models"
+
+Section 4 showed that the parameters of an explicitly causal regression model need not
+
+be identical with the parameters of the usual linear regression model used in social and
+behavioral research, even when the latter model is properly specified (at least in the mean
+structure). Additionally, conditions were given under which the parameters of the two mod-
+els are identical. In this section, I briefly take up the use of structural equation modeling
+for drawing causal inferences in social and behavioral research. This approach, which is
+an outgrowth of econometric work on simultaneous equation models, is usually featured
+in conjunction with nonexperimental studies, but the interpretation of the model parame-
+ters (and parameter estimates) typically relies on notions of causation that are similar to
+those encountered in Section 4 (Sobel 1990, 1993, 1994). Consequently, the material on
+single-equation models in that section carries over to the simultaneous-equation context.
+
+In addition, these models are more complicated than the single-equation models, in partic-
+ular because they feature relationships among dependent variables. As such, a number of
+new issues and concerns, not apparent in the single-equation case, arise with respect to the
+interpretation and estimation of these models.
+
+I begin with the usual approach, as handed down from econometrics. To keep mat-
+ters simple, connections with time series models will be minimized, and in the discussion
+of exogeneity, it will not be necessary to refer to the more general notion that a variable
+is predetermined. I will also assume simple random sampling from a random vector of
+observables Z of dimension n + m.
+
+In the econometric approach, the variables in Z are first partitioned into subsets X and
+Y, of dimension n and m, respectively. The variables in X are viewed as "exogenous,"
+that is, determined outside the system under consideration, and these variables, which often
+refer to policy instruments in the economic context, are regarded as inputs into the model.
+
+Exogenous variables are causally prior to the variables in Y, which are dependent or en-
+dogenous variables, and the values ofthe endogenous variables (which are often viewed as
+outputs) depend upon the values of the exogenous variables, as well as the values of other
+endogenous variables and stochastic disturbances. The partitioning of Z into exogenous
+and endogenous sets is to be decided on the basis of economic considerations (and temporal
+priority), and this assumption is not fully testable. Foro bservation i from the population I,
+the "structural" model is:
+Y; =a+BY;+TX;+e;, ( 1.10)
+where B is an m x m matrix of parameters describing relationships among the endogenous
+r
+variables, with diagonal elements 0, is an m x n matrix of parameters connecting exoge-
+nous and endogenous variables, and e; is a random drawing from a distribution with mean 0
+and finite nonsingular covariance matrix E. Technically, it is not necessary to assume that
+this covariance matrix is nonsingular. In addition, it is assumed that that matrix (I- B)
+is invertible, that observations are independent, and that e; and X; are independent. This
+last assumption is the exogeneity assumption, and as stated, is stronger than required, since
+uncorrelatedness will suffice for deriving consistent estimates. The relationship between
+the exogeneity assumption and the intuitive notion that exogenous variables are determined
+outside the system is discussed subsequently.
+
+The parameters of the structural model above may or may not be uniquely determined.
+
+However, the parameters a', II, and tJ! of the reduced form equation:
+Y;=a'+IIX;+v;, (1.11)
+where v; = (I- B)-1e;, are uniquely determined, with a' = (I- B)-1a, II = (I-
+B)-1T, 1/1 = V(v;) =(I-B)-1E(I- B')-1 for all i. Theseparameterscharacterizethe
+conditional mean structure E(Y I X) and the conditional covariance structure of v;, for
+all i. Using these parameters, in conjunction with restrictions on the structural parameters,
+it may be possible to uniquely determine (identify) the value of the unrestricted structural
+parameters. When this is the case, the model is said to be identified. In the following,
+it is assumed that the model is identified; readers who desire further information about
+identification can consult an econometrics textbook or Hausman ( 1983).
+
+Econometric models are used to draw causal inferences in several ways. Under regu-
+larity conditions on B, the reduced form parameter 'lrrs is usually interpreted as the effect
+of a one unit change in X;r (the rth element of X;) on Y;. (the sth element of Y .). In
+economics, such effects are called equilibrium multipliers (Goldberger 1959), and in psy-
+chology and sociology these quantities are called total effects. Second, economists are
+typically interested in the structural form of the model. Parameters of the structural form,
+which are often viewed as more fundamental than the reduced form parameters, are thought
+to describe the behavior of agents (persons, firms, the government) in the economic sys-
+tem, and changes in one structural parameter may change the entire reduced form (Judge et
+al. 1985). The manner in which such a parameter describes this behavior is generally not
+stated, however.
+
+Economists have criticized the structural-equation approach to causal inference on var-
+ious grounds. First, the concept of a structural parameter is vague at best, meaningless
+at worst. As Lucas (1976) points out, economic agents may change their behavior when
+inputs into the economic system change. This would imply that the so-called structural
+parameters are not invariant to such changes, and in this case, the interpretations in the pre-
+ceding paragraph would not hold. This is also evident from the material in Section 4. Since
+each reduced form equation is simply a regression, note that, as in Section 4, the regression
+may be properly specified, yet 'lrrs may not describe the actual change that would result
+under manipulation of the exogenous variable Xr. The assumption that 1r rs does describe
+the effects of this manipulation is external to the model, although it is often overlooked.
+
+From Section 4, it is also clear that if all the exogenous variables are viewed as causes, this
+is tantamount to assuming that assignment to these variables is random.
+
+In response to some of the concerns above, Sims ( 1982) argues that a parameter is
+structural if it is invariant under a class of modifications ofthe system. Similarly (but more
+strongly), Engle, Hendry, and Richard (1983, p. 284) define a (conditional) model to be
+structurally invariant "if all its parameters are invariant for any change in the distribution
+of the conditioning variables."
+Leamer ( 1985) argues that these ideas about invariance should be extended to apply to
+the concept of exogeneity. The intuitive notion that exogenous variables are determined
+outside the system of interest does not correspond well with the definition that a variable is
+exogenous (with respect to some equation) if it is independent of the error. For example, if
+two random variables are bivariate normal, there are two regressions, and the right-hand-
+side variable in either regression is exogenous (independent of the error). Thus, exogeneity
+depends on the equation of interest, and it also implies a committment to certain parameter
+values. Leamer argues instead that a vector X should be called exogenous with respect to
+a dependent variable Y. if the distribution D(Y. I X) is invariant to a class of interventions.
+
+Characterization of this class may, however, be difficult. This (typically untestable assump-
+tion) is similar to the concept of superexogeneity proposed by Engle, et al. ( 1983), except
+that superexogeneity entails invariance to all interventions, and it hinges on a concept of
+weak exogeneity that is tied to efficient statistical inference. Then, Leamer proposes to call
+an exogenous variable X, causal with respect to a dependent variable Y. if the distribution
+D(Y. I X) depends on X,. An endogenous variable }J can also be a cause of another
+endogenous variable Y2 if the distribution of Y 2 depends on Z, where Z is a "surrogate ex-
+ogenous variable for Y 1" (Leamer, 1985, p. 258). Leamer does little to clarify the intended
+meaning of this statement. It is clear, however, from Section 4, that if the observability
+condition holds, one can think of }J as a cause, and estimate the effect of }J on Y 2• It seems
+unlikely (given the rest of Leamer's treatment) that this is what he has in mind, however.
+
+Psychologists and sociologists who have written on covariance structure analysis, which
+incorporates the model above as a special case, have tended to borrow the econometrician's
+approach to causal inference. But they have not been attentive to the recent concerns in the
+econometric literature concerning exogeneity and parameter invariance. In addition, they
+often focus on independent variables that are not subject to intervention (as seen earlier),
+and unlike much of the economic literature, they also equate the parameters relating depen-
+dent variables to other dependent variables with effects, a practice criticized below.
+
+In that vein, the usual approach in psychology and sociology distinguishes three types
+of effects: total, direct, and indirect. The direct effect of a variable on another is usu-
+ally thought of as the effect that is not transmitted through intervening variables, and has
+been defined explicitly as the outcome that results when the investigator induces a one-
+unit change in the independent variable, holding intervening variables constant (Alwin and
+r
+Hauser 1975). Direct effects are thought to be captured by the elements of and B. Thus,
+Irs gives the direct effect of Xs on Y,. and f3rs gives the direct effect of Y. on Y,.. Simi-
+larly, the total effect of X, on Y, is given by 7rm and as in the economics literature, this
+quantity is interpreted as an equilibrium multiplier. Total effects of endogenous variables
+on endogenous variables have also been defined in the literature; Sobel ( 1990) shows that
+these definitions are incorrect.
+
+Although the foregoing definitions are usually applied in nonexperimental studies, the
+implicit notion of causation in the literature is still manipulative (as indicated above). But
+investigators who use the experimental metaphor do not take it seriously. Neither do method-
+ologists who write about such matters (as illustrated below). For example, they do not dis-
+tinguish between variables that are causes and other variables that are concomitants. Any
+variable can be a cause, and thus one sees statements (based on a nonzero regression coeffi-
+cient) that exogenous variables like father's occupation cause the endogenous variable son's
+intelligence (Kenny, 1979, p. 52). Do we really believe that, if we raised the father's occu-
+pation one unit on some prestige scale, the son would become more intelligent (presuming
+here intelligence, which is usually measured as a latent variable, is real)? Admittedly, the
+concept of intelligence is nebulous; nevertheless, it is doubtful whether any current notions
+of intelligence would allow a claim along such lines. Second, investigators attempt to con-
+sider direct effects of alleged causes, even when it is clear that one or more intervening
+variables the concept of an intervening variable is not even defined in the usual literature,
+as pointed out in Sobel (1990) cannot be held constant. Third, investigators ignore pos-
+sible relations among exogenous variables when they compute total effects of exogenous
+variables. For example, in a status attainment model which includes father's education and
+father's occupation, the total effect offa ther's education on son's education that is reported
+ignores the fact that father's occupation depends on and is temporally subsequent to father's
+education. Duncan ( 197 5) makes a similar point. Note also how the foregoing example il-
+lustrates that while both variables may be exogenous in the statistical sense with respect to
+the son's education equation, it is difficult to argue that father's occupation is determined
+outside the model. Fourth, investigators discuss the effects of endogenous variables on
+other endogenous variables, linking these to elements of the matrix B, or to functions of
+these elements. But if an endogenous variable is to be viewed as a cause of another endoge-
+nous variable, and causation involves at least a hypothetical manipulation, as implicit (and
+sometimes explicit) in the literature, how is this view to be reconciled with the treatment of
+the (causal) endogenous variable as a stochastic outcome of the model itself? Sobel ( 1990),
+drawing on Fisher ( 1970), points out that here a very strong invariance assumption is being
+made, namely that the parameter (or function) relating the two variables would be the same
+in a different system in which the so-called causal endogenous variables were exogenous.
+
+This requires a thought experiment which is difficult to perform in some instances, and the
+invariance assumption is also often unreasonable. Fifth, mathematical results depend on
+whether causation is instantaneous or whether the cause is temporally prior to the effect. In
+many cases, researchers view temporal priority as needed, but this is not reflected in their
+interpretation of the results, nor in the definition of the effects. To see how the mathemati-
+cal results may hinge on explicit assumptions about such matters, see Sobel ( 1990). Sixth,
+as noted in Section 3, investigators often treat simultaneity in these models as meaning that
+cause and effect simultaneously cause each other. On the subject of simultaneity, see also
+Cox ( 1992), and for additional criticisms of the causal-modeling approach in psychology
+and sociology, see Holland (1988) and Sobel (1990, 1994).
+
+A number of the preceding abuses would be lessened if sociologists and psychologists
+took the experimental metaphor seriously, as well as the associated econometric literature
+on exogeneity and invariance. But the econometric approach itself is not without its diffi-
+culties. To illustrate, I briefly reconsider Leamer's definition of causation. First, Leamer
+recognizes that the interpretation of economic data rests upon the experimental metaphor,
+and he espouses a notion of causation compatible with this metaphor. Thus it is reasonable
+to ask whether his definition of causality, which is based on the distribution ofthe observed
+data, and not on the distributions in Section 4, is in line with this metaphor.
+
+To that end, consider the joint distribution of height and weight in an adult population,
+and suppose it is bivariate normal. Imagine a class of interventions in which some persons
+are induced to gain five pounds, others to lose five pounds. Such a set of interventions could
+be conducted in such a way that neither the marginal distribution of weight, nor the condi-
+tional distribution of height given weight changes. Thus, weight is exogenous (Leamer's
+definition) to height for such interventions. Furthermore, the distribution of height, given
+weight, depends on weight. Hence, using Leamer's definitions, weight causes height. How-
+ever, we do not believe that inducing an adult person to lose or gain five pounds changes
+their height. Therefore, it is necessary to conclude that Leamer's definition of causality
+(in the sense he intends it) is defective. One might well object to this counterexample on
+the grounds that no one would consider this relationship causal in the first place or wish to
+consider such a class of interventions, and/or that a fuller model would uncover the spuri-
+ousness ofthis relationship. Such objections are beside the point. The counterexample is
+designed simply to show that the definition itself is defective. A better model might well
+produce better causal knowledge, and Leamer's definitions (to the extent these could be
+implemented), might work under some circumstances (which have not been spelled out),
+but this certainly does not vindicate the definition itself.
+
+A more explicit approach is taken by Holland (1988), who applies the experimental
+approach to a recursive two-equation system with a binary independent variable, which
+takes values 1 in the treatment group and 0 in the control group. He distinguishes carefully
+between the causal model and the system of regression equations for this case. Mimicking
+( 1.8) (Holland does not write the model in this way) the causal model (note both X and }J
+are explicitly viewed as causes here) could be written as:
+=
+Ylxi a1 + ')'nX + C1xi
+f2xy1i = a2 + ')'21X + fJ21Y1 + C:2xy1i· ( 1.12)
+The first equation describes the value of the response Ylxi when the independent variable
+is set to x, for all i, and the second describes the value of the response Y2xy 1; when the
+independent variable is set to x, for all i, and in addition, }J is set to Y1·
+The corresponding simultaneous equation model is:
+Yl(i) = &1 + iuX; + c:i;
+Y2<i> = &2 + i'21X; + .821Yl<i> + c:i;. (1.13)
+Holland assumes random assignment to treatment and control groups. Under this as-
+sumption, consistent estimates of iu are consistent for 'Yll· Similarly, the reduced form
+parameter in the regression of Y 2 on X is consistent for the total effect in the causal model.
+
+But the estimates of 1 21 and .821 are not consistent for the corresponding causal parameters.
+
+Note that Sobel's ( 1990) conclusion that the usual parameters of the simultaneous equa-
+tion system should not be interpreted as direct effects, a conclusion reached in a different
+manner, reiterates this result. For further details on this case, see Holland ( 1988), and for
+other relevant material, see Angrist, lmbens, and Rubin ( 1993), Efron and Feldman ( 1991 ),
+Robins (1994), and Robins and Greenland (1992).
+
+## 6 Discussion
+
+Two deterministic accounts of causation were considered. Probabilistic notions of causa-
+
+tion that rely primarily on the concepts of independence and conditional independence do
+not lead to causal inferences that comport with a manipulative account. Nor does the typ-
+ical approach to causal inference in nonexperimental studies in the social and behavioral
+sciences yield inferences that comport with a manipulative account. In that vein, the forma-
+lization of the manipulative account discussed in Section 4 appears to offer more promise
+to social scientists. The formalization is identical for experimental and nonexperimental
+studies, and the resulting approach to causal inference reveals the types of assumptions
+researchers implicitly make when analyzing data in nonexperimental studies. As such,
+this approach provides a framework in which the nonexperimental worker can think more
+clearly about the types of conditions that need to be satisfied in order to make inferences in
+line with a manipulative account. It should also encourage sociologists, who have typically
+disdained experimental evidence, to pay more attention to the results from well-designed
+experiments (when these are possible) and/or to design experiments that will yield infer-
+ences in line with the manipulative account. This is not to say that the experimental ap-
+proach is free of difficulties (some of which have been identified in Section 4 ), or that it can
+always be implemented, or that all scientific inferences should be causal in the first place.
+
+Nor am I suggesting causal inferences are always faulty in the absence of a randomized
+experiment. In that vein, many, if not most, scientific breakthroughs (for example, Snow
+lowered the death rate due to cholera by turning off water pumps in London) have been
+made without the benefits of a randomized experiment.
+
+Existing formalizations of the manipulative account are not general enough to handle
+the types of causal questions that social scientists are often interested in addressing. Some
+of the limitations have already been pointed out in the text. Another problem that could
+benefit from a formal treatment (noted in Cox 1992) is the subject of hierarchical variation,
+which is usually addressed by using contextual (multilevel) models. Hopefully some of
+these gaps will be addressed by future workers.
+
+REFERENCES
+Alwin, D. F., and Hauser, R. M. (1975), "The Decomposition of Effects in Path Analy-
+sis," American Sociological Review, 40, 37-47.
+
+Anderson, J. ( 1938), "The Problem of Causality," Australasian Journal of Psychology
+andPhilosophy, 16, 127-142.
+
+Anderson, T. W. (1984), An Introduction to Multivariate Statistical Analysis (2nded.),
+New York: John Wiley.
+
+Angrist,J.D.,Imbens,G. W.,andRubin,D.B. (1993), "Identification of Causal Ef-
+fects Using Instrumental Variables," unpublished manuscript, Department of S tatis-
+tics, Harvard University.
+
+Barnes, J. ( 1982), Aristotle, Oxford: Oxford University Press.
+
+Basmann, R. L. (1965), "A Note on the Statistical Testability of 'Explicit Causal
+Chains' Against the Class of 'Interdependent' Models," Journal of the American
+Statistical Association, 60, 1080-1093.
+
+Bunge, M. (1979), Causality and Modern Science (3rded.), New York: Dover.
+
+Byerly, H. (1990), "Causes and Laws: TheAsymmetryPuzzle,"inPSA 1990,Proceed-
+ings of the 1990 Biennial Meeting of the Philosophy ofS cience Association, Vol. 1,
+eds. A. Fine, M. Forbes, and L. Wessels, East Lansing, MI: Philosophy of Science
+Association.
+
+Campbell, D. T., and Stanley, J. C. (1963) 1966, Experimental and Quasi-Experimen-
+tal Designs for Research, Chicago: Rand McNally.
+
+Cartwright, N. ( 1989), Nature's Capacities and Their Measurement, Oxford: Clarendon
+Press.
+
+Chamberlain, G. (1982), "The General Equivalence of Granger and Sims Causality,"
+Econometrica, 50,569-581.
+
+Cliff, N. (1983), "Some Cautions Concerning the Application of Causal Modeling,"
+Multivariate Behavioral Research, 18, 115-126.
+
+Collingwood, R. G. ( 1940) 1948,An Essay on Metaphysics, Oxford: Oxford University
+Press.
+
+Conlisk, J. ( 1985), Comment on "Technical Problems in Social Experimentation: Cost
+vs. Ease of Analysis," by J. A. Hausman and D. A. Wise, inSocialExperimentation,
+eds. J. A. Hausman and D. A. Wise, Chicago: University of Chicago Press, pp.
+
+208-219.
+
+Cook, T. D., and Campbell, D. T. (1979), Quasi-Experimentation: Design and Analy-
+sis Issues for Field Settings, Boston: Houghton Mifflin.
+
+Cox, D. R. ( 1958), The P Ianning of Experiments, New York: John Wiley.
+
+--(1992), "Causality; Some Statistical Aspects," Journal of the Royal Statistical
+Society, Ser. A, 155,291-301.
+
+Davis, W. A. ( 1988), "Probabilistic Theories of Causation," in Probability and Causal-
+ity: Essays in Honor of Wesley C. Salmon, ed. J. H. Fetzer, Dordrecht, Holland: D.
+
+Reidel, pp. 133-160.
+
+Dawid, A. P. (1979),"Conditional Independence in Statistical Theory" (with discus-
+sion),Journal of the Royal Statistical Society, Ser. B, 41, 1-31.
+
+Duncan, 0. D. (1966), "Path Analysis: Sociological Examples", American Journal of
+Sociology, 72, 1-16.
+
+--(1975) Introduction to Simultaneous Equation Models, New York: Academic.
+
+Efron, B., and Feldman, D. (1991), "Compliance as an Explanatory Variable in Clinical
+Trials" (with discussion), Journal of the American Statistical Association, 86,9-26.
+
+Einhorn, H. J., and Hogarth, R. M. (1986), "Judging Probable Cause", Psychological
+Bulletin, 99, 3-19.
+
+Engle, R. F., Hendry, D. F., and Richard, J. F. (1983), "Exogeneity," Econometrica, 51,
+277-304.
+
+Feigl, H. (1953), "Notes on Causality," in Readings in the Philosophy of Science, eds.
+
+H. Feigl and M. Brodbeck, New York: Appleton-Century Crofts, pp. 408--418.
+
+Fetzer, J. H. ( 1988), "Probabilistic Metaphysics," in Probability and Causality: Essays
+in Honor of Wesley C. Salmon, ed. J. H. Fetzer, Dordrecht, Holland: D. Reidel, pp.
+
+109-132.
+
+Fisher, F. M. (1970), "A Correspondence Principle for Simultaneous Equation Mod-
+els,"Econometrica, 38,73-92.
+
+Florens, J.P., andMouchart, M. (1982), "A Note on Noncausality," Econometrica, 50,
+583-591.
+
+Freedman, D. A. (1987), "As Others See Us: A Case Study in Path Analysis" (with
+discussion),]o urnal of Educational Statistics, 12, 101-223.
+
+Gail, H. M., Wieand, S., and Piantadosi, S. ( 1984), "Biased Estimates of Treatment Ef-
+fects in Randomized Experiments with Nonlinear Regression and Omitted Covari-
+ates," Biometrika, 71,431--444.
+
+Gasking, D. (1955), "Causation and Recipes," Mind, 64,479--487.
+
+Geweke, J. (1984), "Inference and Causality in Economic Time Series Models," in
+Handbook of Econometrics (Vol. 2), eds. Z. Griliches and M.D. Intriligator, Ams-
+terdam: NorthHolland,pp. 1101-1144.
+
+Giere, R. ( 1980), "Causal Systems and Statistical Hypotheses" (with discussion), in Ap-
+plications ofI nductive Logic, eds. L. J. Cohen and M. Hesse, Oxford: Oxford Uni-
+versity Press, pp. 251-290.
+
+Goldberger, A. S. (1959), Impact Multipliers and Dynamic Properties of the Klein-
+Goldberger Model, Amsterdam: North Holland.
+
+Good, I. J. (1961), "A Causal Calculus I," British Journal ofth e Philosophy ofS cience,
+11, 305-318.
+
+--(1962), "A Causal Calculus II," British Journal of the Philosophy ofS cience, 12,
+42-51.
+
+Granger, C. W. (1969), "Investigating Causal Relations by Econometric Models and
+Cross-Spectral Methods," Econometrica, 37,424--438.
+
+--(1980), "Testing for Causality: A Personal Viewpoint," Journal of Economic Dy-
+namics and Control, 2, 329-352.
+
+--( 1986), Comment on" Statistics and Causal Inference," by P. W. Holland, Journal
+of the American Statistical Association, 81, 967-968.
+
+Harre, R. (1972), The Philosophies ofS cience, Oxford: Oxford University Press.
+
+Harre, R., and Madden, E. H. (1975), Causal Powers: A Theory of Natural Necessity,
+Oxford: Basil Blackwell.
+
+Hausman, J. A. (1983), "Specification and Estimation of Simultaneous Equation Mod-
+els," in Handbook of Econometrics(Vol. 1) , eds. Z. Griliches and M. D. Intriligator,
+Amsterdam: North Holland, pp. 392-448.
+
+Heckman, J. J. (1974), "Shadow Prices, Market Wages, and Labor Supply," Economet-
+rica, 42, 679-694.
+
+--(1976), "The Common Structure of Statistical Models of Truncation, Sample Se-
+lection and Limited Dependent Variables and a Simple Estimator for such Models,"
+Annals of Economic and Social Measurement, 5, 475-492.
+
+Heckman, J. J., andHotz, V. J. (1989), "Choosing Among Alternative Nonexperimen-
+tal Methods for Estimating the Impact of Social Programs: The Case of Manpower
+Training" (with discussion), Journal of the American Statistical Association, 84,
+862-880.
+
+Heckman, J. J., Hotz, V. J., andDabos, M. (1987), "Do We Need Experimental Data to
+Evaluate the Impact of Manpower Training on Earnings?" Evaluation Review, 11,
+395-427.
+
+Hempel, C. G. ( 1968), "Maximal Specificity and Lawl ikeness in Probabilistic Explana-
+tion," PhilosophyofScience, 35,116-133.
+
+Holland, P. W. (1986), "Statistics and Causal Inference" (with discussion), Journal of
+the American Statistical Association, 81, 945-970.
+
+--(1987), Comment on "The Role of a Second Control Group in an Observational
+Study," by P.R. Rosenbaum, Statistical Science, 2, 306-308.
+
+--(1988), "Causal Inference, Path Analysis, and Recursive Structural Equation
+Models" (with discussion), in Sociological Methodology, 1988, ed. C. C. Clogg,
+Washington, D. C.: American Sociological Association, pp. 449-493.
+
+Holland, P. W., and Rubin, D. B. (1983), "On Lord's Paradox," In Principals of Mod-
+ern Psychological Measurement, eds. H. Wainer and S. Messnick, Hillsdak, NJ:
+Lawrence Erlbaum, pp. 3-35.
+
+Hume, D. (1739) 1978,A Treatise ofH uman Nature, Oxford: Oxford University Press.
+
+--(1740) 1988, An Abstract of a Treatise of Human Nature, in An Enquiry Con-
+cerning Human Understanding/David H ume: Introduction, Notes, and Editorial Ar-
+rangement by Anthony Flew, ed. A. Flew, La Salle, IL: Open Court, pp. 29-43.
+
+--(1748) 1988, An Enquiry Concerning Human Understanding, in An Enquiry Con-
+cerning Human Un derstanding!David H ume: Introduction, Notes, and Editorial Ar-
+rangement by Anthony Flew, ed. A. Flew, La Salle, IL: Open Court, pp. 53-195.
+
+Joreskog, K. G. (1977), "Structural Equation Models in the Social Sciences: Specifi-
+cation, Estimation and Testing," in Applications of Statistics, ed. P. R. Krishnaiah,
+Amsterdam: North Holland, pp. 265-287.
+
+Judge, G. G., Griffiths, W. E., Hall, R. C., Liitkepohl, H., and Lee, T. C.
+
+(1985), The Theory and Practice of Econometrics (2nd ed.), New York: John Wi-
+ley.
+
+Kempthorne, 0. ( 1952), The Design and Analysis ofE xperiments, New York: John Wi-
+ley.
+
+Kenny, D. A. (1979), Correlation and Causality, New York: John Wiley.
+
+Leamer, E. E. (1985), "Vector Autoregressions for Causal Inference?" (with discus-
+sion), in Understanding Monetary Regimes, supplement to Journal ofM onetary Eco-
+nomics, eds. K. Brunner and A. Meltzer, pp. 255-318.
+
+Lucas, R. E. (1976), "Econometric Policy Evaluation: A Critique" (with discussion),
+in The Phillips Curve and Labor Markets, supplement to Journal of Monetary Eco-
+nomics, eds. K. Brunner and A. Meltzer, pp. 19-62.
+
+Mackie, J. L. ( 197 4 ), The Cement of the Universe, Oxford: Oxford University Press.
+
+Mill, J. S. (1843) 1973, A System of Logic: Ratiocinative and Inductive, in The Col-
+lected Works of John Stuart Mill (Vol. 7), ed. J. M. Robson, Toronto: University of
+Toronto Press.
+
+Neyman, J. S. (1923) 1990, "On the Application of Probability Theory to Agri-Cultural
+Experiments. Essay on Principles. Section 9" (with discussion), Statistical Science,
+Otte, R. (1981), "A Critique of Suppes' Theory of Probabilistic Causality," Synthese,
+48, 167-189.
+
+Pearl, J., and Verma, T. S. (1991), "A Theory of Inferred Causation," in Principles of
+Know/edge Representation and Reasoning: Proceedings oft he Second International
+Conference, eds. J. A. Allen, R. Fikes, and E. Sandewall, San Mateo, CA: Morgan
+Kaufmann, pp. 441-452.
+
+Pratt, J. W., and Schlaifer, R. (1984), "On the Nature and Discovery of Structure" (with
+discussion), Journal of the American Statistical Association, 79,9-33.
+
+--(1988), "On the Interpretation and Observation of Laws," Journal of Economet-
+rics, 39, 23-52.
+
+Ragin, C. C. (1987), The Comparative Method, Berkeley: University of California
+Press.
+
+Reichenbach, H. (1956), The Direction of Time, Berkeley: University of California
+Press.
+
+Robins, J. M. (1992), "Identifiability and Exchangeability for Direct and Indirect Ef-
+fects," Epidemiology, 3, 143-155.
+
+--( 1994 ), "Correcting for Non-Compliance in Randomized Trials Using Structural
+Nested Mean Models," forthcoming in Communications in Statistics, Ser. A.
+
+Rosenbaum, P.R. (1984a), "From Association to Causation in Observational Studies:
+The Role of Tests of Strongly Ignorable Treatment Asignment," Journal of the Amer-
+ican Statistical Association, 79,41-48.
+
+--( 1984b ), "The Consequences of Adjustment for a Concomitant Variable That Has
+Been Affected by the Treatment," Journal of the Royal Statistical Society, Ser. A,
+147, 656-666.
+
+--(1986), "Dropping Out of High School in the United States: An Observational
+Study," Journal of Educational Statistics, 11,207-224.
+
+--(1987), "The Role of a Second Control Group in an Observational Study" (with
+discussion), Statistical Science, 2, 292-316.
+
+--(1992), "Detecting Bias with Confidence in Observational Studies," Biometrika,
+79, 367-374.
+
+Rosenbaum, P.R., and Rubin, D. B. ( 1983), "The Central Role of the Propensity Score
+in 0 bservational Studies for Causal Effects," Biometrika, 7 0, 41-55.
+
+Rubin, D. B. (1974), "Estimating Causal Effects of Treatments in Randomized and
+Nonrandomized Studies," Journal of Educational Psychology, 66, 688-701.
+
+--(1977), "Assignment to Treatment Groups on the Basis of a Covariate," Journal
+of Educational Statistics, 2, 1-26.
+
+--(1978), "Bayesian Inference for Causal Effects: The Role of Randomization,"
+The Annals of Statistics, 6, 34-58.
+
+--(1 980), Comment on "Randomization Analysis of Experimental Data: The Fisher
+Randomization Test," by D. Basu, Journal of the American Statistical Association,
+75,591-593.
+
+--(1990), "Formal Modes of Statistical Inference for Causal Effects," Journal of
+Statistical Planning and Inference, 25, 279-292.
+
+Russell, B. (1913), "On the Notion of Cause," Proceedings of the Aristotelian Society,
+New Series, 13, 1-26.
+
+Salmon, W. C. (1984), Scientific Explanation and the Causal Structure of the World,
+Princeton, NJ: Princeton University Press.
+
+Simon, H. A. (1952), "On the Definition of the Causal Relation," Journal ofP hilosophy,
+49, 517-528.
+
+--(1 953), "Causal Ordering and Identifiability," in Studies in Econometric Methods,
+eds. W. Hood and T. Koopmans, New York: John Wiley, pp. 49-74.
+
+--(1954), "Spurious Correlation: A Causal Interpretation," Journal ofth e American
+Statistical Association, 49, 467-492.
+
+Simon, H. A., and Rescher, N. (1966), "Cause and Counterfactual," Philosophy of Sci-
+. ence, 33, 323-340.
+
+Sims, C. A. ( 1977), "Exogeneity and Causal Ordering in Macroeconomic Models," in
+New Methods in Business Cycle Research: Proceedings from a Conference, ed. C.
+
+A. Sims, Minneapolis: Federal Reserve Bank of Minneapolis.
+
+--(1982), "Policy Analysis with Econometric Models," Brookings Papers onEco-
+nomic Activity, 1, 107-164.
+
+Skyrms, B. (1988), "Probability and Causation," Journal of Econometrics, 39,53-68.
+
+Smith, H. L. (1990), "Problems of Specification Common to Experimental and Non-
+experimental Social Research," inS ociolo gical Methodology, 1990, ed. C. C. Clogg,
+Oxford: Basil Blackwell, pp. 59-91.
+
+Sobel, M. E. ( 1990), "Effect Analysis and Causation in Linear Structural Equation
+Models," Psychometrika, 55,495-515.
+
+--(1993), "Causation, Spurious Correlation and Recursive Structural Equation
+Models: A Reexamination," unpublished manuscript.
+
+--(1994), "Causal Inference in Latent Variable Models," forthcoming in Analysis
+of Latent Variables in Developmental Research, eds. A. von Eye and C. C. Clogg,
+Newburg Park, CA: Sage.
+
+Sober, E. (1982), "Frequency-Dependent Causation," Journal of Philosophy, 79, 247-
+253.
+
+Suppes, P. ( 1970), A Probabilistic Theory of Causality, Amsterdam: North Holland.
+
+von Wright, G. H. (1971), Explanation and Understanding, Ithaca, N.Y.: Cornell Uni-
+versity Press.
+
+White, P. ( 1990), "Ideas About Causation in Philosophy and Psychology," Psychologi-
+cal Bulletin, 108,3-18.
+
+Wold, H. 0. A. (1966), "On the Definition and Meaning of Causal Concepts," in La
+Technique des modeles dans les sciences humaines, ed. H. 0. A. Wold, Monaco:
+Union Europeenne d 'Editions, pp. 265-275.
+
+Wright, S. (1921), "Correlation and Causation," Journal of Agricultural Research, 20,
+557-585.
+
+Young, J. Z. (1978), Programs of the Brain, Oxford: Oxford University Press.
+
+Zellner, A. (1979) 1984, "Causality and Econometrics," in Basic Issues in Economet-
+rics, ed. A. Zellner, Chicago: University of Chicago Press, pp. 35-74 .
+
