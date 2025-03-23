@@ -60,6 +60,10 @@ website:
           - href: extracted/Sobel.qmd
           - href: extracted/Causal inference in statistics An overview2.qmd
           - href: extracted/Causal Inference in the Social and Behavioral Sciences2.qmd
+          - href: extracted/Pearl-epilogue.qmd
+          - href: extracted/An Introduction to Causal Inference.qmd
+          - href: documents/spinoza.qmd
+          - href: extracted/VERGARAY.qmd
 format:
   html:
     toc: true
