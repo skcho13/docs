@@ -53,6 +53,7 @@ website:
           - href: extracted/On_the_material_supports_of_subjectivity.qmd
           - href: documents/spinoza.qmd
           - href: extracted/VERGARAY.qmd
+          - href: documents/cheese.qmd
       - section: Data Science
         contents:
           - href: documents/Program.qmd

@@ -722,7 +722,7 @@ which was derived from a more complicated set of (counterfactual) assumptions.
 AsnotedbyRobins,theformuladictatesanadjustmentforcovariates(e.g.,Z3)that
 mightbeaffectedbyprevioustreatments(e.g., Z2).
 
-3.3 Coping with unmeasured confounders
+### 3.3 Coping with unmeasured confounders
 Thingsaremorecomplicatedwhenwefaceunmeasuredconfounders. Forexample,
 itisnotimmediatelyclearwhethertheformulainEq.(20)canbeestimatedifanyof
 Z1,Z2 and Z3 is not measured. A few but challenging algebraic steps wouldreveal
@@ -748,7 +748,7 @@ lation can further reduce Eq. (23), or that measurement of Z3 (unlike Z1, or Z2)
 necessary in any estimation of P(y|do(x0)). Such considerations become transpar-
 entfromagraphicalcriteriontobe discussed next.
 
-3.3.1 Covariateselection– theback-doorcriterion
+#### 3.3.1 Covariateselection– theback-doorcriterion
 Consider an observational study where we wish to find the effect of X on Y, for
 example, treatment on response, and assume that the factors deemed relevant to
 the problem are structured as in Fig. 4; some are affecting the response, some are
@@ -865,7 +865,7 @@ All in all, one can safely state that, armed with the back-door criterion,
 causality has removed “confounding”fromits store ofenigmatic andcontroversial
 concepts.
 
-3.3.2 Confoundingequivalence–agraphicaltest
+#### 3.3.2 Confoundingequivalence–agraphicaltest
 Another problem that has been given graphical solution recently is that of deter-
 miningwhetheradjustmentfortwosetsofcovariateswouldresultinthesamecon-
 founding bias (Pearl and Paz, 2009). The reasons forposing this question are sev-
@@ -910,7 +910,7 @@ be assisted by propensity scores methods. The informationthat such tests provide
 can be as powerful as conditional independence tests. The statistical ramification
 ofsuch tests areexplicatedin (PearlandPaz, 2009).
 
-3.3.3 Generalcontrolofconfounding
+#### 3.3.3 General control of confounding
 Adjusting for covariates is only one of many methods that permits us to estimate
 causal effects in nonexperimental studies. Pearl (1995) has presented examples in
 whichthereexists nosetofvariablesthatissufficientforadjustmentandwherethe
@@ -962,7 +962,7 @@ diagram.
 Graph-basedmethodsforeffectidentificationundermeasurementerrorsare
 discussed in (Pearl,2009f, Herna´nandCole, 2009, Caiand Kuroki,2008).
 
-3.3.4 From identificationtoestimation
+#### 3.3.4 From identificationtoestimation
 The mathematical derivation of causal effect estimands, like Eqs. (25) and (28) is
 merely a first step toward computing quantitative estimates of those effects from
 finite samples, using the rich traditions ofstatistical estimation and machine learn-
@@ -1174,7 +1174,7 @@ termsofestimableparameters).
 if it is not. Test the statistical implications of the model, if any, and modify
 themodelwhen failureoccurs.
 
-4.1 Defining the target quantity
+### 4.1 Defining the target quantity
 The definitionalphase is the most neglected step in currentpractice of quantitative
 analysis. The structural modeling approach insists on defining the target quantity,
 be it “causal effect,” “mediated effect,” “effect on the treated,” or “probability of
@@ -1202,7 +1202,7 @@ theoryavoids the many pitfallsand confusions thathave plagued the interpretation
 12
 ofstructuralandregressionalparametersforthepast half century.
 
-4.2 Explicating causal assumptions
+### 4.2 Explicating causal assumptions
 This is the second most neglected step in causal analysis. In the past, the diffi-
 culty has been the lack of a language suitable for articulating causal assumptions
 which,asidefromimpedinginvestigatorsfromexplicatingassumptions, alsoinhib-
@@ -1263,7 +1263,8 @@ factors”)over its“strongignorability”alternative,as the properwayofarticul
 causal assumptions. Even the most devout advocates of the “strong ignorability”
 language use “omitted factors” when the need arises to defend assumptions (e.g.,
 (Sobel,2008))
-4.3 Identification, estimation, and approximation
+
+### 4.3 Identification, estimation, and approximation
 Having unburden itself from parametric representations, the identification process
 in the structural framework proceeds either in the space of assumptions (i.e., the
 diagram) or in the space of mathematical expressions, after translating the graph-
@@ -1390,7 +1391,7 @@ ofthesubmodelM explicatesmathematicallyhowthehypotheticalcondition“had
 x
 X beenx” is realized,and whatthelogicalconsequences areofsucha condition.
 
-5.1 The “black-box” missing-data paradigm
+### 5.1 The “black-box” missing-data paradigm
 Thedistinctcharacteristicofthepotential-outcomeapproachisthat,althoughinves-
 tigatorsmustthinkandcommunicateintermsofundefined,hypotheticalquantities
 such asY (u), the analysis itself is conducted almost entirely within the axiomatic
@@ -1450,7 +1451,8 @@ Equation(33)ensures thatthe interventionsdo(Y =y) resultsin theconditionY =
 y, regardless of concurrent interventions, say do(Z = z), that may be applied to
 variables other than Y. Equation (34) generalizes (32) to cases where Z is held
 fixed, atz. (See(Halpern,1998)forproofofcompleteness.)
-5.2 Problem formulation and the demystification of “ignorabil-
+
+### 5.2 Problem formulation and the demystification of “ignorabil-
 ity”
 The main drawback of this black-box approach surfaces in problem formulation,
 namely, the phase where a researcher begins to articulate the “science” or “causal
@@ -1586,7 +1588,7 @@ lustrates howsuchsymbiosis clarifiesthe definitionand identificationofdirectand
 indirect effects, and how it overcomes difficultiesthat were deemed insurmount-
 ablein theexclusivist potential-outcomeframework(Rubin,2004, 2005).
 
-5.3 Combining graphs and potential outcomes
+### 5.3 Combining graphs and potential outcomes
 The formulation of causal assumptions using graphs was discussed in Section 3.
 
 In this subsection we will systematize the translation of these assumptions from
@@ -1683,9 +1685,9 @@ assumptions.
 
 ## 6. Counterfactuals at Work
 
-6.1 Mediation: Direct and indirect effects
+### 6.1 Mediation: Direct and indirect effects
 
-6.1.1 Direct versustotaleffects
+#### 6.1.1 Direct versustotaleffects
 The causal effect we have analyzed so far, P(y|do(x)), measures the total effect of
 a variable (or a set of variables) X on a response variable Y. In many cases, this
 quantity does not adequately represent the target of investigation and attention is
@@ -1735,7 +1737,7 @@ it has produced indeed a principled solution to the mediation problem, based on
 the counterfactual reading of structural equations (29). The following subsections
 summarizethemethodand itssolution.
 
-6.1.2 Controlleddirect-effects
+#### 6.1.2 Controlleddirect-effects
 A major impediment to progress in mediation analysis has been the lack of no-
 tational facility for expressing the key notion of “holding the mediating variables
 fixed” in the definition of direct effect. Clearly, this notion must be interpreted as
@@ -1787,7 +1789,7 @@ of unmeasured confounders were derived by Pearl and Robins (1995) (see Pearl
 (2000a, Chapter 4) and invoke sequential application of the back-door conditions
 discussed in Section3.2.
 
-6.1.3 Naturaldirecteffects
+#### 6.1.3 Naturaldirecteffects
 Inlinearsystems, thedirecteffectisfullyspecified bythepath coefficientattached
 to the link from X toY; therefore, the direct effect is independent of the values at
 whichwe hold Z. In nonlinearsystems, those values would,in general, modifythe
@@ -1862,7 +1864,7 @@ x,x′
 z
 Both(44)and(45)caneasily beestimated bya two-stepregression.
 
-6.1.4 Naturalindirecteffects
+#### 6.1.4 Naturalindirecteffects
 Remarkably, the definition of the natural direct effect (42) can be turned around
 and provide an operational definition for the indirect effect – a concept shrouded
 in mystery and controversy, because it is impossible, using the do(x) operator, to
@@ -1921,7 +1923,7 @@ go through the definitional step of the study and freely articulate the target q
 tity Q(M) in the language of science, i.e., counterfactuals, despite the seemingly
 speculative natureofeach assumption inthemodel(Pearl,2000b).
 
-6.2 The MediationFormula: a simplesolutionto a thornyprob-
+### 6.2 The MediationFormula: a simplesolutionto a thornyprob-
 lem
 This subsection demonstrateshow thesolutionprovidedinequations (45)and(48)
 can be applied to practical problems of assessing mediation effects in non-linear
@@ -2156,7 +2158,7 @@ x
 19
 definition,Eq. (29).
 
-6.3 Causes of effects and probabilities of causation
+### 6.3 Causes of effects and probabilities of causation
 The likelihood that one event was the cause of another guides much of what we
 understand about the world(and howwe act in it). Forexample, knowing whether
 itwastheaspirinthatcuredmyheadacheortheTVprogramIwaswatchingwould
