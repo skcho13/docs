@@ -47,23 +47,28 @@ website:
       - href: index.qmd
         text: "Welcome"
       - text: ---
-      - section: Documents
+      - section: General
         contents:
           - href: extracted/Jack_Martin10.qmd
           - href: extracted/On_the_material_supports_of_subjectivity.qmd
+          - href: documents/spinoza.qmd
+          - href: extracted/VERGARAY.qmd
+      - section: Data Science
+        contents:
           - href: documents/Program.qmd
           - href: documents/Program_KR.qmd
           - href: extracted/Probably Overthinking It.qmd
-          - href: extracted/The Book of Why - Judea Pearl.qmd
-          - href: extracted/nun_study.qmd
           - href: extracted/Counterfactuals and Causal Inference.qmd
           - href: extracted/Sobel.qmd
-          - href: extracted/Causal inference in statistics An overview2.qmd
+          - href: extracted/nun_study.qmd
+      - section: Causal Inference
+        contents:
+          - href: extracted/The Book of Why - Judea Pearl.qmd
           - href: extracted/Causal Inference in the Social and Behavioral Sciences2.qmd
           - href: extracted/Pearl-epilogue.qmd
+          - href: extracted/Causal inference in statistics An overview2.qmd
           - href: extracted/An Introduction to Causal Inference.qmd
-          - href: documents/spinoza.qmd
-          - href: extracted/VERGARAY.qmd
+          
 format:
   html:
     toc: true
