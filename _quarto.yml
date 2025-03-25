@@ -41,7 +41,7 @@ website:
     #     text: "GitHub organization"
     style: "floating"
     search: true
-    collapse-level: 2
+    collapse-level: 1
     
     contents:
       - href: index.qmd
