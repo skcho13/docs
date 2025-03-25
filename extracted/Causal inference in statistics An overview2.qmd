@@ -528,7 +528,8 @@ that variations in Zwill leave Yunchanged, as long as variables UY, and X
 remain constant. A system of such functions are said to be structural if they
 are assumed to be autonomous, that is, each function is invar iant to possible
 changes in the form of the other functions ( Simon ,1953;Koopmans ,1953).
-3.2.1. Representing interventions
+
+#### 3.2.1. Representing interventions
 This feature of invariance permits us to use structural equa tions as a basis for
 modeling causal eﬀects and counterfactuals. This is done th rough a mathemat-
 ical operator called do(x) which simulates physical interventions by deleting
@@ -593,7 +594,8 @@ the variability of those details in such a way that equality o fP’s would enta
 equality of Q’s. When this happens, Qdepends on Ponly, and should therefore
 be expressible in terms of the parameters of P. The next subsections exemplify
 and operationalize this notion.
-3.2.2. Estimating the eﬀect of interventions
+
+#### 3.2.2. Estimating the eﬀect of interventions
 To understand how hypothetical quantities such as P(y|do(x)) orE(Y|do(x0))
 can be estimated from actual data and a partially speciﬁed mo del let us be-
 gin with a simple demonstration on the model of Fig. 2(a). We will show that,
@@ -640,7 +642,8 @@ ing the identiﬁcation problem to a graphical procedure. Ind eed, since graphs
 encode all the information that non-parametric structural equations represent,
 they should permit us to solve the identiﬁcation problem wit hout resorting to
 algebraic analysis.
-3.2.3. Causal eﬀects from data and graphs
+
+#### 3.2.3. Causal eﬀects from data and graphs
 Causal analysis in graphical models begins with the realiza tion that all causal
 eﬀects are identiﬁable whenever the model is Markovian , that is, the graph is
 acyclic (i.e., containing no directed cycles) and all the er ror terms are jointly
@@ -763,7 +766,8 @@ parents suﬃce for estimating the eﬀect of X, whether some algebraic manipu-
 lation can further reduce Eq. ( 23), or that measurement of Z3(unlike Z1, or
 Z2) is necessary in any estimation of P(y|do(x0)). Such considerations become
 transparent from a graphical criterion to be discussed next .
-3.3.1. Covariate selection – the back-door criterion
+
+#### 3.3.1. Covariate selection – the back-door criterion
 Consider an observational study where we wish to ﬁnd the eﬀec t ofXonY, for
 example, treatment on response, and assume that the factors deemed relevant
 to the problem are structured as in Fig. 4; some are aﬀecting the response, some
@@ -855,7 +859,8 @@ Sthat minimizes measurement cost or sampling variability ( Tian et al. ,1998).
 All in all, one can safely state that, armed with the back-doo r criterion,
 causality has removed “confounding” from its store of enigm atic and controver-
 sial concepts.
-3.3.2. General control of confounding
+
+#### 3.3.2. General control of confounding
 Adjusting for covariates is only one of many methods that per mits us to es-
 timate causal eﬀects in nonexperimental studies. Pearl (1995a ) has presented
 examples in which there exists no set of variables that is suﬃ cient for adjust-
@@ -900,7 +905,8 @@ not ancestors of Y.
 the condition from causal eﬀects to any counterfactual expr ession (Shpitser and
 Pearl, 2007). The corresponding unbiased estimands for these causal qu antities
 are readable directly from the diagram.
-3.3.3. From identiﬁcation to estimation
+
+#### 3.3.3. From identiﬁcation to estimation
 The mathematical derivation of causal eﬀect estimands, lik e Eqs. ( 25) and ( 26)
 is merely a ﬁrst step toward computing quantitative estimat es of those eﬀects
 from ﬁnite samples, using the rich traditions of statistica l estimation and ma-
@@ -929,7 +935,8 @@ variates in propensity-score methods. The graphical tools presented in this sec-
 tion unveil the character of these covariates and show preci sely what covariates
 should, and should not be included in the conditioning set fo r propensity-score
 matching (see also ( Pearl and Paz ,2009)).
-3.3.4. Bayesianism and causality, or where do the probabili ties come from?
+
+#### 3.3.4. Bayesianism and causality, or where do the probabili ties come from?
 Looking back at the derivation of causal eﬀects in Sections 3.2and3.3, the
 reader should note that at no time did the analysis require nu merical assess-
 ment of probabilities. True, we assumed that the causal mode lMis loaded
@@ -1137,7 +1144,7 @@ and represent their structural part in graphical form.
 3. Identify: Determine if the target quantity is identiﬁable.
 4. Estimate: Estimate the target quantity if it is identiﬁable, or approx imate it, if it is not.
 
-3.5.1. Deﬁning the target quantity
+#### 3.5.1. Deﬁning the target quantity
 The deﬁnition phase in our example is not altered by the speci ﬁcs of the ex-
 perimental setup under discussion. The structural modelin g approach insists on
 deﬁning the target quantity, in our case “causal eﬀect,” bef ore specifying the
@@ -1149,7 +1156,8 @@ it from its traditional parametric representation, the str uctural theory avoids
 the many confusions and controversies that have plagued the interpretation of
 structural equations and econometric parameters for the pa st half century (see
 footnote 15).
-3.5.2. Formulating the assumptions – Instrumental variabl es
+
+#### 3.5.2. Formulating the assumptions – Instrumental variabl es
 The experimental setup in a typical clinical trial with part ial compliance can
 be represented by the model of Fig. 5(a) and Eq. ( 5) where Zrepresents a ran-
 domized treatment assignment, Xis the treatment actually received, and Yis
@@ -1218,7 +1226,8 @@ ear functions fXandfYmay render the causal eﬀect identiﬁable. Angrist et al.
 (1996) and Heckman and Vytlacil (2005) further reﬁned this analysis by con-
 sidering a variety of causal eﬀect measures, each applicabl e to a special (albeit
 non-identiﬁable and transient) segment of the population.
-3.5.3. Bounding causal eﬀects
+
+#### 3.5.3. Bounding causal eﬀects
 When conditions for identiﬁcation are not met, the best one c an do is derive
 bounds for the quantities of interest—namely, a range of possible v alues that
 represents our ignorance about the data-generating proces s and that cannot be
@@ -1255,7 +1264,8 @@ derived bounds can yield signiﬁcant and sometimes accurate information on
 the treatment eﬃcacy. Chickering and Pearl (1997) further used Bayesian tech-
 niques (with Gibbs sampling) to investigate the sharpness o f these bounds as a
 function of sample size.
-3.5.4. Testable implications of instrumental variables
+
+#### 3.5.4. Testable implications of instrumental variables
 The two assumptions embodied in the model of Fig. 5(a), that Zis randomized
 and has no direct eﬀect on Y, are untestable in general ( Bonet ,2001). However, if
 the treatment variable may take only a ﬁnite number of values , the combination
@@ -1567,7 +1577,7 @@ independencies that logically follow from our assumptions .
 
 ## 5. Counterfactuals at work
 ### 5.1. Mediation: Direct and indirect eﬀects
-5.1.1. Direct versus total eﬀects:
+#### 5.1.1. Direct versus total eﬀects:
 The causal eﬀect we have analyzed so far, P(y|do(x)), measures the totaleﬀect of
 a variable (or a set of variables) Xon a response variable Y. In many cases, this
 quantity does not adequately represent the target of invest igation and attention
@@ -1613,7 +1623,8 @@ E(Y|do(x), do(z1), do(z2), . . ., do (zk)) were derived by Pearl and Robins (199
 condition (Deﬁnition 3).
 22According to Rubin (2004,2005), R.A. Fisher made this mistake in the context of agri-
 culture experiments. Fisher, in fairness, did not have grap hs for guidance.
-5.1.2. Natural direct eﬀects
+
+#### 5.1.2. Natural direct eﬀects
 In linear systems, Eq. ( 46) yields the path coeﬃcient of the link from XtoY;
 independent of the values at which we hold Z, independent of the distribution
 of the error terms, and regardless of whether those coeﬃcien ts are identiﬁable
@@ -1664,7 +1675,8 @@ details and graphical criteria in Pearl (2001,2005) and in Petersen et al. (2006
 In particular, expression ( 48) is both valid and identiﬁable in Markovian
 models, where each term on the right can be reduced to a “ do-free” expression
 using Eq. ( 24).
-5.1.3. Indirect eﬀects and the Mediation Formula
+
+#### 5.1.3. Indirect eﬀects and the Mediation Formula
 Remarkably, the deﬁnition of the natural direct eﬀect ( 47) can easily be turned
 around and provide an operational deﬁnition for the indirect eﬀect – a concept
 shrouded in mystery and controversy, because it is impossib le, using the do(x)
