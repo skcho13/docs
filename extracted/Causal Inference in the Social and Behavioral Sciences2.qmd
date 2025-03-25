@@ -1,15 +1,17 @@
 ---
-title: Chapter 1 Causal Inference in the Social and Behavioral Sciences
+title: Causal Inference in the Social and Behavioral Sciences
 author: Michael E. Sobel
 ---
+
+
+Handbook of Statistical Modeling for the Social and Behavioral Sciences, edited by Gerhard Arminger, Clifford C. Clogg, and Michael E. Sobel. Plenum Press, New York, 1995.
 
 MICHAEL E. SOBEL • Department of Sociology, University of Arizona, Tucson, Arizona 85721, USA. •
 For helpful comments and discussion, I am grateful to Gerhard Arminger, Peter Brantley, Henry Byerly, David
 R. Cox, Otis Dudley Duncan, Judea Pearl, and Herbert L. Smith. Portions of this material were presented at
 the August 1991 meetings of the American Sociological Association in Cincinnati, Ohio.
 
-Handbook ofS tatistical Mo delingfor the Social andB ehavioral Sciences, edited by Gerhard Arminger, Clif-
-ford C. Clogg, and Michael E. Sobel. Plenum Press, New York, 1995.
+# Chapter 1 Causal Inference in the Social and Behavioral Sciences
 
 ## 1 Introduction
 

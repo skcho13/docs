@@ -1,5 +1,6 @@
 ---
-title: COUNTERFACTUALS AND CAUSAL INFERENCE
+title: Counterfaturals and Causal Inference
+author: Stephen L. Morgan, Christopher Winship
 ---
 SecondEdition
 

@@ -1,5 +1,6 @@
 ---
 title: Causal inference in statistics
+author: Judea Pearl
 ---
 
 Statistics Surveys

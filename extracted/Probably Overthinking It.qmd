@@ -1,5 +1,6 @@
 ---
-title: PROBABLY OVERTHINKING IT
+title: Probably Overthinking It
+author: Allen B. Downey
 ---
 
 # PROBABLY OVERTHINKING IT

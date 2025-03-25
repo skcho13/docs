@@ -3,8 +3,9 @@ title: "The Art and Science of Cause and Effect"
 author: Judea Pearl
 ---
 
+CAUSALITY: Models, Reasoning, and Inference, Second Edition
 
-E P I L O G U E
+# EPILOGUE
 
 The Art and Science of Cause and Effect
 

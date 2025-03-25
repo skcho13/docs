@@ -1,8 +1,7 @@
 ---
 title: An Introduction to Causal Inference
-author: Judea Pearl, University of California, Los Angeles
+author: Judea Pearl
 ---
-
 
 The International Journal of Biostatistics
 

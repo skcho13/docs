@@ -56,7 +56,6 @@ website:
       - section: Data Science
         contents:
           - href: documents/Program.qmd
-          - href: documents/Program_KR.qmd
           - href: extracted/Probably Overthinking It.qmd
           - href: extracted/Counterfactuals and Causal Inference.qmd
           - href: extracted/Sobel.qmd
@@ -91,6 +90,7 @@ format:
       margin-width: 200px
         
         # css: styles.css
-
+execute:
+  freeze: auto
 
 
