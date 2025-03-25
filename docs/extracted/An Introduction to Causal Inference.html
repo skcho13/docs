@@ -278,26 +278,26 @@ window.Quarto = {
    
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1 Introduction</a></li>
-  <li><a href="#from-association-to-causation" id="toc-from-association-to-causation" class="nav-link" data-scroll-target="#from-association-to-causation">2 From Association to Causation</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#from-association-to-causation" id="toc-from-association-to-causation" class="nav-link" data-scroll-target="#from-association-to-causation">2. From Association to Causation</a>
   <ul>
   <li><a href="#understanding-the-distinction-and-its-implications" id="toc-understanding-the-distinction-and-its-implications" class="nav-link" data-scroll-target="#understanding-the-distinction-and-its-implications">2.1 Understanding the distinction and its implications</a></li>
   <li><a href="#untested-assumptions-and-new-notation" id="toc-untested-assumptions-and-new-notation" class="nav-link" data-scroll-target="#untested-assumptions-and-new-notation">2.2 Untested assumptions and new notation</a></li>
   </ul></li>
-  <li><a href="#structural-models-diagrams-causal-effects-and-counterfactuals" id="toc-structural-models-diagrams-causal-effects-and-counterfactuals" class="nav-link" data-scroll-target="#structural-models-diagrams-causal-effects-and-counterfactuals">3 Structural Models, Diagrams, Causal Effects, and Counterfactuals</a>
+  <li><a href="#structural-models-diagrams-causal-effects-and-counterfactuals" id="toc-structural-models-diagrams-causal-effects-and-counterfactuals" class="nav-link" data-scroll-target="#structural-models-diagrams-causal-effects-and-counterfactuals">3. Structural Models, Diagrams, Causal Effects, and Counterfactuals</a>
   <ul>
   <li><a href="#a-brief-introduction-to-structural-equation-models" id="toc-a-brief-introduction-to-structural-equation-models" class="nav-link" data-scroll-target="#a-brief-introduction-to-structural-equation-models">3.1 A brief introduction to structural equation models</a></li>
   <li><a href="#from-linear-to-nonparametric-models-and-graphs" id="toc-from-linear-to-nonparametric-models-and-graphs" class="nav-link" data-scroll-target="#from-linear-to-nonparametric-models-and-graphs">3.2 From linear to nonparametric models and graphs</a>
   <ul class="collapse">
   <li><a href="#representing-interventions" id="toc-representing-interventions" class="nav-link" data-scroll-target="#representing-interventions">3.2.1 Representing interventions</a></li>
   <li><a href="#estimating-the-effect-of-interventions" id="toc-estimating-the-effect-of-interventions" class="nav-link" data-scroll-target="#estimating-the-effect-of-interventions">3.2.2 Estimating the effect of interventions</a></li>
-  </ul></li>
   <li><a href="#causal-effects-from-data-and-graphs" id="toc-causal-effects-from-data-and-graphs" class="nav-link" data-scroll-target="#causal-effects-from-data-and-graphs">3.2.3 Causal effects from data and graphs</a></li>
   </ul></li>
-  <li><a href="#methodological-principles-of-causal-inference" id="toc-methodological-principles-of-causal-inference" class="nav-link" data-scroll-target="#methodological-principles-of-causal-inference">4 Methodological Principles of Causal Inference</a></li>
-  <li><a href="#the-potential-outcome-framework" id="toc-the-potential-outcome-framework" class="nav-link" data-scroll-target="#the-potential-outcome-framework">5 The Potential Outcome Framework</a></li>
-  <li><a href="#counterfactuals-at-work" id="toc-counterfactuals-at-work" class="nav-link" data-scroll-target="#counterfactuals-at-work">6 Counterfactuals at Work</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">7 Conclusions</a></li>
+  </ul></li>
+  <li><a href="#methodological-principles-of-causal-inference" id="toc-methodological-principles-of-causal-inference" class="nav-link" data-scroll-target="#methodological-principles-of-causal-inference">4. Methodological Principles of Causal Inference</a></li>
+  <li><a href="#the-potential-outcome-framework" id="toc-the-potential-outcome-framework" class="nav-link" data-scroll-target="#the-potential-outcome-framework">5. The Potential Outcome Framework</a></li>
+  <li><a href="#counterfactuals-at-work" id="toc-counterfactuals-at-work" class="nav-link" data-scroll-target="#counterfactuals-at-work">6. Counterfactuals at Work</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">7. Conclusions</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -341,7 +341,7 @@ window.Quarto = {
 <p>KEYWORDS: structural equation models, confounding, graphical methods, counterfactuals, causal effects, potential-outcome, mediation, policy evaluation, causes of effects Author Notes: Portions of this paper are adapted from Pearl (2000a, 2009a,b); I am indebted to EljaArjas,SanderGreenland,DavidMacKinnon,PatrickShrout,andmanyreadersoftheUCLA Causality Blog (http://www.mii.ucla.edu/causality/) for reading and commenting on various segments of this manuscript, and especially to Erica Moodie and David Stephens for their thorougheditorialinput.ThisresearchwassupportedinpartsbyNIHgrant#1R01LM009961-01, NSF grant #IIS-0914211, and ONR grant #N000-14-09-1-0665.</p>
 </section>
 <section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1 Introduction</h2>
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
 <p>Most studies in the health, social and behavioral sciences aim to answer causal</p>
 <p>rather than associative – questions. Such questions requiresome knowledgeof the data-generatingprocess, andcannotbecomputedfromthedataalone, norfromthe distributions that govern the data. Remarkably, although much of the conceptual framework and algorithmic tools needed for tackling such problems are now well established, they are not known to many of the researchers who could put them into practical use. Solving causal problems systematically requires certain exten- sions in the standard mathematical language of statistics, and these extensions are not typically emphasized in the mainstream literature. As a result, many statistical researchers have not yet benefited from causal inference results in (i) counterfac- tualanalysis,(ii)nonparametricstructuralequations,(iii)graphicalmodels,and(iv) the symbiosis between counterfactual and graphical methods. This survey aims at making these contemporaryadvances more accessible by providing a gentle intro- duction to causal inference for a more in-depth treatment and its methodological principles(see (Pearl,2000a, 2009a,b)).</p>
 <p>In Section 2, we discuss coping with untested assumptions and new math- ematical notation which is requiredto move fromassociational to causal statistics.</p>
@@ -349,7 +349,7 @@ window.Quarto = {
 <p>Section 5 relates these tools to those used in the potential-outcome frame- work, and offers a formal mapping between the two frameworks and a symbiosis (Section 5.3) that exploits the best features of both. Finally, the benefit of this symbiosisisdemonstratedinSection6,inwhichthestructure-basedlogicofcoun- terfactuals is harnessed to estimate causal quantities that cannot be defined within theparadigmofcontrolledrandomizedexperiments. These includedirectandindi- rect effects, the effect of treatmenton the treated, and questions of attribution, i.e., whetheroneevent canbe deemed“responsible” foranother.</p>
 </section>
 <section id="from-association-to-causation" class="level2">
-<h2 class="anchored" data-anchor-id="from-association-to-causation">2 From Association to Causation</h2>
+<h2 class="anchored" data-anchor-id="from-association-to-causation">2. From Association to Causation</h2>
 <section id="understanding-the-distinction-and-its-implications" class="level3">
 <h3 class="anchored" data-anchor-id="understanding-the-distinction-and-its-implications">2.1 Understanding the distinction and its implications</h3>
 <p>Theaimofstandardstatisticalanalysisistoassessparametersofadistributionfrom samples drawn of that distribution. With the help of such parameters, associations among variables can be inferred, which permits the researcher to estimate prob- abilities of past and future events and update those probabilities in light of new information. These tasks are managed well by standard statistical analysis so long as experimentalconditionsremainthesame. Causal analysis goes onestep further; its aim is to infer probabilities under conditions that are changing, for example, changes inducedbytreatmentsorexternalinterventions.</p>
@@ -371,7 +371,7 @@ window.Quarto = {
 </section>
 </section>
 <section id="structural-models-diagrams-causal-effects-and-counterfactuals" class="level2">
-<h2 class="anchored" data-anchor-id="structural-models-diagrams-causal-effects-and-counterfactuals">3 Structural Models, Diagrams, Causal Effects, and Counterfactuals</h2>
+<h2 class="anchored" data-anchor-id="structural-models-diagrams-causal-effects-and-counterfactuals">3. Structural Models, Diagrams, Causal Effects, and Counterfactuals</h2>
 <p>Any conception of causation worthy of the title “theory” must be able to (1) represent causal questions in some mathematical language, (2) provide a precise lan- guage for communicating assumptions under which the questions need to be an- swered, (3)providea systematic wayofansweringat least someofthese questions andlabelingothers“unanswerable,” and(4)provideamethodofdeterminingwhat assumptions ornewmeasurementswouldbeneeded toanswer the“unanswerable” questions.</p>
 <p>A “general theory” should do more. In addition to embracing all questions judged to have causal character, a general theorymust also subsume any other the- ory or method that scientists have found useful in exploring the various aspects of causation. In other words, any alternative theory needs to evolve as a special case ofthe“general theory”whenrestrictionsareimposed oneitherthemodel, thetype ofassumptions admitted,orthelanguage inwhichthose assumptionsare cast.</p>
 <p>Thestructuraltheorythatweuseinthissurveysatisfiesthecriteriaabove. It is based on the StructuralCausal Model (SCM) developed in (Pearl, 1995, 2000a) 2 Clearly,P(Y =y|do(X =x)) isequivalenttoP(Yx=y). Thisiswhatwenormallyassess ina controlledexperiment,withX randomized,inwhichthedistributionofY isestimatedforeachlevel xofX.</p>
@@ -444,9 +444,8 @@ window.Quarto = {
 <p>This equality endows β with its causal meaning as “effect coefficient.” It is ex- tremely important to keep in mind that in structural (as opposed to regressional) models, β is not “interpreted” as an effect coefficient but is “proven” to be one by the derivationabove. β willretain this causal interpretationregardless of how X is actually selected (throughthe function f , Fig. 2(a))and regardless of whetherU X X andU arecorrelated(asinFig.1(b))oruncorrelated(asinFig.1(a)). Correlations Y may onlyimpedeour abilitytoestimateβ fromnonexperimentaldata, butwillnot change its definition as given in (14). Accordingly, and contrary to endless confu- sions in the literature (see footnote 12) structural equations say absolutely nothing about the conditional expectation E(Y|X = x). Such connection may exist under special circumstances, e.g., ifcov(X,U )=0, as in Eq. (13),butis otherwiseirrel- Y evanttothedefinitionorinterpretationofβaseffectcoefficient,ortotheempirical claims ofEq. (1).</p>
 <p>The next subsection will circumvent these derivations altogether by reduc- ingtheidentificationproblemtoagraphicalprocedure. Indeed,sincegraphsencode all the information that non-parametric structural equations represent, they should permitustosolvetheidentificationproblemwithoutresortingtoalgebraicanalysis.</p>
 </section>
-</section>
-<section id="causal-effects-from-data-and-graphs" class="level3">
-<h3 class="anchored" data-anchor-id="causal-effects-from-data-and-graphs">3.2.3 Causal effects from data and graphs</h3>
+<section id="causal-effects-from-data-and-graphs" class="level4">
+<h4 class="anchored" data-anchor-id="causal-effects-from-data-and-graphs">3.2.3 Causal effects from data and graphs</h4>
 <p>Causal analysis in graphical models begins with the realization that all causal ef- fects areidentifiablewheneverthemodelis Markovian,thatis, thegraphis acyclic (i.e., containingno directed cycles) and all the errorterms are jointly independent.</p>
 <p>Non-Markovian models, such as those involving correlated errors (resulting from unmeasured confounders), permit identification only under certain conditions, and these conditionstoo can bedeterminedfromthegraphstructure(Section3.3). The keytothese results restswiththe followingbasic theorem.</p>
 <p>Theorem1 (TheCausal MarkovCondition) AnydistributiongeneratedbyaMarko- vianmodelM can befactorized as: P(v1,v2,…,v n)=∏P(v i|pa i) (15) i whereV1,V2,…,V are theendogenousvariables inM, and pa are (values of)the n i endogenous“parents” ofV in thecausaldiagramassociated with M.</p>
@@ -507,8 +506,9 @@ window.Quarto = {
 <p>The surgical definition of counterfactuals given by (29), provides the con- ceptual and formal basis for the Neyman-Rubin potential-outcome framework, an approach to causation that takes a controlled randomized trial (CRT) as its rul- ing paradigm, assuming that nothing is known to the experimenter about the sci- ence behind the data. This “black-box” approach, which has thus far been denied the benefits of graphical or structuralanalyses, was developed by statisticians who 11 Forexample,“Theprobabilityis80%thatJoebelongstotheclassofpatientswhowillbecured iftheytakethedruganddieotherwise.” found it difficultto cross the two mental barriers discussed in Section 2.2. Section 5 establishes the precise relationship between the structural and potential-outcome paradigms, and outlines how the latter can benefit from the richer representational poweroftheformer.</p>
 </section>
 </section>
+</section>
 <section id="methodological-principles-of-causal-inference" class="level2">
-<h2 class="anchored" data-anchor-id="methodological-principles-of-causal-inference">4 Methodological Principles of Causal Inference</h2>
+<h2 class="anchored" data-anchor-id="methodological-principles-of-causal-inference">4. Methodological Principles of Causal Inference</h2>
 <p>Thestructuraltheorydescribedintheprevioussectionsdictatesaprincipledmethod-</p>
 <p>ologythateliminatesmuchoftheconfusionconcerningtheinterpretationsofstudy results as well as the ethical dilemmas that this confusion tends to spawn. The methodology dictates that every investigation involving causal relationships (and this entails the vast majority of empirical studies in the health, social, and behav- ioralsciences) shouldbe structuredalongthe followingfour-stepprocess: 1. Define: Express the target quantity Q as a function Q(M) that can be com- putedfromany modelM.</p>
 <ol start="2" type="1">
@@ -537,7 +537,7 @@ window.Quarto = {
 <p>They showed that, in certain cases, the derived bounds can yield significant infor- mationonthetreatmentefficacy. ChickeringandPearl(1997)furtherusedBayesian techniques (with Gibbs sampling) to investigate the sharpness of these bounds as a function of sample size. Kaufman, Kaufman, and MacLenose (2009) used this techniquetobounddirectand indirecteffects(see Section6.1).</p>
 </section>
 <section id="the-potential-outcome-framework" class="level2">
-<h2 class="anchored" data-anchor-id="the-potential-outcome-framework">5 The Potential Outcome Framework</h2>
+<h2 class="anchored" data-anchor-id="the-potential-outcome-framework">5. The Potential Outcome Framework</h2>
 <p>ThissectioncomparesthestructuraltheorypresentedinSections1–3tothepotential-</p>
 <p>outcomeframework,usually associated withthenames ofNeyman(1923)andRu- bin (1974), which takes the randomized experiment as its rulingparadigm and has appealed therefore to researchers who do not find that paradigm overly constrain- ing. This framework is not a contender for a comprehensive theory of causation forit is subsumed by the structural theory and excludes ordinarycause-effect rela- tionshipsfromitsassumption vocabulary. We hereexplicate thelogicalfoundation of the Neyman-Rubin framework, its formal subsumption by the structural causal model,andhowitcanbenefitfromtheinsightsprovidedbythebroaderperspective ofthestructuraltheory.</p>
 <p>The primitive object of analysis in the potential-outcome frameworkis the unit-basedresponsevariable,denotedY (u), read: “thevaluethatoutcomeY would x obtaininexperimentalunitu,hadtreatmentX beenx.” Here, unit maystandforan individual patient, an experimental subject, or an agricultural plot. In Section 3.4 13 These equivalence classes were later called “principal stratification” by Frangakis and Rubin (2002).LooserboundswerederivedearlierbyRobins(1989)andManski(1990).</p>
@@ -572,7 +572,7 @@ window.Quarto = {
 <p>Throughout an algebraic derivation, like the one shown in Eq. (36), the analyst may need toemployadditionalassumptions that areentailed by theoriginalexclu- sionandindependenceassumptions, yetarenotshownexplicitlyintheirrespective algebraicexpressions. Forexample,itishardlystraightforwardtoshowthattheas- sumptions of Eqs. (40)–(41)imply the conditional independence (Y ⊥⊥Z|{X ,X}) x z butdonotimplytheconditionalindependence(Y ⊥⊥Z|X). These arenoteasilyde- x rivedbyalgebraicmeansalone. Suchimplicationscan, however,easilybetestedin the graph of Fig. 5 using the graphical reading for conditional independence (Def- inition 1). (See (Pearl, 2000a, pp.&nbsp;16–17, 213–215).) Thus, when the need arises to employ independencies in the course of a derivation, the graph may assist the procedure by vividly displaying the independencies that logically follow from our assumptions.</p>
 </section>
 <section id="counterfactuals-at-work" class="level2">
-<h2 class="anchored" data-anchor-id="counterfactuals-at-work">6 Counterfactuals at Work</h2>
+<h2 class="anchored" data-anchor-id="counterfactuals-at-work">6. Counterfactuals at Work</h2>
 <p>6.1 Mediation: Direct and indirect effects</p>
 <p>6.1.1 Direct versustotaleffects The causal effect we have analyzed so far, P(y|do(x)), measures the total effect of a variable (or a set of variables) X on a response variable Y. In many cases, this quantity does not adequately represent the target of investigation and attention is focused instead on the direct effect of X on Y. The term “direct effect” is meant to quantify an effect that is not mediated by other variables in the model or, more accurately,thesensitivityofY tochangesinX whileallotherfactorsintheanalysis are held fixed. Naturally, holding those factors fixed would sever all causal paths from X toY with the exception of the direct link X →Y, which is not intercepted byany intermediaries.</p>
 <p>A classical example of the ubiquity of direct effects involves legal disputes over race or sex discrimination in hiring. Here, neither the effect of sex or race on applicants’ qualification nor the effect of qualification on hiring are targets of litigation. Rather, defendantsmustprovethatsexandracedonotdirectlyinfluence hiring decisions, whatever indirect effects they might have on hiring by way of applicantqualification.</p>
@@ -637,7 +637,7 @@ window.Quarto = {
 <p>Theseresultsfurtherilluminatetheempiricalcontentofcounterfactualsand their essential role in causal analysis. They prove once again the triumph of logic andanalysisovertraditionsthata-prioriexcludefromtheanalysisquantitiesthatare nottestableinisolation. Mostofall,theydemonstratetheeffectivenessandviability ofthe scientific approach to causation wherebythe dominantparadigm is tomodel the activities of Nature, rather than those of the experimenter. In contrast to the rulingparadigmofconservativestatistics,webeginwithrelationshipsthatweknow inadvancewillneverbeestimated, testedorfalsified. Onlyafterassembling ahost ofsuch relationshipsandjudgingthemtofaithfullyrepresentourtheoryabouthow Nature operates, we ask whether the parameter ofinterest, crisply definedin terms ofthosetheoreticalrelationships,canbeestimatedconsistentlyfromempiricaldata andhow. Itoftendoes, to thecreditofprogressivestatistics.</p>
 </section>
 <section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">7 Conclusions</h2>
+<h2 class="anchored" data-anchor-id="conclusions">7. Conclusions</h2>
 <p>Traditional statistics is strong in devising ways of describing data and inferring</p>
 <p>distributional parameters from sample. Causal inference requires two additional ingredients: a science-friendly language for articulating causal knowledge, and a mathematical machinery for processing that knowledge, combining it with data and drawing new causal conclusions about a phenomenon. This paper surveys re- centadvancesincausalanalysisfromtheunifyingperspectiveofthestructuralthe- ory of causation and shows how statistical methods can be supplemented with the needed ingredients. The theory invokes non-parametric structural equations mod- elsas aformalandmeaningfullanguagefordefiningcausal quantities,formulating causal assumptions, testing identifiability, and explicating many concepts used in causal discourse. These include: randomization, intervention, direct and indirect effects, confounding, counterfactuals, and attribution. The algebraic component of the structurallanguage coincides with the potential-outcomeframework,and its graphical component embraces Wright’s method of path diagrams. When unified and synthesized, the two components offer statistical investigators a powerful and comprehensivemethodologyforempiricalresearch.</p>
 </section>

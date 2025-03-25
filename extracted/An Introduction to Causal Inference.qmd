@@ -41,7 +41,7 @@ segments of this manuscript, and especially to Erica Moodie and David Stephens f
 thorougheditorialinput.ThisresearchwassupportedinpartsbyNIHgrant#1R01LM009961-01,
 NSF grant #IIS-0914211, and ONR grant #N000-14-09-1-0665.
 
-## 1 Introduction
+## 1. Introduction
 
 Most studies in the health, social and behavioral sciences aim to answer causal
 
@@ -79,7 +79,7 @@ theparadigmofcontrolledrandomizedexperiments. These includedirectandindi-
 rect effects, the effect of treatmenton the treated, and questions of attribution, i.e.,
 whetheroneevent canbe deemed“responsible” foranother.
 
-## 2 From Association to Causation
+## 2. From Association to Causation
 
 ### 2.1 Understanding the distinction and its implications
 
@@ -191,7 +191,7 @@ The next section provides a conceptualization that overcomes these mental
 barriersbyofferingafriendlymathematicalmachineryforcause-effectanalysisand
 a formalfoundationforcounterfactualanalysis.
 
-## 3 Structural Models, Diagrams, Causal Effects, and Counterfactuals
+## 3. Structural Models, Diagrams, Causal Effects, and Counterfactuals
 
 Any conception of causation worthy of the title “theory” must be able to (1) represent causal questions in some mathematical language, (2) provide a precise lan-
 guage for communicating assumptions under which the questions need to be an-
@@ -608,7 +608,7 @@ ingtheidentificationproblemtoagraphicalprocedure. Indeed,sincegraphsencode
 all the information that non-parametric structural equations represent, they should
 permitustosolvetheidentificationproblemwithoutresortingtoalgebraicanalysis.
 
-### 3.2.3 Causal effects from data and graphs
+#### 3.2.3 Causal effects from data and graphs
 Causal analysis in graphical models begins with the realization that all causal ef-
 fects areidentifiablewheneverthemodelis Markovian,thatis, thegraphis acyclic
 (i.e., containingno directed cycles) and all the errorterms are jointly independent.
@@ -1152,7 +1152,7 @@ found it difficultto cross the two mental barriers discussed in Section 2.2. Sec
 paradigms, and outlines how the latter can benefit from the richer representational
 poweroftheformer.
 
-## 4 Methodological Principles of Causal Inference
+## 4. Methodological Principles of Causal Inference
 
 Thestructuraltheorydescribedintheprevioussectionsdictatesaprincipledmethod-
 
@@ -1350,7 +1350,7 @@ techniques (with Gibbs sampling) to investigate the sharpness of these bounds as
 a function of sample size. Kaufman, Kaufman, and MacLenose (2009) used this
 techniquetobounddirectand indirecteffects(see Section6.1).
 
-## 5 The Potential Outcome Framework
+## 5. The Potential Outcome Framework
 
 ThissectioncomparesthestructuraltheorypresentedinSections1–3tothepotential-
 
@@ -1681,7 +1681,7 @@ to employ independencies in the course of a derivation, the graph may assist the
 procedure by vividly displaying the independencies that logically follow from our
 assumptions.
 
-## 6 Counterfactuals at Work
+## 6. Counterfactuals at Work
 
 6.1 Mediation: Direct and indirect effects
 
@@ -2290,7 +2290,7 @@ Nature operates, we ask whether the parameter ofinterest, crisply definedin term
 ofthosetheoreticalrelationships,canbeestimatedconsistentlyfromempiricaldata
 andhow. Itoftendoes, to thecreditofprogressivestatistics.
 
-## 7 Conclusions
+## 7. Conclusions
 
 Traditional statistics is strong in devising ways of describing data and inferring
 
