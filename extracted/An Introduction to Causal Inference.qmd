@@ -997,7 +997,7 @@ icaltoolspresentedinthissectionunveilthecharacterofthese covariatesandshow
 preciselywhatcovariatesshould,andshouldnotbeincludedintheconditioningset
 forpropensity-scorematching(seealso (PearlandPaz, 2009, Pearl,2009e)).
 
-3.4 Counterfactual analysis in structural models
+### 3.4 Counterfactual analysis in structural models
 NotallquestionsofcausalcharactercanbeencodedinP(y|do(x))typeexpressions,
 thusimplyingthatnotallcausalquestionscanbeansweredfromexperimentalstud-
 ies. Forexample, questionsofattribution(e.g., whatfractionofdeathcasesaredue
