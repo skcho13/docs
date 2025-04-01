@@ -55,6 +55,7 @@ website:
           - href: extracted/VERGARAY.qmd
           - href: documents/cheese.qmd
           - href: extracted/Dance to the Tune of Life.qmd
+          - href: extracted/eugenist-fisher.qmd
       - section: Data Science
         contents:
           - href: documents/Program.qmd
