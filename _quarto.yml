@@ -56,12 +56,13 @@ website:
           - href: documents/cheese.qmd
           - href: extracted/Dance to the Tune of Life.qmd
           - href: extracted/eugenist-fisher.qmd
+          - href: extracted/positive philosophy.qmd
       - section: Data Science
         contents:
           - href: documents/Program.qmd
           - href: extracted/Probably Overthinking It.qmd
           - href: extracted/Counterfactuals and Causal Inference.qmd
-          - href: extracted/Sobel.qmd
+          - href: extracted/Sobel9.qmd
           - href: extracted/nun_study.qmd
       - section: Causal Inference
         contents:
