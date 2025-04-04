@@ -56,6 +56,7 @@ website:
           - href: documents/cheese.qmd
           - href: extracted/Dance to the Tune of Life.qmd
           - href: extracted/eugenist-fisher.qmd
+          - href: extracted/Fisher_Thoughtful_Eugenist_v5.qmd
           - href: extracted/positive philosophy.qmd
       - section: Data Science
         contents:
